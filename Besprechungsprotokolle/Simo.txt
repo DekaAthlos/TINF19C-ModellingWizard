@@ -1,0 +1,10 @@
+Pull vom GIT:
+--> git pull origin master
+
+
+Push auf GIT:
+--> git add *
+--> git commit -m 'Bananentest'
+--> git push origin master
+
+
