@@ -14,5 +14,9 @@ The further development of the Modelling Wizard was carried out by the following
   * Stefan Nemanja-Banov
   * Simon Jess
   * Phillip Tran
+  * Jakob Schmidt
+  * Timo Zaoral
+  * Tobias Roth
+  
 Link für Vorlesungsinhalte: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
