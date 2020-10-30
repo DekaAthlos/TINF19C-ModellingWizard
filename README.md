@@ -5,5 +5,7 @@ as part of the lecture 'Software Engineering'.
 
 It was made under supervision of [Markus Rentschler](http://wwwlehre.dhbw-stuttgart.de/~rentschler/) and Christian Holder.
 
+## About the Modelling Wizard 
+
 Link für Vorlesungsinhalte: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
