@@ -11,11 +11,8 @@ It was made under supervision of [Markus Rentschler](http://wwwlehre.dhbw-stuttg
 ## About this project
 
 The further development of the Modelling Wizard was carried out by the following students:
-
-⋅* Stefan Nemanja-Banov
-⋅* Phillip Tran
-⋅* Simon Jess
-
-
+  * Stefan Nemanja-Banov
+  * Simon Jess
+  * Phillip Tran
 Link für Vorlesungsinhalte: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
