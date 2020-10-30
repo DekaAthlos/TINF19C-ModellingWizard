@@ -14,7 +14,8 @@ In this project a plugin for AutomationML called 'Modelling Wizzard' will be fur
 
 The Plugin offers the possibility to create new AML Devices and Interfaces and save them as AMLX Package. Moreover it is possible to import files with the help of the DDA2ML-Converter.
 
-Main tasks are e.g. improving the GUI and its usability but also giving the user a detailed manual to make sure that it is clear how to use the plugin.
+Main tasks are e.g. improving the GUI and its usability but also giving the user a detailed manual to make sure the user understands how to use the plugin.
+
 The further development of the Modelling Wizard was carried out by the following students:
   * Stefan Nemanja-Banov
   * Simon Jess
