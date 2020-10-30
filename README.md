@@ -5,8 +5,8 @@ as part of the lecture 'Software Engineering'.
 
 It was made under supervision of [Markus Rentschler](http://wwwlehre.dhbw-stuttgart.de/~rentschler/) and Christian Holder.
 
-## About 
-
+## About AutomationML
+![alt text](https://github.com/DekaAthlos/TINF19C-ModellingWizard/blob/master/PROJECT/Git/automationML.png "Logo AutomationML")
 The Modelling Wizard is a plugin for the AutomationML editor. 
 Link für Vorlesungsinhalte: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
