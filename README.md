@@ -5,8 +5,24 @@ as part of the lecture 'Software Engineering'.
 
 It was made under supervision of [Markus Rentschler](http://wwwlehre.dhbw-stuttgart.de/~rentschler/) and Christian Holder.
 
-## About 
+## About AutomationML
+![alt text](https://github.com/DekaAthlos/TINF19C-ModellingWizard/blob/master/PROJECT/Git/automationML.png "Logo AutomationML")
 
-The Modelling Wizard is a plugin for the AutomationML editor. 
+## About this project
+
+In this project a plugin for AutomationML called 'Modelling Wizzard' will be further developed. The plugin is part of the Master Thesis Work from [Raj Kumar Pulaparthi](https://github.com/Rajkumarpulaparthi/ModellingWizard), a former student of the Otto-Von-Guericke University Magdeburg. 
+
+The Plugin offers the possibility to create new AML Devices and Interfaces and save them as AMLX Package. Moreover it is possible to import files with the help of the DDA2ML-Converter.
+
+Main tasks are e.g. improving the GUI and its usability but also giving the user a detailed manual to make sure the user understands how to use the plugin.
+
+The further development of the Modelling Wizard was carried out by the following students:
+  * Stefan Nemanja-Banov
+  * Simon Jess
+  * Phillip Tran
+  * Jakob Schmidt
+  * Timo Zaoral
+  * Tobias Roth
+  
 Link für Vorlesungsinhalte: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
