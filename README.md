@@ -17,7 +17,7 @@ The Plugin offers the possibility to create new AML Devices and Interfaces and s
 Main tasks are e.g. improving the GUI and its usability but also giving the user a detailed manual to make sure the user understands how to use the plugin.
 
 The further development of the Modelling Wizard was carried out by the following students:
-  * Stefan Nemanja-Banov
+  * Stefan-Nemanja Banov
   * Simon Jess
   * Phillip Tran
   * Jakob Schmidt
