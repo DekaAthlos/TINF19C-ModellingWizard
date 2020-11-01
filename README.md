@@ -8,6 +8,8 @@ It was made under supervision of [Markus Rentschler](http://wwwlehre.dhbw-stuttg
 ## About AutomationML
 ![alt text](https://github.com/DekaAthlos/TINF19C-ModellingWizard/blob/master/PROJECT/Git/automationML.png "Logo AutomationML")
 
+AutomationML is a XML neutral based data format to close the line between production planning and the production plant. The goal of AutomationML is to connect the landscape of  different engineering tools and to describe the data in one tool-independent format. Proprietary interfaces and libraries are not needed anymore. 
+
 ## About this project
 
 In this project a plugin for AutomationML called 'Modelling Wizzard' will be further developed. The plugin is part of the Master Thesis Work from [Raj Kumar Pulaparthi](https://github.com/Rajkumarpulaparthi/ModellingWizard), a former student of the Otto-Von-Guericke University Magdeburg. 
