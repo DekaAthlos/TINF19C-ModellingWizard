@@ -1,4 +1,30 @@
-# Modelling Wizard for Device Descriptions - TINF19C - Team 2
+# Modelling Wizard for Device Descriptions 
 
+This repository is based on a project developed at the [Baden-Württemberg Cooperative State University (DHBW Stuttgart)](https://www.dhbw-stuttgart.de/), 
+as part of the lecture 'Software Engineering'.
+
+It was made under supervision of [Markus Rentschler](http://wwwlehre.dhbw-stuttgart.de/~rentschler/) and Christian Holder.
+
+## About AutomationML
+![alt text](https://github.com/DekaAthlos/TINF19C-ModellingWizard/blob/master/PROJECT/Git/automationML.png "Logo AutomationML")
+
+AutomationML is a XML neutral based data format to close the line between production planning and the production plant. The goal of AutomationML is to connect the landscape of  different engineering tools and to describe the data in one tool-independent format. Proprietary interfaces and libraries are not needed anymore. 
+
+## About this project
+
+In this project a plugin for AutomationML called 'Modelling Wizzard' will be further developed. The plugin is part of the Master Thesis Work from [Raj Kumar Pulaparthi](https://github.com/Rajkumarpulaparthi/ModellingWizard), a former student of the Otto-Von-Guericke University Magdeburg. 
+
+The Plugin offers the possibility to create new AML Devices and Interfaces and save them as AMLX Package. Moreover it is possible to import files with the help of the DDA2ML-Converter.
+
+Main tasks are e.g. improving the GUI and its usability but also giving the user a detailed manual to make sure the user understands how to use the plugin.
+
+The further development of the Modelling Wizard was carried out by the following students:
+  * Stefan-Nemanja Banov
+  * Simon Jess
+  * Phillip Tran
+  * Jakob Schmidt
+  * Timo Zaoral
+  * Tobias Roth
+  
 Link für Vorlesungsinhalte: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
