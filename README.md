@@ -1,7 +1,7 @@
 # Modelling Wizard for Device Descriptions 
 
 This repository is based on a project developed at the [Baden-Württemberg Cooperative State University (DHBW Stuttgart)](https://www.dhbw-stuttgart.de/), 
-as part of the lecture 'Software Engineering'.
+as a part of the lecture 'Software Engineering'.
 
 It was made under supervision of [Markus Rentschler](http://wwwlehre.dhbw-stuttgart.de/~rentschler/) and Christian Holder.
 
@@ -26,5 +26,5 @@ The further development of the Modelling Wizard was carried out by the following
   * Timo Zaoral
   * Tobias Roth
   
-Link für Vorlesungsinhalte: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
+Link to the lecture content: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
