@@ -26,5 +26,5 @@ The further development of the Modelling Wizard was carried out by the following
   * Timo Zaoral
   * Tobias Roth
   
-Link für Vorlesungsinhalte: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
+Link to the lecture content: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
