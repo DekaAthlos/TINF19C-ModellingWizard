@@ -1044,7 +1044,6 @@ namespace Aml.Editor.Plugin
                                     genericInformationtreeView.Nodes.Clear();
 
                                     TreeNode parentNode;
-                                    TreeNode childNodes;
 
                                     var AutomationMLDataTables = new AutomationMLDataTables();
                                     genericInformationDataGridView.CurrentRow.Selected = true;
