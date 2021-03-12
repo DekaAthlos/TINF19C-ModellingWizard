@@ -40,7 +40,6 @@ namespace Aml.Editor.Plugin
         public Dictionary<string, List<ElectricalInterfaceParameters>> DictofElectricalInterfaceParameters { get; set; }
 
 
-
         // These are the Dictionary properties that store Electrical Interfaces Instances 
         // This Dictionary Property Stores the "Parent Interface Class Attributes" as Values and "Interface Number + InterfaceName" as Key
         public Dictionary<string, List<List<ClassOfListsFromReferencefile>>> DictionaryForInterfaceClassesInElectricalInterfaces { get; set; }
