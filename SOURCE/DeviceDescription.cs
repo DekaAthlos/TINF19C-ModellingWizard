@@ -3670,7 +3670,7 @@ namespace Aml.Editor.Plugin
 
         private void manualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string search = "https://balluff-my.sharepoint.com/personal/raj_pulaparthi_balluff_de/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fraj%5Fpulaparthi%5Fballuff%5Fde%2FDocuments%2FDocumentation%20Modelling%20Wizard%2Epdf&parent=%2Fpersonal%2Fraj%5Fpulaparthi%5Fballuff%5Fde%2FDocuments";
+            string search = "https://github.com/DekaAthlos/TINF19C-ModellingWizard/releases/tag/0.0";
             System.Diagnostics.Process.Start(search);
         }
     }
