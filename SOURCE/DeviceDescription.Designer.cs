@@ -48,10 +48,10 @@
             this.fileNameLabel = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.Page0_FullWondow = new System.Windows.Forms.Panel();
+            this.Page0_FullWindowPanel2 = new System.Windows.Forms.Panel();
+            this.Page0_FastFullWindow = new System.Windows.Forms.Panel();
+            this.Page0_FastFullWindow2 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataTabControl = new System.Windows.Forms.TabControl();
             this.genericData = new System.Windows.Forms.TabPage();
@@ -115,8 +115,6 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.selectFileBtn = new System.Windows.Forms.Button();
             this.selectURLBtn = new System.Windows.Forms.Button();
-            this.AMLfileLabel = new System.Windows.Forms.Label();
-            this.AMLURLLabel = new System.Windows.Forms.Label();
             this.selectedFileLocationTxtBx = new System.Windows.Forms.TextBox();
             this.Interface = new System.Windows.Forms.TabPage();
             this.electricalInterfacesPanel = new System.Windows.Forms.Panel();
@@ -161,7 +159,7 @@
             this.electricalInterfacesButton = new System.Windows.Forms.Button();
             this.treeViewPanel = new System.Windows.Forms.Panel();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.panel22 = new System.Windows.Forms.Panel();
+            this.Page0_RoleClassPanel = new System.Windows.Forms.Panel();
             this.treeViewRoleClassLib = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip7 = new System.Windows.Forms.ToolStrip();
@@ -240,11 +238,13 @@
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loadfromLibrary = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.loadFromComponentFile = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.AMLfileLabel = new System.Windows.Forms.Label();
+            this.AMLURLLabel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.Page0_FullWondow.SuspendLayout();
+            this.Page0_FullWindowPanel2.SuspendLayout();
+            this.Page0_FastFullWindow.SuspendLayout();
+            this.Page0_FastFullWindow2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -287,7 +287,7 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            this.panel22.SuspendLayout();
+            this.Page0_RoleClassPanel.SuspendLayout();
             this.toolStrip7.SuspendLayout();
             this.treeViewInterfaceClassLibPanel.SuspendLayout();
             this.toolStrip9.SuspendLayout();
@@ -425,14 +425,14 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // manualToolStripMenuItem
             // 
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manualToolStripMenuItem.Text = "Manual";
             this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
@@ -449,47 +449,47 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
-            // panel1
+            // Page0_FullWondow
             // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1813, 888);
-            this.panel1.TabIndex = 2;
+            this.Page0_FullWondow.Controls.Add(this.Page0_FullWindowPanel2);
+            this.Page0_FullWondow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Page0_FullWondow.Location = new System.Drawing.Point(0, 0);
+            this.Page0_FullWondow.Margin = new System.Windows.Forms.Padding(0);
+            this.Page0_FullWondow.Name = "Page0_FullWondow";
+            this.Page0_FullWondow.Size = new System.Drawing.Size(1813, 888);
+            this.Page0_FullWondow.TabIndex = 2;
             // 
-            // panel3
+            // Page0_FullWindowPanel2
             // 
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.toolStrip4);
-            this.panel3.Controls.Add(this.toolStrip1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1813, 888);
-            this.panel3.TabIndex = 1;
+            this.Page0_FullWindowPanel2.Controls.Add(this.Page0_FastFullWindow);
+            this.Page0_FullWindowPanel2.Controls.Add(this.toolStrip4);
+            this.Page0_FullWindowPanel2.Controls.Add(this.toolStrip1);
+            this.Page0_FullWindowPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Page0_FullWindowPanel2.Location = new System.Drawing.Point(0, 0);
+            this.Page0_FullWindowPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.Page0_FullWindowPanel2.Name = "Page0_FullWindowPanel2";
+            this.Page0_FullWindowPanel2.Size = new System.Drawing.Size(1813, 888);
+            this.Page0_FullWindowPanel2.TabIndex = 1;
             // 
-            // panel4
+            // Page0_FastFullWindow
             // 
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 50);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1813, 838);
-            this.panel4.TabIndex = 3;
+            this.Page0_FastFullWindow.Controls.Add(this.Page0_FastFullWindow2);
+            this.Page0_FastFullWindow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Page0_FastFullWindow.Location = new System.Drawing.Point(0, 50);
+            this.Page0_FastFullWindow.Margin = new System.Windows.Forms.Padding(0);
+            this.Page0_FastFullWindow.Name = "Page0_FastFullWindow";
+            this.Page0_FastFullWindow.Size = new System.Drawing.Size(1813, 838);
+            this.Page0_FastFullWindow.TabIndex = 3;
             // 
-            // panel6
+            // Page0_FastFullWindow2
             // 
-            this.panel6.Controls.Add(this.splitContainer1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1813, 838);
-            this.panel6.TabIndex = 2;
+            this.Page0_FastFullWindow2.Controls.Add(this.splitContainer1);
+            this.Page0_FastFullWindow2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Page0_FastFullWindow2.Location = new System.Drawing.Point(0, 0);
+            this.Page0_FastFullWindow2.Margin = new System.Windows.Forms.Padding(0);
+            this.Page0_FastFullWindow2.Name = "Page0_FastFullWindow2";
+            this.Page0_FastFullWindow2.Size = new System.Drawing.Size(1813, 838);
+            this.Page0_FastFullWindow2.TabIndex = 2;
             // 
             // splitContainer1
             // 
@@ -507,7 +507,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.treeViewPanel);
             this.splitContainer1.Size = new System.Drawing.Size(1813, 838);
-            this.splitContainer1.SplitterDistance = 1374;
+            this.splitContainer1.SplitterDistance = 1146;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -522,7 +522,7 @@
             this.dataTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.dataTabControl.Name = "dataTabControl";
             this.dataTabControl.SelectedIndex = 0;
-            this.dataTabControl.Size = new System.Drawing.Size(1374, 838);
+            this.dataTabControl.Size = new System.Drawing.Size(1146, 838);
             this.dataTabControl.TabIndex = 0;
             this.dataTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.dataTabControl_DrawItem);
             this.dataTabControl.Click += new System.EventHandler(this.dataTabControl_Click);
@@ -950,7 +950,7 @@
             // 
             this.toolStripLabel20.ForeColor = System.Drawing.Color.Black;
             this.toolStripLabel20.Name = "toolStripLabel20";
-            this.toolStripLabel20.Size = new System.Drawing.Size(113, 19);
+            this.toolStripLabel20.Size = new System.Drawing.Size(113, 23);
             this.toolStripLabel20.Text = "Generic Information";
             // 
             // deleteRoleClassButton
@@ -960,7 +960,7 @@
             this.deleteRoleClassButton.Image = ((System.Drawing.Image)(resources.GetObject("deleteRoleClassButton.Image")));
             this.deleteRoleClassButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.deleteRoleClassButton.Name = "deleteRoleClassButton";
-            this.deleteRoleClassButton.Size = new System.Drawing.Size(44, 19);
+            this.deleteRoleClassButton.Size = new System.Drawing.Size(44, 23);
             this.deleteRoleClassButton.Text = "Delete";
             this.deleteRoleClassButton.Click += new System.EventHandler(this.deleteRoleClassButton_Click);
             // 
@@ -971,7 +971,7 @@
             this.DocsTabPage.Location = new System.Drawing.Point(4, 24);
             this.DocsTabPage.Margin = new System.Windows.Forms.Padding(0);
             this.DocsTabPage.Name = "DocsTabPage";
-            this.DocsTabPage.Size = new System.Drawing.Size(1366, 810);
+            this.DocsTabPage.Size = new System.Drawing.Size(1138, 810);
             this.DocsTabPage.TabIndex = 4;
             this.DocsTabPage.Text = "Documents";
             // 
@@ -986,7 +986,7 @@
             this.addPicturesandDocsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.addPicturesandDocsPanel.MinimumSize = new System.Drawing.Size(691, 22);
             this.addPicturesandDocsPanel.Name = "addPicturesandDocsPanel";
-            this.addPicturesandDocsPanel.Size = new System.Drawing.Size(1366, 810);
+            this.addPicturesandDocsPanel.Size = new System.Drawing.Size(1138, 810);
             this.addPicturesandDocsPanel.TabIndex = 0;
             // 
             // Page2_BottomPanel
@@ -1083,7 +1083,7 @@
             "BillofMaterials",
             "Certificate"});
             this.automationMLRoleCmbBx.Name = "automationMLRoleCmbBx";
-            this.automationMLRoleCmbBx.Size = new System.Drawing.Size(114, 25);
+            this.automationMLRoleCmbBx.Size = new System.Drawing.Size(132, 25);
             this.automationMLRoleCmbBx.SelectedIndexChanged += new System.EventHandler(this.automationMLRoleCmbBx_SelectedIndexChanged);
             this.automationMLRoleCmbBx.Click += new System.EventHandler(this.automationMLRoleCmbBx_Click);
             // 
@@ -1144,7 +1144,7 @@
             this.addBtn.Location = new System.Drawing.Point(0, 0);
             this.addBtn.Margin = new System.Windows.Forms.Padding(0);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(1366, 34);
+            this.addBtn.Size = new System.Drawing.Size(1138, 34);
             this.addBtn.TabIndex = 0;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = false;
@@ -1164,7 +1164,7 @@
             // 
             // selectedFileURLTextBox
             // 
-            this.selectedFileURLTextBox.Location = new System.Drawing.Point(7, 51);
+            this.selectedFileURLTextBox.Location = new System.Drawing.Point(129, 72);
             this.selectedFileURLTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.selectedFileURLTextBox.Name = "selectedFileURLTextBox";
             this.selectedFileURLTextBox.Size = new System.Drawing.Size(370, 23);
@@ -1181,23 +1181,23 @@
             this.tableLayoutPanel4.Controls.Add(this.selectURLBtn, 2, 1);
             this.tableLayoutPanel4.Controls.Add(this.AMLfileLabel, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.AMLURLLabel, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(423, 14);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(591, 26);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(691, 75);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(468, 75);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // selectFileBtn
             // 
             this.selectFileBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.selectFileBtn.ForeColor = System.Drawing.Color.Black;
-            this.selectFileBtn.Location = new System.Drawing.Point(532, 3);
+            this.selectFileBtn.Location = new System.Drawing.Point(308, 3);
             this.selectFileBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.selectFileBtn.Name = "selectFileBtn";
-            this.selectFileBtn.Size = new System.Drawing.Size(157, 31);
+            this.selectFileBtn.Size = new System.Drawing.Size(158, 31);
             this.selectFileBtn.TabIndex = 0;
             this.selectFileBtn.Text = "Select File";
             this.selectFileBtn.UseVisualStyleBackColor = true;
@@ -1207,40 +1207,18 @@
             // 
             this.selectURLBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.selectURLBtn.ForeColor = System.Drawing.Color.Black;
-            this.selectURLBtn.Location = new System.Drawing.Point(532, 40);
+            this.selectURLBtn.Location = new System.Drawing.Point(308, 40);
             this.selectURLBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.selectURLBtn.Name = "selectURLBtn";
-            this.selectURLBtn.Size = new System.Drawing.Size(157, 32);
+            this.selectURLBtn.Size = new System.Drawing.Size(158, 32);
             this.selectURLBtn.TabIndex = 1;
             this.selectURLBtn.Text = "Add URL";
             this.selectURLBtn.UseVisualStyleBackColor = true;
             this.selectURLBtn.Click += new System.EventHandler(this.selectURLBtn_Click);
             // 
-            // AMLfileLabel
-            // 
-            this.AMLfileLabel.AutoSize = true;
-            this.AMLfileLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AMLfileLabel.Location = new System.Drawing.Point(2, 0);
-            this.AMLfileLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.AMLfileLabel.Name = "AMLfileLabel";
-            this.AMLfileLabel.Size = new System.Drawing.Size(261, 37);
-            this.AMLfileLabel.TabIndex = 8;
-            this.AMLfileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // AMLURLLabel
-            // 
-            this.AMLURLLabel.AutoSize = true;
-            this.AMLURLLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AMLURLLabel.Location = new System.Drawing.Point(2, 37);
-            this.AMLURLLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.AMLURLLabel.Name = "AMLURLLabel";
-            this.AMLURLLabel.Size = new System.Drawing.Size(261, 38);
-            this.AMLURLLabel.TabIndex = 9;
-            this.AMLURLLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // selectedFileLocationTxtBx
             // 
-            this.selectedFileLocationTxtBx.Location = new System.Drawing.Point(7, 9);
+            this.selectedFileLocationTxtBx.Location = new System.Drawing.Point(129, 34);
             this.selectedFileLocationTxtBx.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.selectedFileLocationTxtBx.Name = "selectedFileLocationTxtBx";
             this.selectedFileLocationTxtBx.Size = new System.Drawing.Size(370, 23);
@@ -1256,7 +1234,7 @@
             this.Interface.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Interface.Name = "Interface";
             this.Interface.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Interface.Size = new System.Drawing.Size(1366, 810);
+            this.Interface.Size = new System.Drawing.Size(1313, 782);
             this.Interface.TabIndex = 6;
             this.Interface.Text = "Interfaces";
             // 
@@ -1272,7 +1250,7 @@
             this.electricalInterfacesPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.electricalInterfacesPanel.MinimumSize = new System.Drawing.Size(686, 22);
             this.electricalInterfacesPanel.Name = "electricalInterfacesPanel";
-            this.electricalInterfacesPanel.Size = new System.Drawing.Size(1362, 804);
+            this.electricalInterfacesPanel.Size = new System.Drawing.Size(1309, 776);
             this.electricalInterfacesPanel.TabIndex = 0;
             this.electricalInterfacesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.electricalInterfacesPanel_Paint);
             // 
@@ -1720,7 +1698,7 @@
             this.electricalInterfacesButton.Location = new System.Drawing.Point(0, 0);
             this.electricalInterfacesButton.Margin = new System.Windows.Forms.Padding(0);
             this.electricalInterfacesButton.Name = "electricalInterfacesButton";
-            this.electricalInterfacesButton.Size = new System.Drawing.Size(1362, 34);
+            this.electricalInterfacesButton.Size = new System.Drawing.Size(1309, 34);
             this.electricalInterfacesButton.TabIndex = 0;
             this.electricalInterfacesButton.Text = "Electrical Interfaces";
             this.electricalInterfacesButton.UseVisualStyleBackColor = false;
@@ -1735,7 +1713,7 @@
             this.treeViewPanel.Location = new System.Drawing.Point(0, 0);
             this.treeViewPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewPanel.Name = "treeViewPanel";
-            this.treeViewPanel.Size = new System.Drawing.Size(436, 838);
+            this.treeViewPanel.Size = new System.Drawing.Size(664, 838);
             this.treeViewPanel.TabIndex = 1;
             // 
             // splitContainer3
@@ -1748,25 +1726,25 @@
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.panel22);
+            this.splitContainer3.Panel1.Controls.Add(this.Page0_RoleClassPanel);
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.treeViewInterfaceClassLibPanel);
-            this.splitContainer3.Size = new System.Drawing.Size(436, 838);
-            this.splitContainer3.SplitterDistance = 446;
+            this.splitContainer3.Size = new System.Drawing.Size(664, 838);
+            this.splitContainer3.SplitterDistance = 476;
             this.splitContainer3.TabIndex = 0;
             // 
-            // panel22
+            // Page0_RoleClassPanel
             // 
-            this.panel22.Controls.Add(this.treeViewRoleClassLib);
-            this.panel22.Controls.Add(this.toolStrip7);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(0, 0);
-            this.panel22.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(436, 446);
-            this.panel22.TabIndex = 0;
+            this.Page0_RoleClassPanel.Controls.Add(this.treeViewRoleClassLib);
+            this.Page0_RoleClassPanel.Controls.Add(this.toolStrip7);
+            this.Page0_RoleClassPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Page0_RoleClassPanel.Location = new System.Drawing.Point(0, 0);
+            this.Page0_RoleClassPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Page0_RoleClassPanel.Name = "Page0_RoleClassPanel";
+            this.Page0_RoleClassPanel.Size = new System.Drawing.Size(664, 476);
+            this.Page0_RoleClassPanel.TabIndex = 0;
             // 
             // treeViewRoleClassLib
             // 
@@ -1779,7 +1757,7 @@
             this.treeViewRoleClassLib.Name = "treeViewRoleClassLib";
             this.treeViewRoleClassLib.SelectedImageKey = "RCL.JPG";
             this.treeViewRoleClassLib.ShowNodeToolTips = true;
-            this.treeViewRoleClassLib.Size = new System.Drawing.Size(436, 421);
+            this.treeViewRoleClassLib.Size = new System.Drawing.Size(664, 451);
             this.treeViewRoleClassLib.TabIndex = 9;
             this.treeViewRoleClassLib.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewRoleClassLib_ItemDrag);
             this.treeViewRoleClassLib.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRoleClassLib_AfterSelect);
@@ -1804,7 +1782,7 @@
             this.toolStripTextBox1});
             this.toolStrip7.Location = new System.Drawing.Point(0, 0);
             this.toolStrip7.Name = "toolStrip7";
-            this.toolStrip7.Size = new System.Drawing.Size(436, 25);
+            this.toolStrip7.Size = new System.Drawing.Size(664, 25);
             this.toolStrip7.TabIndex = 8;
             this.toolStrip7.Text = "toolStrip7";
             // 
@@ -1832,8 +1810,9 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(76, 25);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(88, 25);
             // 
             // treeViewInterfaceClassLibPanel
             // 
@@ -1843,7 +1822,7 @@
             this.treeViewInterfaceClassLibPanel.Location = new System.Drawing.Point(0, 0);
             this.treeViewInterfaceClassLibPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewInterfaceClassLibPanel.Name = "treeViewInterfaceClassLibPanel";
-            this.treeViewInterfaceClassLibPanel.Size = new System.Drawing.Size(436, 388);
+            this.treeViewInterfaceClassLibPanel.Size = new System.Drawing.Size(664, 358);
             this.treeViewInterfaceClassLibPanel.TabIndex = 1;
             // 
             // treeViewInterfaceClassLib
@@ -1856,7 +1835,7 @@
             this.treeViewInterfaceClassLib.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewInterfaceClassLib.Name = "treeViewInterfaceClassLib";
             this.treeViewInterfaceClassLib.SelectedImageKey = "ICL.JPG";
-            this.treeViewInterfaceClassLib.Size = new System.Drawing.Size(436, 363);
+            this.treeViewInterfaceClassLib.Size = new System.Drawing.Size(664, 333);
             this.treeViewInterfaceClassLib.TabIndex = 10;
             this.treeViewInterfaceClassLib.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewInterfaceClassLib_ItemDrag);
             this.treeViewInterfaceClassLib.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewInterfaceClassLib_BeforeSelect);
@@ -1878,7 +1857,7 @@
             this.toolStripTextBox2});
             this.toolStrip9.Location = new System.Drawing.Point(0, 0);
             this.toolStrip9.Name = "toolStrip9";
-            this.toolStrip9.Size = new System.Drawing.Size(436, 25);
+            this.toolStrip9.Size = new System.Drawing.Size(664, 25);
             this.toolStrip9.TabIndex = 9;
             this.toolStrip9.Text = "toolStrip9";
             // 
@@ -1906,8 +1885,9 @@
             // 
             // toolStripTextBox2
             // 
+            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 25);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(116, 25);
             // 
             // toolStrip4
             // 
@@ -1945,8 +1925,9 @@
             // vendorNameTextBox
             // 
             this.vendorNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vendorNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.vendorNameTextBox.Name = "vendorNameTextBox";
-            this.vendorNameTextBox.Size = new System.Drawing.Size(188, 25);
+            this.vendorNameTextBox.Size = new System.Drawing.Size(219, 25);
             this.vendorNameTextBox.Leave += new System.EventHandler(this.vendorNameTextBox_Leave);
             // 
             // toolStripSeparator3
@@ -1969,8 +1950,9 @@
             // deviceNameTextBox
             // 
             this.deviceNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.deviceNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.deviceNameTextBox.Name = "deviceNameTextBox";
-            this.deviceNameTextBox.Size = new System.Drawing.Size(188, 25);
+            this.deviceNameTextBox.Size = new System.Drawing.Size(219, 25);
             this.deviceNameTextBox.Leave += new System.EventHandler(this.deviceNameTextBox_Leave);
             // 
             // toolStripSeparator1
@@ -2439,12 +2421,34 @@
             this.loadFromComponentFile.Visible = false;
             this.loadFromComponentFile.Width = 125;
             // 
+            // AMLfileLabel
+            // 
+            this.AMLfileLabel.AutoSize = true;
+            this.AMLfileLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AMLfileLabel.Location = new System.Drawing.Point(2, 0);
+            this.AMLfileLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AMLfileLabel.Name = "AMLfileLabel";
+            this.AMLfileLabel.Size = new System.Drawing.Size(149, 37);
+            this.AMLfileLabel.TabIndex = 8;
+            this.AMLfileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // AMLURLLabel
+            // 
+            this.AMLURLLabel.AutoSize = true;
+            this.AMLURLLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AMLURLLabel.Location = new System.Drawing.Point(2, 37);
+            this.AMLURLLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AMLURLLabel.Name = "AMLURLLabel";
+            this.AMLURLLabel.Size = new System.Drawing.Size(149, 38);
+            this.AMLURLLabel.TabIndex = 9;
+            this.AMLURLLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // DeviceDescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Page0_FullWondow);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(1750, 866);
@@ -2452,11 +2456,11 @@
             this.Size = new System.Drawing.Size(1813, 888);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.Page0_FullWondow.ResumeLayout(false);
+            this.Page0_FullWindowPanel2.ResumeLayout(false);
+            this.Page0_FullWindowPanel2.PerformLayout();
+            this.Page0_FastFullWindow.ResumeLayout(false);
+            this.Page0_FastFullWindow2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -2513,8 +2517,8 @@
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
+            this.Page0_RoleClassPanel.ResumeLayout(false);
+            this.Page0_RoleClassPanel.PerformLayout();
             this.toolStrip7.ResumeLayout(false);
             this.toolStrip7.PerformLayout();
             this.treeViewInterfaceClassLibPanel.ResumeLayout(false);
@@ -2537,12 +2541,12 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel Page0_FullWondow;
+        private System.Windows.Forms.Panel Page0_FullWindowPanel2;
+        private System.Windows.Forms.Panel Page0_FastFullWindow;
         private System.Windows.Forms.TabControl dataTabControl;
         private System.Windows.Forms.ToolStrip toolStrip4;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel Page0_FastFullWindow2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel treeViewPanel;
         private System.Windows.Forms.TabPage DocsTabPage;
@@ -2561,15 +2565,13 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator32;
         private System.Windows.Forms.Panel Page2_VerstecktesPanel;
         private System.Windows.Forms.TextBox selectedFileLocationTxtBx;
-        private System.Windows.Forms.Label AMLfileLabel;
-        private System.Windows.Forms.Label AMLURLLabel;
         private System.Windows.Forms.ToolStripComboBox automationMLRoleCmbBx;
         private System.Windows.Forms.ToolStripLabel AutomationMLRole;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator29;
         private System.Windows.Forms.ToolStripButton addRole;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator33;
         private System.Windows.Forms.ToolStripButton clearSelectedRowBtn;
-        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel Page0_RoleClassPanel;
         private System.Windows.Forms.TreeView treeViewRoleClassLib;
         private System.Windows.Forms.ToolStrip toolStrip7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator28;
@@ -2745,5 +2747,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewCheckBoxColumn loadfromLibrary;
         private System.Windows.Forms.DataGridViewCheckBoxColumn loadFromComponentFile;
+        private System.Windows.Forms.Label AMLfileLabel;
+        private System.Windows.Forms.Label AMLURLLabel;
     }
 }
