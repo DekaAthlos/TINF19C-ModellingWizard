@@ -2126,15 +2126,7 @@ namespace Aml.Editor.Plugin
             }
 
         }
-        private void electricalInterfacesCollectionDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            electricalInterfacesCollectionDataGridView.CurrentRow.Selected = true;
-           // if (electricalInterfacesCollectionDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                AMC.WindowSizeChanger(electricalInterfacesTreeViewPanel);
-            }
-            
-        }
+
         private void treeViewElectricalInterfaces_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             string searchName = "";
@@ -2413,14 +2405,6 @@ namespace Aml.Editor.Plugin
 
         
 
-        private void genericInformationDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            genericInformationDataGridView.CurrentRow.Selected = true;
-            //if (genericInformationDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                AMC.WindowSizeChanger(genericInformationpanel);
-            }
-        }
 
         private void genericInformationtreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -3672,6 +3656,21 @@ namespace Aml.Editor.Plugin
         {
             string search = "https://balluff-my.sharepoint.com/personal/raj_pulaparthi_balluff_de/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fraj%5Fpulaparthi%5Fballuff%5Fde%2FDocuments%2FDocumentation%20Modelling%20Wizard%2Epdf&parent=%2Fpersonal%2Fraj%5Fpulaparthi%5Fballuff%5Fde%2FDocuments";
             System.Diagnostics.Process.Start(search);
+        }
+
+        private void elecInterAttDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void electricalInterfacesPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel_FrontPage_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     
