@@ -55,7 +55,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataTabControl = new System.Windows.Forms.TabControl();
             this.genericData = new System.Windows.Forms.TabPage();
-            this.panel_FrontPage = new System.Windows.Forms.Panel();
+            this.Page1_MainPanel = new System.Windows.Forms.Panel();
             this.Page1_BottomPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -98,7 +98,7 @@
             this.deleteRoleClassButton = new System.Windows.Forms.ToolStripButton();
             this.DocsTabPage = new System.Windows.Forms.TabPage();
             this.addPicturesandDocsPanel = new System.Windows.Forms.Panel();
-            this.Page2_TopPanel = new System.Windows.Forms.Panel();
+            this.Page2_BottomPanel = new System.Windows.Forms.Panel();
             this.attachablesInfoDataGridView = new System.Windows.Forms.DataGridView();
             this.ElementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,17 +115,14 @@
             this.toolStripLabel12 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator32 = new System.Windows.Forms.ToolStripSeparator();
             this.clearSelectedRowBtn = new System.Windows.Forms.ToolStripButton();
-            this.panelSelectFile = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.selectFileBtn = new System.Windows.Forms.Button();
             this.selectURLBtn = new System.Windows.Forms.Button();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.selectedFileLocationTxtBx = new System.Windows.Forms.TextBox();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.selectedFileURLTextBox = new System.Windows.Forms.TextBox();
             this.AMLfileLabel = new System.Windows.Forms.Label();
             this.AMLURLLabel = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
+            this.Page2_VerstecktesPanel = new System.Windows.Forms.Panel();
+            this.selectedFileLocationTxtBx = new System.Windows.Forms.TextBox();
             this.Interface = new System.Windows.Forms.TabPage();
             this.electricalInterfacesPanel = new System.Windows.Forms.Panel();
             this.Page3_BottomPanel = new System.Windows.Forms.Panel();
@@ -168,7 +165,6 @@
             this.deleterowsInelectricalInterfacesDataGridView = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.electricalInterfacesButton = new System.Windows.Forms.Button();
-            this.panel28 = new System.Windows.Forms.Panel();
             this.treeViewPanel = new System.Windows.Forms.Panel();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -188,8 +184,6 @@
             this.InterfaceClassLibLabel = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator42 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -248,6 +242,7 @@
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
+            this.selectedFileURLTextBox = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -259,7 +254,7 @@
             this.splitContainer1.SuspendLayout();
             this.dataTabControl.SuspendLayout();
             this.genericData.SuspendLayout();
-            this.panel_FrontPage.SuspendLayout();
+            this.Page1_MainPanel.SuspendLayout();
             this.Page1_BottomPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -272,14 +267,12 @@
             this.deleteRoleClassesButton.SuspendLayout();
             this.DocsTabPage.SuspendLayout();
             this.addPicturesandDocsPanel.SuspendLayout();
-            this.Page2_TopPanel.SuspendLayout();
+            this.Page2_BottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.attachablesInfoDataGridView)).BeginInit();
             this.toolStrip13.SuspendLayout();
             this.toolStrip19.SuspendLayout();
-            this.panelSelectFile.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.panel35.SuspendLayout();
-            this.panel36.SuspendLayout();
+            this.Page2_VerstecktesPanel.SuspendLayout();
             this.Interface.SuspendLayout();
             this.electricalInterfacesPanel.SuspendLayout();
             this.Page3_BottomPanel.SuspendLayout();
@@ -301,7 +294,6 @@
             this.toolStrip7.SuspendLayout();
             this.treeViewInterfaceClassLibPanel.SuspendLayout();
             this.toolStrip9.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.toolStrip4.SuspendLayout();
             this.contextMenuStripforInterfaceClassLib.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.identificationDataGridView)).BeginInit();
@@ -464,29 +456,29 @@
             // 
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1490, 715);
+            this.panel1.Size = new System.Drawing.Size(1490, 740);
             this.panel1.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.toolStrip4);
+            this.panel3.Controls.Add(this.toolStrip1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1490, 715);
+            this.panel3.Size = new System.Drawing.Size(1490, 740);
             this.panel3.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 25);
+            this.panel4.Location = new System.Drawing.Point(0, 50);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1490, 690);
@@ -541,7 +533,7 @@
             // genericData
             // 
             this.genericData.BackColor = System.Drawing.Color.LightGray;
-            this.genericData.Controls.Add(this.panel_FrontPage);
+            this.genericData.Controls.Add(this.Page1_MainPanel);
             this.genericData.Location = new System.Drawing.Point(4, 22);
             this.genericData.Margin = new System.Windows.Forms.Padding(2);
             this.genericData.Name = "genericData";
@@ -550,28 +542,30 @@
             this.genericData.TabIndex = 7;
             this.genericData.Text = "Generic Data";
             // 
-            // panel_FrontPage
+            // Page1_MainPanel
             // 
-            this.panel_FrontPage.AutoScroll = true;
-            this.panel_FrontPage.Controls.Add(this.Page1_BottomPanel);
-            this.panel_FrontPage.Controls.Add(this.Page1_TopPanel);
-            this.panel_FrontPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_FrontPage.Location = new System.Drawing.Point(2, 2);
-            this.panel_FrontPage.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_FrontPage.MinimumSize = new System.Drawing.Size(588, 19);
-            this.panel_FrontPage.Name = "panel_FrontPage";
-            this.panel_FrontPage.Size = new System.Drawing.Size(1118, 660);
-            this.panel_FrontPage.TabIndex = 1;
-            this.panel_FrontPage.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_FrontPage_Paint);
+            this.Page1_MainPanel.AutoScroll = true;
+            this.Page1_MainPanel.BackColor = System.Drawing.Color.SteelBlue;
+            this.Page1_MainPanel.Controls.Add(this.Page1_BottomPanel);
+            this.Page1_MainPanel.Controls.Add(this.Page1_TopPanel);
+            this.Page1_MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Page1_MainPanel.Location = new System.Drawing.Point(2, 2);
+            this.Page1_MainPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.Page1_MainPanel.MinimumSize = new System.Drawing.Size(588, 19);
+            this.Page1_MainPanel.Name = "Page1_MainPanel";
+            this.Page1_MainPanel.Size = new System.Drawing.Size(1118, 660);
+            this.Page1_MainPanel.TabIndex = 1;
+            this.Page1_MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_FrontPage_Paint);
             // 
             // Page1_BottomPanel
             // 
+            this.Page1_BottomPanel.BackColor = System.Drawing.Color.LightGray;
             this.Page1_BottomPanel.Controls.Add(this.tabControl1);
             this.Page1_BottomPanel.Controls.Add(this.toolStrip5);
-            this.Page1_BottomPanel.Location = new System.Drawing.Point(70, 387);
-            this.Page1_BottomPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.Page1_BottomPanel.Location = new System.Drawing.Point(13, 349);
+            this.Page1_BottomPanel.Margin = new System.Windows.Forms.Padding(25);
             this.Page1_BottomPanel.Name = "Page1_BottomPanel";
-            this.Page1_BottomPanel.Size = new System.Drawing.Size(984, 211);
+            this.Page1_BottomPanel.Size = new System.Drawing.Size(1090, 296);
             this.Page1_BottomPanel.TabIndex = 10;
             // 
             // tabControl1
@@ -583,7 +577,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(984, 186);
+            this.tabControl1.Size = new System.Drawing.Size(1090, 271);
             this.tabControl1.TabIndex = 9;
             // 
             // tabPage1
@@ -594,7 +588,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(976, 160);
+            this.tabPage1.Size = new System.Drawing.Size(1082, 245);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Attributes";
             // 
@@ -611,55 +605,55 @@
             this.genericparametersAttrDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.genericparametersAttrDataGridView.Location = new System.Drawing.Point(2, 2);
             this.genericparametersAttrDataGridView.Name = "genericparametersAttrDataGridView";
-            this.genericparametersAttrDataGridView.RowHeadersWidth = 51;
-            this.genericparametersAttrDataGridView.Size = new System.Drawing.Size(972, 156);
+            this.genericparametersAttrDataGridView.RowHeadersWidth = 50;
+            this.genericparametersAttrDataGridView.Size = new System.Drawing.Size(1078, 241);
             this.genericparametersAttrDataGridView.TabIndex = 8;
             this.genericparametersAttrDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genericparametersAttrDataGridView_CellClick);
             this.genericparametersAttrDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.genericparametersAttrDataGridView_CellEndEdit);
             // 
             // dataGridViewTextBoxColumn24
             // 
+            this.dataGridViewTextBoxColumn24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn24.HeaderText = "AttributeName";
-            this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 50;
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.Width = 125;
             // 
             // dataGridViewTextBoxColumn25
             // 
+            this.dataGridViewTextBoxColumn25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn25.HeaderText = "Values";
-            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 50;
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.Width = 125;
             // 
             // dataGridViewTextBoxColumn26
             // 
+            this.dataGridViewTextBoxColumn26.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn26.HeaderText = "Default";
             this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.Width = 125;
             // 
             // dataGridViewTextBoxColumn27
             // 
+            this.dataGridViewTextBoxColumn27.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn27.HeaderText = "Units";
             this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.Width = 125;
             // 
             // dataGridViewTextBoxColumn28
             // 
+            this.dataGridViewTextBoxColumn28.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn28.HeaderText = "DataType";
             this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.Width = 125;
             // 
             // dataGridViewTextBoxColumn29
             // 
+            this.dataGridViewTextBoxColumn29.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn29.HeaderText = "Semantic";
             this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
             this.dataGridViewTextBoxColumn29.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn29.Width = 125;
             // 
             // tabPage2
             // 
@@ -669,7 +663,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(976, 160);
+            this.tabPage2.Size = new System.Drawing.Size(1082, 245);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Header";
             // 
@@ -707,67 +701,67 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(972, 156);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1078, 241);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // genericDataNameTxtBx
             // 
             this.genericDataNameTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataNameTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataNameTxtBx.Location = new System.Drawing.Point(283, 115);
+            this.genericDataNameTxtBx.Location = new System.Drawing.Point(314, 181);
             this.genericDataNameTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataNameTxtBx.Name = "genericDataNameTxtBx";
-            this.genericDataNameTxtBx.Size = new System.Drawing.Size(688, 20);
+            this.genericDataNameTxtBx.Size = new System.Drawing.Size(763, 20);
             this.genericDataNameTxtBx.TabIndex = 24;
             // 
             // genericDataIDTxtBx
             // 
             this.genericDataIDTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataIDTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataIDTxtBx.Location = new System.Drawing.Point(283, 96);
+            this.genericDataIDTxtBx.Location = new System.Drawing.Point(314, 151);
             this.genericDataIDTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataIDTxtBx.Name = "genericDataIDTxtBx";
-            this.genericDataIDTxtBx.Size = new System.Drawing.Size(688, 20);
+            this.genericDataIDTxtBx.Size = new System.Drawing.Size(763, 20);
             this.genericDataIDTxtBx.TabIndex = 23;
             // 
             // genericDataAttributePathTxtBx
             // 
             this.genericDataAttributePathTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataAttributePathTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataAttributePathTxtBx.Location = new System.Drawing.Point(283, 77);
+            this.genericDataAttributePathTxtBx.Location = new System.Drawing.Point(314, 121);
             this.genericDataAttributePathTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataAttributePathTxtBx.Name = "genericDataAttributePathTxtBx";
-            this.genericDataAttributePathTxtBx.Size = new System.Drawing.Size(688, 20);
+            this.genericDataAttributePathTxtBx.Size = new System.Drawing.Size(763, 20);
             this.genericDataAttributePathTxtBx.TabIndex = 22;
             // 
             // genericDataRefBaseClassPathTxtBx
             // 
             this.genericDataRefBaseClassPathTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataRefBaseClassPathTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataRefBaseClassPathTxtBx.Location = new System.Drawing.Point(283, 58);
+            this.genericDataRefBaseClassPathTxtBx.Location = new System.Drawing.Point(314, 91);
             this.genericDataRefBaseClassPathTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataRefBaseClassPathTxtBx.Name = "genericDataRefBaseClassPathTxtBx";
-            this.genericDataRefBaseClassPathTxtBx.Size = new System.Drawing.Size(688, 20);
+            this.genericDataRefBaseClassPathTxtBx.Size = new System.Drawing.Size(763, 20);
             this.genericDataRefBaseClassPathTxtBx.TabIndex = 21;
             // 
             // genericDataRefClassNameTxtBx
             // 
             this.genericDataRefClassNameTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataRefClassNameTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataRefClassNameTxtBx.Location = new System.Drawing.Point(283, 39);
+            this.genericDataRefClassNameTxtBx.Location = new System.Drawing.Point(314, 61);
             this.genericDataRefClassNameTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataRefClassNameTxtBx.Name = "genericDataRefClassNameTxtBx";
-            this.genericDataRefClassNameTxtBx.Size = new System.Drawing.Size(688, 20);
+            this.genericDataRefClassNameTxtBx.Size = new System.Drawing.Size(763, 20);
             this.genericDataRefClassNameTxtBx.TabIndex = 20;
             // 
             // genericDataCopyrightTxtBx
             // 
             this.genericDataCopyrightTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataCopyrightTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataCopyrightTxtBx.Location = new System.Drawing.Point(283, 20);
+            this.genericDataCopyrightTxtBx.Location = new System.Drawing.Point(314, 31);
             this.genericDataCopyrightTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataCopyrightTxtBx.Name = "genericDataCopyrightTxtBx";
-            this.genericDataCopyrightTxtBx.Size = new System.Drawing.Size(688, 20);
+            this.genericDataCopyrightTxtBx.Size = new System.Drawing.Size(763, 20);
             this.genericDataCopyrightTxtBx.TabIndex = 19;
             // 
             // label1
@@ -775,10 +769,10 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 115);
+            this.label1.Location = new System.Drawing.Point(3, 181);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 18);
+            this.label1.Size = new System.Drawing.Size(308, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -788,10 +782,10 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(3, 96);
+            this.label2.Location = new System.Drawing.Point(3, 151);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(277, 18);
+            this.label2.Size = new System.Drawing.Size(308, 29);
             this.label2.TabIndex = 10;
             this.label2.Text = "ID";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -801,10 +795,10 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 77);
+            this.label3.Location = new System.Drawing.Point(3, 121);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(277, 18);
+            this.label3.Size = new System.Drawing.Size(308, 29);
             this.label3.TabIndex = 8;
             this.label3.Text = "Attribute Path";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -814,10 +808,10 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(3, 58);
+            this.label4.Location = new System.Drawing.Point(3, 91);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(277, 18);
+            this.label4.Size = new System.Drawing.Size(308, 29);
             this.label4.TabIndex = 6;
             this.label4.Text = "Referenced Base Class Path";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -827,10 +821,10 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(3, 39);
+            this.label5.Location = new System.Drawing.Point(3, 61);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(277, 18);
+            this.label5.Size = new System.Drawing.Size(308, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "Referenced Class Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -840,10 +834,10 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(3, 20);
+            this.label6.Location = new System.Drawing.Point(3, 31);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(277, 18);
+            this.label6.Size = new System.Drawing.Size(308, 29);
             this.label6.TabIndex = 2;
             this.label6.Text = "Copyright";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -856,7 +850,7 @@
             this.label7.Location = new System.Drawing.Point(3, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(277, 18);
+            this.label7.Size = new System.Drawing.Size(308, 29);
             this.label7.TabIndex = 0;
             this.label7.Text = "Description";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -865,10 +859,10 @@
             // 
             this.genericDataDescriptionTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataDescriptionTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataDescriptionTxtBx.Location = new System.Drawing.Point(283, 1);
+            this.genericDataDescriptionTxtBx.Location = new System.Drawing.Point(314, 1);
             this.genericDataDescriptionTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataDescriptionTxtBx.Name = "genericDataDescriptionTxtBx";
-            this.genericDataDescriptionTxtBx.Size = new System.Drawing.Size(688, 20);
+            this.genericDataDescriptionTxtBx.Size = new System.Drawing.Size(763, 20);
             this.genericDataDescriptionTxtBx.TabIndex = 18;
             // 
             // toolStrip5
@@ -878,7 +872,7 @@
             this.genericDataHeaderLabel});
             this.toolStrip5.Location = new System.Drawing.Point(0, 0);
             this.toolStrip5.Name = "toolStrip5";
-            this.toolStrip5.Size = new System.Drawing.Size(984, 25);
+            this.toolStrip5.Size = new System.Drawing.Size(1090, 25);
             this.toolStrip5.TabIndex = 10;
             this.toolStrip5.Text = "toolStrip5";
             // 
@@ -892,10 +886,10 @@
             this.Page1_TopPanel.Controls.Add(this.genericInformationtreeView);
             this.Page1_TopPanel.Controls.Add(this.genericInformationDataGridView);
             this.Page1_TopPanel.Controls.Add(this.deleteRoleClassesButton);
-            this.Page1_TopPanel.Location = new System.Drawing.Point(70, 85);
+            this.Page1_TopPanel.Location = new System.Drawing.Point(13, 14);
             this.Page1_TopPanel.Margin = new System.Windows.Forms.Padding(2);
             this.Page1_TopPanel.Name = "Page1_TopPanel";
-            this.Page1_TopPanel.Size = new System.Drawing.Size(984, 270);
+            this.Page1_TopPanel.Size = new System.Drawing.Size(1090, 321);
             this.Page1_TopPanel.TabIndex = 1;
             // 
             // genericInformationtreeView
@@ -903,11 +897,11 @@
             this.genericInformationtreeView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.genericInformationtreeView.ImageIndex = 0;
             this.genericInformationtreeView.ImageList = this.imageList2;
-            this.genericInformationtreeView.Location = new System.Drawing.Point(0, 204);
+            this.genericInformationtreeView.Location = new System.Drawing.Point(0, 255);
             this.genericInformationtreeView.Margin = new System.Windows.Forms.Padding(2);
             this.genericInformationtreeView.Name = "genericInformationtreeView";
             this.genericInformationtreeView.SelectedImageIndex = 0;
-            this.genericInformationtreeView.Size = new System.Drawing.Size(984, 66);
+            this.genericInformationtreeView.Size = new System.Drawing.Size(1090, 66);
             this.genericInformationtreeView.TabIndex = 0;
             this.genericInformationtreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.genericInformationtreeView_AfterSelect);
             this.genericInformationtreeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.genericInformationtreeView_NodeMouseClick);
@@ -936,7 +930,7 @@
             this.genericInformationDataGridView.Name = "genericInformationDataGridView";
             this.genericInformationDataGridView.RowHeadersWidth = 51;
             this.genericInformationDataGridView.RowTemplate.Height = 24;
-            this.genericInformationDataGridView.Size = new System.Drawing.Size(984, 248);
+            this.genericInformationDataGridView.Size = new System.Drawing.Size(1090, 299);
             this.genericInformationDataGridView.TabIndex = 1;
             this.genericInformationDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genericInformationDataGridView_CellClick);
             this.genericInformationDataGridView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.genericInformationDataGridView_MouseUp);
@@ -988,7 +982,7 @@
             this.deleteRoleClassButton});
             this.deleteRoleClassesButton.Location = new System.Drawing.Point(0, 0);
             this.deleteRoleClassesButton.Name = "deleteRoleClassesButton";
-            this.deleteRoleClassesButton.Size = new System.Drawing.Size(984, 22);
+            this.deleteRoleClassesButton.Size = new System.Drawing.Size(1090, 22);
             this.deleteRoleClassesButton.TabIndex = 0;
             this.deleteRoleClassesButton.Text = "toolStrip25";
             // 
@@ -1023,8 +1017,10 @@
             // 
             // addPicturesandDocsPanel
             // 
-            this.addPicturesandDocsPanel.Controls.Add(this.Page2_TopPanel);
+            this.addPicturesandDocsPanel.BackColor = System.Drawing.Color.SteelBlue;
+            this.addPicturesandDocsPanel.Controls.Add(this.Page2_BottomPanel);
             this.addPicturesandDocsPanel.Controls.Add(this.addBtn);
+            this.addPicturesandDocsPanel.Controls.Add(this.Page2_VerstecktesPanel);
             this.addPicturesandDocsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addPicturesandDocsPanel.Location = new System.Drawing.Point(0, 0);
             this.addPicturesandDocsPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -1033,17 +1029,16 @@
             this.addPicturesandDocsPanel.Size = new System.Drawing.Size(1122, 664);
             this.addPicturesandDocsPanel.TabIndex = 0;
             // 
-            // Page2_TopPanel
+            // Page2_BottomPanel
             // 
-            this.Page2_TopPanel.Controls.Add(this.attachablesInfoDataGridView);
-            this.Page2_TopPanel.Controls.Add(this.toolStrip13);
-            this.Page2_TopPanel.Controls.Add(this.toolStrip19);
-            this.Page2_TopPanel.Controls.Add(this.panelSelectFile);
-            this.Page2_TopPanel.Location = new System.Drawing.Point(31, 58);
-            this.Page2_TopPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.Page2_TopPanel.Name = "Page2_TopPanel";
-            this.Page2_TopPanel.Size = new System.Drawing.Size(1055, 463);
-            this.Page2_TopPanel.TabIndex = 3;
+            this.Page2_BottomPanel.Controls.Add(this.attachablesInfoDataGridView);
+            this.Page2_BottomPanel.Controls.Add(this.toolStrip13);
+            this.Page2_BottomPanel.Controls.Add(this.toolStrip19);
+            this.Page2_BottomPanel.Location = new System.Drawing.Point(13, 321);
+            this.Page2_BottomPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.Page2_BottomPanel.Name = "Page2_BottomPanel";
+            this.Page2_BottomPanel.Size = new System.Drawing.Size(1093, 323);
+            this.Page2_BottomPanel.TabIndex = 3;
             // 
             // attachablesInfoDataGridView
             // 
@@ -1058,7 +1053,7 @@
             this.attachablesInfoDataGridView.Name = "attachablesInfoDataGridView";
             this.attachablesInfoDataGridView.RowHeadersWidth = 51;
             this.attachablesInfoDataGridView.RowTemplate.Height = 24;
-            this.attachablesInfoDataGridView.Size = new System.Drawing.Size(1055, 413);
+            this.attachablesInfoDataGridView.Size = new System.Drawing.Size(1093, 273);
             this.attachablesInfoDataGridView.TabIndex = 4;
             // 
             // ElementName
@@ -1094,7 +1089,7 @@
             this.toolStripSeparator33});
             this.toolStrip13.Location = new System.Drawing.Point(0, 25);
             this.toolStrip13.Name = "toolStrip13";
-            this.toolStrip13.Size = new System.Drawing.Size(1055, 25);
+            this.toolStrip13.Size = new System.Drawing.Size(1093, 25);
             this.toolStrip13.TabIndex = 1;
             this.toolStrip13.Text = "toolStrip13";
             // 
@@ -1155,7 +1150,7 @@
             this.clearSelectedRowBtn});
             this.toolStrip19.Location = new System.Drawing.Point(0, 0);
             this.toolStrip19.Name = "toolStrip19";
-            this.toolStrip19.Size = new System.Drawing.Size(1055, 25);
+            this.toolStrip19.Size = new System.Drawing.Size(1093, 25);
             this.toolStrip19.TabIndex = 3;
             this.toolStrip19.Text = "toolStrip19";
             // 
@@ -1188,38 +1183,23 @@
             this.clearSelectedRowBtn.Text = "Delete";
             this.clearSelectedRowBtn.Click += new System.EventHandler(this.clearSelectedRowBtn_Click);
             // 
-            // panelSelectFile
-            // 
-            this.panelSelectFile.Controls.Add(this.tableLayoutPanel4);
-            this.panelSelectFile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSelectFile.Location = new System.Drawing.Point(0, 0);
-            this.panelSelectFile.Margin = new System.Windows.Forms.Padding(2);
-            this.panelSelectFile.MaximumSize = new System.Drawing.Size(592, 57);
-            this.panelSelectFile.MinimumSize = new System.Drawing.Size(592, 0);
-            this.panelSelectFile.Name = "panelSelectFile";
-            this.panelSelectFile.Size = new System.Drawing.Size(592, 0);
-            this.panelSelectFile.TabIndex = 5;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.03257F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.96743F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.Controls.Add(this.selectFileBtn, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.selectURLBtn, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.panel35, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.panel36, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.AMLfileLabel, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.AMLURLLabel, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(363, 12);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(592, 56);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(592, 65);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // selectFileBtn
@@ -1229,7 +1209,7 @@
             this.selectFileBtn.Location = new System.Drawing.Point(456, 2);
             this.selectFileBtn.Margin = new System.Windows.Forms.Padding(2);
             this.selectFileBtn.Name = "selectFileBtn";
-            this.selectFileBtn.Size = new System.Drawing.Size(134, 24);
+            this.selectFileBtn.Size = new System.Drawing.Size(134, 28);
             this.selectFileBtn.TabIndex = 0;
             this.selectFileBtn.Text = "Select File";
             this.selectFileBtn.UseVisualStyleBackColor = true;
@@ -1239,50 +1219,14 @@
             // 
             this.selectURLBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.selectURLBtn.ForeColor = System.Drawing.Color.Black;
-            this.selectURLBtn.Location = new System.Drawing.Point(456, 30);
+            this.selectURLBtn.Location = new System.Drawing.Point(456, 34);
             this.selectURLBtn.Margin = new System.Windows.Forms.Padding(2);
             this.selectURLBtn.Name = "selectURLBtn";
-            this.selectURLBtn.Size = new System.Drawing.Size(134, 24);
+            this.selectURLBtn.Size = new System.Drawing.Size(134, 29);
             this.selectURLBtn.TabIndex = 1;
             this.selectURLBtn.Text = "Add URL";
             this.selectURLBtn.UseVisualStyleBackColor = true;
             this.selectURLBtn.Click += new System.EventHandler(this.selectURLBtn_Click);
-            // 
-            // panel35
-            // 
-            this.panel35.Controls.Add(this.selectedFileLocationTxtBx);
-            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel35.Location = new System.Drawing.Point(132, 0);
-            this.panel35.Margin = new System.Windows.Forms.Padding(0);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(322, 28);
-            this.panel35.TabIndex = 6;
-            // 
-            // selectedFileLocationTxtBx
-            // 
-            this.selectedFileLocationTxtBx.Location = new System.Drawing.Point(2, 5);
-            this.selectedFileLocationTxtBx.Margin = new System.Windows.Forms.Padding(2);
-            this.selectedFileLocationTxtBx.Name = "selectedFileLocationTxtBx";
-            this.selectedFileLocationTxtBx.Size = new System.Drawing.Size(318, 20);
-            this.selectedFileLocationTxtBx.TabIndex = 0;
-            // 
-            // panel36
-            // 
-            this.panel36.Controls.Add(this.selectedFileURLTextBox);
-            this.panel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel36.Location = new System.Drawing.Point(132, 28);
-            this.panel36.Margin = new System.Windows.Forms.Padding(0);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(322, 28);
-            this.panel36.TabIndex = 7;
-            // 
-            // selectedFileURLTextBox
-            // 
-            this.selectedFileURLTextBox.Location = new System.Drawing.Point(2, 5);
-            this.selectedFileURLTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.selectedFileURLTextBox.Name = "selectedFileURLTextBox";
-            this.selectedFileURLTextBox.Size = new System.Drawing.Size(318, 20);
-            this.selectedFileURLTextBox.TabIndex = 1;
             // 
             // AMLfileLabel
             // 
@@ -1291,7 +1235,7 @@
             this.AMLfileLabel.Location = new System.Drawing.Point(2, 0);
             this.AMLfileLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AMLfileLabel.Name = "AMLfileLabel";
-            this.AMLfileLabel.Size = new System.Drawing.Size(128, 28);
+            this.AMLfileLabel.Size = new System.Drawing.Size(223, 32);
             this.AMLfileLabel.TabIndex = 8;
             this.AMLfileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -1299,10 +1243,10 @@
             // 
             this.AMLURLLabel.AutoSize = true;
             this.AMLURLLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AMLURLLabel.Location = new System.Drawing.Point(2, 28);
+            this.AMLURLLabel.Location = new System.Drawing.Point(2, 32);
             this.AMLURLLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AMLURLLabel.Name = "AMLURLLabel";
-            this.AMLURLLabel.Size = new System.Drawing.Size(128, 28);
+            this.AMLURLLabel.Size = new System.Drawing.Size(223, 33);
             this.AMLURLLabel.TabIndex = 9;
             this.AMLURLLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -1312,20 +1256,40 @@
             this.addBtn.Image = global::Aml.Editor.Plugin.Properties.Resources.icons8_expand_arrow_24;
             this.addBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addBtn.Location = new System.Drawing.Point(0, 0);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(0);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(1122, 19);
+            this.addBtn.Size = new System.Drawing.Size(1122, 30);
             this.addBtn.TabIndex = 0;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = true;
             this.addBtn.Click += new System.EventHandler(this.addbtn_Click);
+            // 
+            // Page2_VerstecktesPanel
+            // 
+            this.Page2_VerstecktesPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Page2_VerstecktesPanel.Controls.Add(this.selectedFileURLTextBox);
+            this.Page2_VerstecktesPanel.Controls.Add(this.tableLayoutPanel4);
+            this.Page2_VerstecktesPanel.Controls.Add(this.selectedFileLocationTxtBx);
+            this.Page2_VerstecktesPanel.Location = new System.Drawing.Point(18, 58);
+            this.Page2_VerstecktesPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.Page2_VerstecktesPanel.Name = "Page2_VerstecktesPanel";
+            this.Page2_VerstecktesPanel.Size = new System.Drawing.Size(1088, 125);
+            this.Page2_VerstecktesPanel.TabIndex = 6;
+            // 
+            // selectedFileLocationTxtBx
+            // 
+            this.selectedFileLocationTxtBx.Location = new System.Drawing.Point(6, 8);
+            this.selectedFileLocationTxtBx.Margin = new System.Windows.Forms.Padding(2);
+            this.selectedFileLocationTxtBx.Name = "selectedFileLocationTxtBx";
+            this.selectedFileLocationTxtBx.Size = new System.Drawing.Size(318, 20);
+            this.selectedFileLocationTxtBx.TabIndex = 0;
+            this.selectedFileLocationTxtBx.TextChanged += new System.EventHandler(this.selectedFileLocationTxtBx_TextChanged);
             // 
             // Interface
             // 
             this.Interface.AutoScroll = true;
             this.Interface.BackColor = System.Drawing.Color.LightGray;
             this.Interface.Controls.Add(this.electricalInterfacesPanel);
-            this.Interface.Controls.Add(this.panel28);
             this.Interface.Location = new System.Drawing.Point(4, 22);
             this.Interface.Margin = new System.Windows.Forms.Padding(2);
             this.Interface.Name = "Interface";
@@ -1337,6 +1301,7 @@
             // electricalInterfacesPanel
             // 
             this.electricalInterfacesPanel.AutoScroll = true;
+            this.electricalInterfacesPanel.BackColor = System.Drawing.Color.SteelBlue;
             this.electricalInterfacesPanel.Controls.Add(this.Page3_BottomPanel);
             this.electricalInterfacesPanel.Controls.Add(this.Page3_TopPanel);
             this.electricalInterfacesPanel.Controls.Add(this.electricalInterfacesButton);
@@ -1351,12 +1316,13 @@
             // 
             // Page3_BottomPanel
             // 
+            this.Page3_BottomPanel.BackColor = System.Drawing.Color.LightGray;
             this.Page3_BottomPanel.Controls.Add(this.tabControlElectricalAttributes);
             this.Page3_BottomPanel.Controls.Add(this.toolStrip2);
-            this.Page3_BottomPanel.Location = new System.Drawing.Point(15, 328);
+            this.Page3_BottomPanel.Location = new System.Drawing.Point(15, 334);
             this.Page3_BottomPanel.Margin = new System.Windows.Forms.Padding(2);
             this.Page3_BottomPanel.Name = "Page3_BottomPanel";
-            this.Page3_BottomPanel.Size = new System.Drawing.Size(1021, 284);
+            this.Page3_BottomPanel.Size = new System.Drawing.Size(1090, 309);
             this.Page3_BottomPanel.TabIndex = 10;
             // 
             // tabControlElectricalAttributes
@@ -1368,7 +1334,7 @@
             this.tabControlElectricalAttributes.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlElectricalAttributes.Name = "tabControlElectricalAttributes";
             this.tabControlElectricalAttributes.SelectedIndex = 0;
-            this.tabControlElectricalAttributes.Size = new System.Drawing.Size(1021, 259);
+            this.tabControlElectricalAttributes.Size = new System.Drawing.Size(1090, 284);
             this.tabControlElectricalAttributes.TabIndex = 9;
             // 
             // attributestab
@@ -1378,7 +1344,7 @@
             this.attributestab.Margin = new System.Windows.Forms.Padding(2);
             this.attributestab.Name = "attributestab";
             this.attributestab.Padding = new System.Windows.Forms.Padding(2);
-            this.attributestab.Size = new System.Drawing.Size(1013, 233);
+            this.attributestab.Size = new System.Drawing.Size(1082, 258);
             this.attributestab.TabIndex = 0;
             this.attributestab.Text = "Attributes";
             this.attributestab.UseVisualStyleBackColor = true;
@@ -1397,7 +1363,7 @@
             this.elecInterAttDataGridView.Location = new System.Drawing.Point(2, 2);
             this.elecInterAttDataGridView.Name = "elecInterAttDataGridView";
             this.elecInterAttDataGridView.RowHeadersWidth = 51;
-            this.elecInterAttDataGridView.Size = new System.Drawing.Size(1009, 229);
+            this.elecInterAttDataGridView.Size = new System.Drawing.Size(1078, 254);
             this.elecInterAttDataGridView.TabIndex = 8;
             this.elecInterAttDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elecInterAttDataGridView_CellClick);
             this.elecInterAttDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elecInterAttDataGridView_CellContentClick);
@@ -1405,47 +1371,47 @@
             // 
             // dataGridViewTextBoxColumn17
             // 
+            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn17.HeaderText = "AttributeName";
             this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.Width = 125;
             // 
             // dataGridViewTextBoxColumn18
             // 
+            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn18.HeaderText = "Values";
             this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.Width = 125;
             // 
             // dataGridViewTextBoxColumn19
             // 
+            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn19.HeaderText = "Default";
             this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.Width = 125;
             // 
             // dataGridViewTextBoxColumn20
             // 
+            this.dataGridViewTextBoxColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn20.HeaderText = "Units";
             this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Width = 125;
             // 
             // dataGridViewTextBoxColumn21
             // 
+            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn21.HeaderText = "DataType";
             this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Width = 125;
             // 
             // dataGridViewTextBoxColumn22
             // 
+            this.dataGridViewTextBoxColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn22.HeaderText = "Semantic";
             this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             this.dataGridViewTextBoxColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn22.Width = 125;
             // 
             // header
             // 
@@ -1456,7 +1422,7 @@
             this.header.Margin = new System.Windows.Forms.Padding(2);
             this.header.Name = "header";
             this.header.Padding = new System.Windows.Forms.Padding(2);
-            this.header.Size = new System.Drawing.Size(1013, 233);
+            this.header.Size = new System.Drawing.Size(1082, 258);
             this.header.TabIndex = 1;
             this.header.Text = "Header";
             // 
@@ -1494,67 +1460,67 @@
             this.headerpanelTabelLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.headerpanelTabelLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.headerpanelTabelLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.headerpanelTabelLayoutPanel.Size = new System.Drawing.Size(1009, 228);
+            this.headerpanelTabelLayoutPanel.Size = new System.Drawing.Size(1078, 228);
             this.headerpanelTabelLayoutPanel.TabIndex = 0;
             // 
             // nameTxtBxElecAttri
             // 
             this.nameTxtBxElecAttri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameTxtBxElecAttri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nameTxtBxElecAttri.Location = new System.Drawing.Point(294, 169);
+            this.nameTxtBxElecAttri.Location = new System.Drawing.Point(314, 169);
             this.nameTxtBxElecAttri.Margin = new System.Windows.Forms.Padding(0);
             this.nameTxtBxElecAttri.Name = "nameTxtBxElecAttri";
-            this.nameTxtBxElecAttri.Size = new System.Drawing.Size(714, 20);
+            this.nameTxtBxElecAttri.Size = new System.Drawing.Size(763, 20);
             this.nameTxtBxElecAttri.TabIndex = 24;
             // 
             // idTxtBxElecAttri
             // 
             this.idTxtBxElecAttri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTxtBxElecAttri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.idTxtBxElecAttri.Location = new System.Drawing.Point(294, 141);
+            this.idTxtBxElecAttri.Location = new System.Drawing.Point(314, 141);
             this.idTxtBxElecAttri.Margin = new System.Windows.Forms.Padding(0);
             this.idTxtBxElecAttri.Name = "idTxtBxElecAttri";
-            this.idTxtBxElecAttri.Size = new System.Drawing.Size(714, 20);
+            this.idTxtBxElecAttri.Size = new System.Drawing.Size(763, 20);
             this.idTxtBxElecAttri.TabIndex = 23;
             // 
             // attributepathTxtBxElecAttri
             // 
             this.attributepathTxtBxElecAttri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.attributepathTxtBxElecAttri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.attributepathTxtBxElecAttri.Location = new System.Drawing.Point(294, 113);
+            this.attributepathTxtBxElecAttri.Location = new System.Drawing.Point(314, 113);
             this.attributepathTxtBxElecAttri.Margin = new System.Windows.Forms.Padding(0);
             this.attributepathTxtBxElecAttri.Name = "attributepathTxtBxElecAttri";
-            this.attributepathTxtBxElecAttri.Size = new System.Drawing.Size(714, 20);
+            this.attributepathTxtBxElecAttri.Size = new System.Drawing.Size(763, 20);
             this.attributepathTxtBxElecAttri.TabIndex = 22;
             // 
             // RefBaseClassPathTxtBxElecAttri
             // 
             this.RefBaseClassPathTxtBxElecAttri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RefBaseClassPathTxtBxElecAttri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RefBaseClassPathTxtBxElecAttri.Location = new System.Drawing.Point(294, 85);
+            this.RefBaseClassPathTxtBxElecAttri.Location = new System.Drawing.Point(314, 85);
             this.RefBaseClassPathTxtBxElecAttri.Margin = new System.Windows.Forms.Padding(0);
             this.RefBaseClassPathTxtBxElecAttri.Name = "RefBaseClassPathTxtBxElecAttri";
-            this.RefBaseClassPathTxtBxElecAttri.Size = new System.Drawing.Size(714, 20);
+            this.RefBaseClassPathTxtBxElecAttri.Size = new System.Drawing.Size(763, 20);
             this.RefBaseClassPathTxtBxElecAttri.TabIndex = 21;
             // 
             // RefClassNameTxtBxElecAttri
             // 
             this.RefClassNameTxtBxElecAttri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RefClassNameTxtBxElecAttri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RefClassNameTxtBxElecAttri.Location = new System.Drawing.Point(294, 57);
+            this.RefClassNameTxtBxElecAttri.Location = new System.Drawing.Point(314, 57);
             this.RefClassNameTxtBxElecAttri.Margin = new System.Windows.Forms.Padding(0);
             this.RefClassNameTxtBxElecAttri.Name = "RefClassNameTxtBxElecAttri";
-            this.RefClassNameTxtBxElecAttri.Size = new System.Drawing.Size(714, 20);
+            this.RefClassNameTxtBxElecAttri.Size = new System.Drawing.Size(763, 20);
             this.RefClassNameTxtBxElecAttri.TabIndex = 20;
             // 
             // copyrightTxtBxElecAttri
             // 
             this.copyrightTxtBxElecAttri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.copyrightTxtBxElecAttri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.copyrightTxtBxElecAttri.Location = new System.Drawing.Point(294, 29);
+            this.copyrightTxtBxElecAttri.Location = new System.Drawing.Point(314, 29);
             this.copyrightTxtBxElecAttri.Margin = new System.Windows.Forms.Padding(0);
             this.copyrightTxtBxElecAttri.Name = "copyrightTxtBxElecAttri";
-            this.copyrightTxtBxElecAttri.Size = new System.Drawing.Size(714, 20);
+            this.copyrightTxtBxElecAttri.Size = new System.Drawing.Size(763, 20);
             this.copyrightTxtBxElecAttri.TabIndex = 19;
             // 
             // label31
@@ -1565,7 +1531,7 @@
             this.label31.Location = new System.Drawing.Point(3, 169);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(288, 27);
+            this.label31.Size = new System.Drawing.Size(308, 27);
             this.label31.TabIndex = 12;
             this.label31.Text = "Name";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1578,7 +1544,7 @@
             this.label29.Location = new System.Drawing.Point(3, 141);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(288, 27);
+            this.label29.Size = new System.Drawing.Size(308, 27);
             this.label29.TabIndex = 10;
             this.label29.Text = "ID";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1591,7 +1557,7 @@
             this.label27.Location = new System.Drawing.Point(3, 113);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(288, 27);
+            this.label27.Size = new System.Drawing.Size(308, 27);
             this.label27.TabIndex = 8;
             this.label27.Text = "Attribute Path";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1604,7 +1570,7 @@
             this.label25.Location = new System.Drawing.Point(3, 85);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(288, 27);
+            this.label25.Size = new System.Drawing.Size(308, 27);
             this.label25.TabIndex = 6;
             this.label25.Text = "Referenced Base Class Path";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1617,7 +1583,7 @@
             this.label21.Location = new System.Drawing.Point(3, 57);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(288, 27);
+            this.label21.Size = new System.Drawing.Size(308, 27);
             this.label21.TabIndex = 4;
             this.label21.Text = "Referenced Class Name";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1630,7 +1596,7 @@
             this.label18.Location = new System.Drawing.Point(3, 29);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(288, 27);
+            this.label18.Size = new System.Drawing.Size(308, 27);
             this.label18.TabIndex = 2;
             this.label18.Text = "Copyright";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1643,7 +1609,7 @@
             this.label15.Location = new System.Drawing.Point(3, 1);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(288, 27);
+            this.label15.Size = new System.Drawing.Size(308, 27);
             this.label15.TabIndex = 0;
             this.label15.Text = "Description";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1652,10 +1618,10 @@
             // 
             this.descriptionTxtBoxElecAttri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descriptionTxtBoxElecAttri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.descriptionTxtBoxElecAttri.Location = new System.Drawing.Point(294, 1);
+            this.descriptionTxtBoxElecAttri.Location = new System.Drawing.Point(314, 1);
             this.descriptionTxtBoxElecAttri.Margin = new System.Windows.Forms.Padding(0);
             this.descriptionTxtBoxElecAttri.Name = "descriptionTxtBoxElecAttri";
-            this.descriptionTxtBoxElecAttri.Size = new System.Drawing.Size(714, 20);
+            this.descriptionTxtBoxElecAttri.Size = new System.Drawing.Size(763, 20);
             this.descriptionTxtBoxElecAttri.TabIndex = 18;
             // 
             // toolStrip2
@@ -1665,7 +1631,7 @@
             this.electricalInterfacesHeaderlabel});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1021, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(1090, 25);
             this.toolStrip2.TabIndex = 7;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -1680,10 +1646,10 @@
             this.Page3_TopPanel.Controls.Add(this.treeViewElectricalInterfaces);
             this.Page3_TopPanel.Controls.Add(this.electricalInterfacesCollectionDataGridView);
             this.Page3_TopPanel.Controls.Add(this.toolStrip24);
-            this.Page3_TopPanel.Location = new System.Drawing.Point(15, 51);
+            this.Page3_TopPanel.Location = new System.Drawing.Point(15, 41);
             this.Page3_TopPanel.Margin = new System.Windows.Forms.Padding(2);
             this.Page3_TopPanel.Name = "Page3_TopPanel";
-            this.Page3_TopPanel.Size = new System.Drawing.Size(1021, 239);
+            this.Page3_TopPanel.Size = new System.Drawing.Size(1090, 277);
             this.Page3_TopPanel.TabIndex = 1;
             // 
             // treeViewElectricalInterfaces
@@ -1691,11 +1657,11 @@
             this.treeViewElectricalInterfaces.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.treeViewElectricalInterfaces.ImageIndex = 0;
             this.treeViewElectricalInterfaces.ImageList = this.imageList2;
-            this.treeViewElectricalInterfaces.Location = new System.Drawing.Point(0, 183);
+            this.treeViewElectricalInterfaces.Location = new System.Drawing.Point(0, 221);
             this.treeViewElectricalInterfaces.Margin = new System.Windows.Forms.Padding(2);
             this.treeViewElectricalInterfaces.Name = "treeViewElectricalInterfaces";
             this.treeViewElectricalInterfaces.SelectedImageIndex = 0;
-            this.treeViewElectricalInterfaces.Size = new System.Drawing.Size(1021, 56);
+            this.treeViewElectricalInterfaces.Size = new System.Drawing.Size(1090, 56);
             this.treeViewElectricalInterfaces.TabIndex = 0;
             this.treeViewElectricalInterfaces.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRoleClassLib_AfterSelect);
             this.treeViewElectricalInterfaces.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewElectricalInterfaces_NodeMouseClick);
@@ -1717,7 +1683,7 @@
             this.electricalInterfacesCollectionDataGridView.Name = "electricalInterfacesCollectionDataGridView";
             this.electricalInterfacesCollectionDataGridView.RowHeadersWidth = 51;
             this.electricalInterfacesCollectionDataGridView.RowTemplate.Height = 24;
-            this.electricalInterfacesCollectionDataGridView.Size = new System.Drawing.Size(1021, 214);
+            this.electricalInterfacesCollectionDataGridView.Size = new System.Drawing.Size(1090, 252);
             this.electricalInterfacesCollectionDataGridView.TabIndex = 1;
             this.electricalInterfacesCollectionDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.electricalInterfacesCollectionDataGridView_CellClick);
             this.electricalInterfacesCollectionDataGridView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.electricalInterfacesCollectionDataGridView_MouseUp);
@@ -1767,7 +1733,7 @@
             this.toolStripLabel3});
             this.toolStrip24.Location = new System.Drawing.Point(0, 0);
             this.toolStrip24.Name = "toolStrip24";
-            this.toolStrip24.Size = new System.Drawing.Size(1021, 25);
+            this.toolStrip24.Size = new System.Drawing.Size(1090, 25);
             this.toolStrip24.TabIndex = 0;
             this.toolStrip24.Text = "toolStrip24";
             // 
@@ -1796,21 +1762,13 @@
             this.electricalInterfacesButton.Image = global::Aml.Editor.Plugin.Properties.Resources.icons8_expand_arrow_24;
             this.electricalInterfacesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.electricalInterfacesButton.Location = new System.Drawing.Point(0, 0);
-            this.electricalInterfacesButton.Margin = new System.Windows.Forms.Padding(2);
+            this.electricalInterfacesButton.Margin = new System.Windows.Forms.Padding(0);
             this.electricalInterfacesButton.Name = "electricalInterfacesButton";
-            this.electricalInterfacesButton.Size = new System.Drawing.Size(1118, 19);
+            this.electricalInterfacesButton.Size = new System.Drawing.Size(1118, 30);
             this.electricalInterfacesButton.TabIndex = 0;
             this.electricalInterfacesButton.Text = "Electrical Interfaces";
             this.electricalInterfacesButton.UseVisualStyleBackColor = true;
             this.electricalInterfacesButton.Click += new System.EventHandler(this.electricalInterfacesButton_Click);
-            // 
-            // panel28
-            // 
-            this.panel28.Location = new System.Drawing.Point(759, 21);
-            this.panel28.Margin = new System.Windows.Forms.Padding(2);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(150, 81);
-            this.panel28.TabIndex = 0;
             // 
             // treeViewPanel
             // 
@@ -1840,7 +1798,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.treeViewInterfaceClassLibPanel);
             this.splitContainer3.Size = new System.Drawing.Size(357, 690);
-            this.splitContainer3.SplitterDistance = 314;
+            this.splitContainer3.SplitterDistance = 368;
             this.splitContainer3.SplitterWidth = 3;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -1848,16 +1806,16 @@
             // 
             this.panel22.Controls.Add(this.treeViewRoleClassLib);
             this.panel22.Controls.Add(this.toolStrip7);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel22.Location = new System.Drawing.Point(0, 0);
             this.panel22.Margin = new System.Windows.Forms.Padding(2);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(357, 314);
+            this.panel22.Size = new System.Drawing.Size(357, 368);
             this.panel22.TabIndex = 0;
             // 
             // treeViewRoleClassLib
             // 
-            this.treeViewRoleClassLib.BackColor = System.Drawing.Color.White;
+            this.treeViewRoleClassLib.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.treeViewRoleClassLib.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewRoleClassLib.ImageKey = "RCL.JPG";
             this.treeViewRoleClassLib.ImageList = this.imageList1;
@@ -1866,7 +1824,7 @@
             this.treeViewRoleClassLib.Name = "treeViewRoleClassLib";
             this.treeViewRoleClassLib.SelectedImageKey = "RCL.JPG";
             this.treeViewRoleClassLib.ShowNodeToolTips = true;
-            this.treeViewRoleClassLib.Size = new System.Drawing.Size(357, 289);
+            this.treeViewRoleClassLib.Size = new System.Drawing.Size(357, 343);
             this.treeViewRoleClassLib.TabIndex = 9;
             this.treeViewRoleClassLib.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewRoleClassLib_ItemDrag);
             this.treeViewRoleClassLib.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRoleClassLib_AfterSelect);
@@ -1931,12 +1889,12 @@
             this.treeViewInterfaceClassLibPanel.Location = new System.Drawing.Point(0, 0);
             this.treeViewInterfaceClassLibPanel.Margin = new System.Windows.Forms.Padding(2);
             this.treeViewInterfaceClassLibPanel.Name = "treeViewInterfaceClassLibPanel";
-            this.treeViewInterfaceClassLibPanel.Size = new System.Drawing.Size(357, 373);
+            this.treeViewInterfaceClassLibPanel.Size = new System.Drawing.Size(357, 319);
             this.treeViewInterfaceClassLibPanel.TabIndex = 1;
             // 
             // treeViewInterfaceClassLib
             // 
-            this.treeViewInterfaceClassLib.BackColor = System.Drawing.Color.White;
+            this.treeViewInterfaceClassLib.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.treeViewInterfaceClassLib.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewInterfaceClassLib.ImageIndex = 0;
             this.treeViewInterfaceClassLib.ImageList = this.imageList2;
@@ -1944,7 +1902,7 @@
             this.treeViewInterfaceClassLib.Margin = new System.Windows.Forms.Padding(2);
             this.treeViewInterfaceClassLib.Name = "treeViewInterfaceClassLib";
             this.treeViewInterfaceClassLib.SelectedImageKey = "ICL.JPG";
-            this.treeViewInterfaceClassLib.Size = new System.Drawing.Size(357, 348);
+            this.treeViewInterfaceClassLib.Size = new System.Drawing.Size(357, 294);
             this.treeViewInterfaceClassLib.TabIndex = 10;
             this.treeViewInterfaceClassLib.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewInterfaceClassLib_ItemDrag);
             this.treeViewInterfaceClassLib.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewInterfaceClassLib_BeforeSelect);
@@ -1998,23 +1956,6 @@
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 25);
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.flowLayoutPanel1);
-            this.panel5.Location = new System.Drawing.Point(562, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(225, 652);
-            this.panel5.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(98, 298);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(150, 81);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
             // toolStrip4
             // 
             this.toolStrip4.BackColor = System.Drawing.SystemColors.Control;
@@ -2030,7 +1971,7 @@
             this.toolStripSeparator1,
             this.filePathLabel,
             this.librariesSplitButton});
-            this.toolStrip4.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip4.Location = new System.Drawing.Point(0, 25);
             this.toolStrip4.Name = "toolStrip4";
             this.toolStrip4.Size = new System.Drawing.Size(1490, 25);
             this.toolStrip4.TabIndex = 1;
@@ -2108,6 +2049,7 @@
             this.librariesSplitButton.Name = "librariesSplitButton";
             this.librariesSplitButton.Size = new System.Drawing.Size(117, 22);
             this.librariesSplitButton.Text = "Standard Libraries";
+            this.librariesSplitButton.ButtonClick += new System.EventHandler(this.librariesSplitButton_ButtonClick);
             this.librariesSplitButton.DoubleClick += new System.EventHandler(this.librariesSplitButton_DoubleClick);
             this.librariesSplitButton.MouseHover += new System.EventHandler(this.librariesSplitButton_MouseHover);
             // 
@@ -2516,12 +2458,20 @@
             this.toolStripButton15.Size = new System.Drawing.Size(44, 24);
             this.toolStripButton15.Text = "Save";
             // 
+            // selectedFileURLTextBox
+            // 
+            this.selectedFileURLTextBox.Location = new System.Drawing.Point(6, 44);
+            this.selectedFileURLTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.selectedFileURLTextBox.Name = "selectedFileURLTextBox";
+            this.selectedFileURLTextBox.Size = new System.Drawing.Size(318, 20);
+            this.selectedFileURLTextBox.TabIndex = 1;
+            this.selectedFileURLTextBox.TextChanged += new System.EventHandler(this.selectedFileURLTextBox_TextChanged);
+            // 
             // DeviceDescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.toolStrip1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DeviceDescription";
             this.Size = new System.Drawing.Size(1490, 740);
@@ -2538,7 +2488,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.dataTabControl.ResumeLayout(false);
             this.genericData.ResumeLayout(false);
-            this.panel_FrontPage.ResumeLayout(false);
+            this.Page1_MainPanel.ResumeLayout(false);
             this.Page1_BottomPanel.ResumeLayout(false);
             this.Page1_BottomPanel.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -2555,20 +2505,17 @@
             this.deleteRoleClassesButton.PerformLayout();
             this.DocsTabPage.ResumeLayout(false);
             this.addPicturesandDocsPanel.ResumeLayout(false);
-            this.Page2_TopPanel.ResumeLayout(false);
-            this.Page2_TopPanel.PerformLayout();
+            this.Page2_BottomPanel.ResumeLayout(false);
+            this.Page2_BottomPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.attachablesInfoDataGridView)).EndInit();
             this.toolStrip13.ResumeLayout(false);
             this.toolStrip13.PerformLayout();
             this.toolStrip19.ResumeLayout(false);
             this.toolStrip19.PerformLayout();
-            this.panelSelectFile.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
-            this.panel36.ResumeLayout(false);
-            this.panel36.PerformLayout();
+            this.Page2_VerstecktesPanel.ResumeLayout(false);
+            this.Page2_VerstecktesPanel.PerformLayout();
             this.Interface.ResumeLayout(false);
             this.electricalInterfacesPanel.ResumeLayout(false);
             this.Page3_BottomPanel.ResumeLayout(false);
@@ -2599,7 +2546,6 @@
             this.treeViewInterfaceClassLibPanel.PerformLayout();
             this.toolStrip9.ResumeLayout(false);
             this.toolStrip9.PerformLayout();
-            this.panel5.ResumeLayout(false);
             this.toolStrip4.ResumeLayout(false);
             this.toolStrip4.PerformLayout();
             this.contextMenuStripforInterfaceClassLib.ResumeLayout(false);
@@ -2609,7 +2555,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductOrderDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductDetails)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -2623,9 +2568,6 @@
         private System.Windows.Forms.TabControl dataTabControl;
         private System.Windows.Forms.ToolStrip toolStrip4;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel treeViewPanel;
         private System.Windows.Forms.TabPage DocsTabPage;
@@ -2637,15 +2579,13 @@
         private System.Windows.Forms.Button selectFileBtn;
         private System.Windows.Forms.Button selectURLBtn;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Panel Page2_TopPanel;
+        private System.Windows.Forms.Panel Page2_BottomPanel;
         private System.Windows.Forms.ToolStrip toolStrip19;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator30;
         private System.Windows.Forms.ToolStripLabel toolStripLabel12;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator32;
-        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel Page2_VerstecktesPanel;
         private System.Windows.Forms.TextBox selectedFileLocationTxtBx;
-        private System.Windows.Forms.Panel panel36;
-        private System.Windows.Forms.TextBox selectedFileURLTextBox;
         private System.Windows.Forms.Label AMLfileLabel;
         private System.Windows.Forms.Label AMLURLLabel;
         private System.Windows.Forms.ToolStripComboBox automationMLRoleCmbBx;
@@ -2701,7 +2641,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.DataGridView elecInterAttDataGridView;
         private System.Windows.Forms.DataGridView attachablesInfoDataGridView;
-        private System.Windows.Forms.Panel panelSelectFile;
         private System.Windows.Forms.DataGridViewTextBoxColumn ElementName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Add;
@@ -2785,26 +2724,14 @@
         private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem electricConnectorLibraryv100ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem industrialSensorLibraryv100ToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.TabPage genericData;
         private System.Windows.Forms.TreeView treeViewElectricalInterfaces;
-        private System.Windows.Forms.Panel panel_FrontPage;
+        private System.Windows.Forms.Panel Page1_MainPanel;
         private System.Windows.Forms.TreeView genericInformationtreeView;
         private System.Windows.Forms.Panel Page1_BottomPanel;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView genericparametersAttrDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox genericDataNameTxtBx;
@@ -2833,5 +2760,18 @@
         private System.Windows.Forms.ToolStrip deleteRoleClassesButton;
         private System.Windows.Forms.ToolStripLabel toolStripLabel20;
         private System.Windows.Forms.ToolStripButton deleteRoleClassButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.TextBox selectedFileURLTextBox;
     }
 }

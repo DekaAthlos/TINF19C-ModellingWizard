@@ -663,7 +663,6 @@ namespace Aml.Editor.Plugin
             if (automationMLRoleCmbBx.SelectedItem == null || automationMLRoleCmbBx.SelectedItem != null)
             {
                 automationMLRoleCmbBx.DroppedDown = true;
-                panelSelectFile.Size = panelSelectFile.MaximumSize;
             }
             
 
@@ -687,7 +686,6 @@ namespace Aml.Editor.Plugin
                     selectedFileLocationTxtBx.Text = "";
                     AMLfileLabel.Text = "";
                     AMLURLLabel.Text = "";
-                    panelSelectFile.Size = panelSelectFile.MinimumSize;
                    
                 }
 
@@ -712,7 +710,6 @@ namespace Aml.Editor.Plugin
                     attachablesInfoDataGridView.Rows[index].Cells["FilePath"].Value = selectedFileURLTextBox.Text;
                     AMLURLLabel.Text = "";
                     selectedFileURLTextBox.Text = "";
-                    panelSelectFile.Size = panelSelectFile.MinimumSize;
                 }
                
             }
@@ -1835,7 +1832,6 @@ namespace Aml.Editor.Plugin
         {
             if (automationMLRoleCmbBx.SelectedItem != null)
             {
-                panelSelectFile.Size = panelSelectFile.MaximumSize;
             }
         }
 
@@ -3669,6 +3665,21 @@ namespace Aml.Editor.Plugin
         }
 
         private void panel_FrontPage_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void librariesSplitButton_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectedFileLocationTxtBx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectedFileURLTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
