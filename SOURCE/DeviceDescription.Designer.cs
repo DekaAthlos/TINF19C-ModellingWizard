@@ -1228,6 +1228,7 @@
             // 
             // addBtn
             // 
+            this.addBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.addBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.addBtn.Image = global::Aml.Editor.Plugin.Properties.Resources.icons8_expand_arrow_24;
             this.addBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1237,7 +1238,7 @@
             this.addBtn.Size = new System.Drawing.Size(1122, 30);
             this.addBtn.TabIndex = 0;
             this.addBtn.Text = "Add";
-            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
             // Page2_VerstecktesPanel
@@ -1696,6 +1697,7 @@
             // 
             // electricalInterfacesButton
             // 
+            this.electricalInterfacesButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.electricalInterfacesButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.electricalInterfacesButton.Image = global::Aml.Editor.Plugin.Properties.Resources.icons8_expand_arrow_24;
             this.electricalInterfacesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1705,7 +1707,7 @@
             this.electricalInterfacesButton.Size = new System.Drawing.Size(1118, 30);
             this.electricalInterfacesButton.TabIndex = 0;
             this.electricalInterfacesButton.Text = "Electrical Interfaces";
-            this.electricalInterfacesButton.UseVisualStyleBackColor = true;
+            this.electricalInterfacesButton.UseVisualStyleBackColor = false;
             this.electricalInterfacesButton.Click += new System.EventHandler(this.electricalInterfacesButton_Click);
             // 
             // treeViewPanel
