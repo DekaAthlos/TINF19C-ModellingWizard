@@ -1009,12 +1009,13 @@
             // 
             this.DocsTabPage.BackColor = System.Drawing.Color.LightGray;
             this.DocsTabPage.Controls.Add(this.addPicturesandDocsPanel);
+            this.DocsTabPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocsTabPage.Location = new System.Drawing.Point(4, 24);
             this.DocsTabPage.Margin = new System.Windows.Forms.Padding(0);
             this.DocsTabPage.Name = "DocsTabPage";
             this.DocsTabPage.Size = new System.Drawing.Size(1401, 810);
             this.DocsTabPage.TabIndex = 4;
-            this.DocsTabPage.Text = "Documents";
+            this.DocsTabPage.Text = "Attachments";
             // 
             // addPicturesandDocsPanel
             // 
@@ -1267,7 +1268,7 @@
             this.selectedFileLocationTxtBx.Location = new System.Drawing.Point(601, 3);
             this.selectedFileLocationTxtBx.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.selectedFileLocationTxtBx.Name = "selectedFileLocationTxtBx";
-            this.selectedFileLocationTxtBx.Size = new System.Drawing.Size(595, 23);
+            this.selectedFileLocationTxtBx.Size = new System.Drawing.Size(595, 25);
             this.selectedFileLocationTxtBx.TabIndex = 0;
             this.selectedFileLocationTxtBx.TextChanged += new System.EventHandler(this.selectedFileLocationTxtBx_TextChanged);
             // 
@@ -1299,7 +1300,7 @@
             this.selectedFileURLTextBox.Location = new System.Drawing.Point(601, 34);
             this.selectedFileURLTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.selectedFileURLTextBox.Name = "selectedFileURLTextBox";
-            this.selectedFileURLTextBox.Size = new System.Drawing.Size(595, 23);
+            this.selectedFileURLTextBox.Size = new System.Drawing.Size(595, 25);
             this.selectedFileURLTextBox.TabIndex = 1;
             this.selectedFileURLTextBox.TextChanged += new System.EventHandler(this.selectedFileURLTextBox_TextChanged);
             // 
@@ -1897,7 +1898,6 @@
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(88, 25);
             // 
@@ -1972,7 +1972,6 @@
             // 
             // toolStripTextBox2
             // 
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(116, 25);
             // 
@@ -2012,7 +2011,6 @@
             // vendorNameTextBox
             // 
             this.vendorNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vendorNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.vendorNameTextBox.Name = "vendorNameTextBox";
             this.vendorNameTextBox.Size = new System.Drawing.Size(219, 25);
             this.vendorNameTextBox.Leave += new System.EventHandler(this.vendorNameTextBox_Leave);
@@ -2037,7 +2035,6 @@
             // deviceNameTextBox
             // 
             this.deviceNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.deviceNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.deviceNameTextBox.Name = "deviceNameTextBox";
             this.deviceNameTextBox.Size = new System.Drawing.Size(219, 25);
             this.deviceNameTextBox.Leave += new System.EventHandler(this.deviceNameTextBox_Leave);
