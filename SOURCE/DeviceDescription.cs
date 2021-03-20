@@ -3683,6 +3683,16 @@ namespace Aml.Editor.Plugin
         {
 
         }
+
+        private void addPicturesandDocsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Page1_TopPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     
 }
