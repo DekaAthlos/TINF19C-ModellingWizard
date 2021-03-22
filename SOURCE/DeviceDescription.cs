@@ -3698,6 +3698,11 @@ namespace Aml.Editor.Plugin
         {
 
         }
+
+        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
     
 }
