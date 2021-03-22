@@ -3703,6 +3703,16 @@ namespace Aml.Editor.Plugin
         {
 
         }
+
+        private void genericparametersAttrDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void genericInformationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     
 }
