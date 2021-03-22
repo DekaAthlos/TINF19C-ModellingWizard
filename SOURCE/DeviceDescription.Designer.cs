@@ -166,11 +166,9 @@
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.vendorNameTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.deviceNameTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.filePathLabel = new System.Windows.Forms.ToolStripLabel();
@@ -445,7 +443,7 @@
             this.genericData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.genericData.Name = "genericData";
             this.genericData.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.genericData.Size = new System.Drawing.Size(1401, 810);
+            this.genericData.Size = new System.Drawing.Size(1401, 805);
             this.genericData.TabIndex = 7;
             this.genericData.Text = "Generic Data";
             // 
@@ -460,7 +458,7 @@
             this.Page1_MainPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Page1_MainPanel.MinimumSize = new System.Drawing.Size(686, 100);
             this.Page1_MainPanel.Name = "Page1_MainPanel";
-            this.Page1_MainPanel.Size = new System.Drawing.Size(1397, 804);
+            this.Page1_MainPanel.Size = new System.Drawing.Size(1397, 799);
             this.Page1_MainPanel.TabIndex = 1;
             this.Page1_MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_FrontPage_Paint);
             // 
@@ -476,7 +474,7 @@
             this.Page1_BottomPanel.MinimumSize = new System.Drawing.Size(0, 350);
             this.Page1_BottomPanel.Name = "Page1_BottomPanel";
             this.Page1_BottomPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.Page1_BottomPanel.Size = new System.Drawing.Size(1397, 354);
+            this.Page1_BottomPanel.Size = new System.Drawing.Size(1397, 350);
             this.Page1_BottomPanel.TabIndex = 10;
             // 
             // tabControl1
@@ -488,7 +486,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1377, 309);
+            this.tabControl1.Size = new System.Drawing.Size(1377, 305);
             this.tabControl1.TabIndex = 9;
             // 
             // tabPage1
@@ -576,7 +574,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage2.Size = new System.Drawing.Size(1369, 281);
+            this.tabPage2.Size = new System.Drawing.Size(1369, 277);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Header";
             // 
@@ -614,14 +612,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1365, 275);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1365, 271);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // genericDataNameTxtBx
             // 
             this.genericDataNameTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataNameTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataNameTxtBx.Location = new System.Drawing.Point(398, 235);
+            this.genericDataNameTxtBx.Location = new System.Drawing.Point(398, 229);
             this.genericDataNameTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataNameTxtBx.Name = "genericDataNameTxtBx";
             this.genericDataNameTxtBx.Size = new System.Drawing.Size(966, 23);
@@ -631,7 +629,7 @@
             // 
             this.genericDataIDTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataIDTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataIDTxtBx.Location = new System.Drawing.Point(398, 196);
+            this.genericDataIDTxtBx.Location = new System.Drawing.Point(398, 191);
             this.genericDataIDTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataIDTxtBx.Name = "genericDataIDTxtBx";
             this.genericDataIDTxtBx.Size = new System.Drawing.Size(966, 23);
@@ -641,7 +639,7 @@
             // 
             this.genericDataAttributePathTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataAttributePathTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataAttributePathTxtBx.Location = new System.Drawing.Point(398, 157);
+            this.genericDataAttributePathTxtBx.Location = new System.Drawing.Point(398, 153);
             this.genericDataAttributePathTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataAttributePathTxtBx.Name = "genericDataAttributePathTxtBx";
             this.genericDataAttributePathTxtBx.Size = new System.Drawing.Size(966, 23);
@@ -651,7 +649,7 @@
             // 
             this.genericDataRefBaseClassPathTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataRefBaseClassPathTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataRefBaseClassPathTxtBx.Location = new System.Drawing.Point(398, 118);
+            this.genericDataRefBaseClassPathTxtBx.Location = new System.Drawing.Point(398, 115);
             this.genericDataRefBaseClassPathTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataRefBaseClassPathTxtBx.Name = "genericDataRefBaseClassPathTxtBx";
             this.genericDataRefBaseClassPathTxtBx.Size = new System.Drawing.Size(966, 23);
@@ -661,7 +659,7 @@
             // 
             this.genericDataRefClassNameTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataRefClassNameTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataRefClassNameTxtBx.Location = new System.Drawing.Point(398, 79);
+            this.genericDataRefClassNameTxtBx.Location = new System.Drawing.Point(398, 77);
             this.genericDataRefClassNameTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataRefClassNameTxtBx.Name = "genericDataRefClassNameTxtBx";
             this.genericDataRefClassNameTxtBx.Size = new System.Drawing.Size(966, 23);
@@ -671,7 +669,7 @@
             // 
             this.genericDataCopyrightTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genericDataCopyrightTxtBx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genericDataCopyrightTxtBx.Location = new System.Drawing.Point(398, 40);
+            this.genericDataCopyrightTxtBx.Location = new System.Drawing.Point(398, 39);
             this.genericDataCopyrightTxtBx.Margin = new System.Windows.Forms.Padding(0);
             this.genericDataCopyrightTxtBx.Name = "genericDataCopyrightTxtBx";
             this.genericDataCopyrightTxtBx.Size = new System.Drawing.Size(966, 23);
@@ -682,10 +680,10 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 235);
+            this.label1.Location = new System.Drawing.Point(3, 229);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(392, 39);
+            this.label1.Size = new System.Drawing.Size(392, 41);
             this.label1.TabIndex = 12;
             this.label1.Text = "Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -695,10 +693,10 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(3, 196);
+            this.label2.Location = new System.Drawing.Point(3, 191);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(392, 38);
+            this.label2.Size = new System.Drawing.Size(392, 37);
             this.label2.TabIndex = 10;
             this.label2.Text = "ID";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -708,10 +706,10 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 157);
+            this.label3.Location = new System.Drawing.Point(3, 153);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(392, 38);
+            this.label3.Size = new System.Drawing.Size(392, 37);
             this.label3.TabIndex = 8;
             this.label3.Text = "Attribute Path";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -721,10 +719,10 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(3, 118);
+            this.label4.Location = new System.Drawing.Point(3, 115);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(392, 38);
+            this.label4.Size = new System.Drawing.Size(392, 37);
             this.label4.TabIndex = 6;
             this.label4.Text = "Referenced Base Class Path";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -734,10 +732,10 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(3, 79);
+            this.label5.Location = new System.Drawing.Point(3, 77);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(392, 38);
+            this.label5.Size = new System.Drawing.Size(392, 37);
             this.label5.TabIndex = 4;
             this.label5.Text = "Referenced Class Name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -747,10 +745,10 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(3, 40);
+            this.label6.Location = new System.Drawing.Point(3, 39);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(392, 38);
+            this.label6.Size = new System.Drawing.Size(392, 37);
             this.label6.TabIndex = 2;
             this.label6.Text = "Copyright";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -763,7 +761,7 @@
             this.label7.Location = new System.Drawing.Point(3, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(392, 38);
+            this.label7.Size = new System.Drawing.Size(392, 37);
             this.label7.TabIndex = 0;
             this.label7.Text = "Description";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1231,7 +1229,7 @@
             this.Interface.Location = new System.Drawing.Point(4, 24);
             this.Interface.Margin = new System.Windows.Forms.Padding(0);
             this.Interface.Name = "Interface";
-            this.Interface.Size = new System.Drawing.Size(1401, 810);
+            this.Interface.Size = new System.Drawing.Size(1401, 805);
             this.Interface.TabIndex = 6;
             this.Interface.Text = "Interfaces";
             // 
@@ -1247,7 +1245,7 @@
             this.electricalInterfacesPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.electricalInterfacesPanel.MinimumSize = new System.Drawing.Size(686, 22);
             this.electricalInterfacesPanel.Name = "electricalInterfacesPanel";
-            this.electricalInterfacesPanel.Size = new System.Drawing.Size(1401, 810);
+            this.electricalInterfacesPanel.Size = new System.Drawing.Size(1401, 805);
             this.electricalInterfacesPanel.TabIndex = 0;
             this.electricalInterfacesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.electricalInterfacesPanel_Paint);
             // 
@@ -1896,11 +1894,9 @@
             this.toolStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel2,
-            this.toolStripSeparator2,
             this.vendorNameTextBox,
             this.toolStripSeparator3,
             this.toolStripLabel4,
-            this.toolStripSeparator4,
             this.deviceNameTextBox,
             this.toolStripSeparator1,
             this.filePathLabel,
@@ -1919,11 +1915,6 @@
             this.toolStripLabel2.Name = "toolStripLabel2";
             this.toolStripLabel2.Size = new System.Drawing.Size(93, 23);
             this.toolStripLabel2.Text = "Vendor Name";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 26);
             // 
             // vendorNameTextBox
             // 
@@ -1944,11 +1935,6 @@
             this.toolStripLabel4.Name = "toolStripLabel4";
             this.toolStripLabel4.Size = new System.Drawing.Size(89, 23);
             this.toolStripLabel4.Text = "Device Name";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 26);
             // 
             // deviceNameTextBox
             // 
@@ -2706,11 +2692,9 @@
         private System.Windows.Forms.TextBox descriptionTxtBoxElecAttri;
         private System.Windows.Forms.ToolStripLabel fileNameLabel;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripTextBox vendorNameTextBox;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox deviceNameTextBox;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel filePathLabel;
