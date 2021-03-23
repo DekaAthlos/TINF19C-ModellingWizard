@@ -663,7 +663,6 @@ namespace Aml.Editor.Plugin
             if (automationMLRoleCmbBx.SelectedItem == null || automationMLRoleCmbBx.SelectedItem != null)
             {
                 automationMLRoleCmbBx.DroppedDown = true;
-                panelSelectFile.Size = panelSelectFile.MaximumSize;
             }
             
 
@@ -687,7 +686,6 @@ namespace Aml.Editor.Plugin
                     selectedFileLocationTxtBx.Text = "";
                     AMLfileLabel.Text = "";
                     AMLURLLabel.Text = "";
-                    panelSelectFile.Size = panelSelectFile.MinimumSize;
                    
                 }
 
@@ -712,7 +710,6 @@ namespace Aml.Editor.Plugin
                     attachablesInfoDataGridView.Rows[index].Cells["FilePath"].Value = selectedFileURLTextBox.Text;
                     AMLURLLabel.Text = "";
                     selectedFileURLTextBox.Text = "";
-                    panelSelectFile.Size = panelSelectFile.MinimumSize;
                 }
                
             }
@@ -1835,7 +1832,6 @@ namespace Aml.Editor.Plugin
         {
             if (automationMLRoleCmbBx.SelectedItem != null)
             {
-                panelSelectFile.Size = panelSelectFile.MaximumSize;
             }
         }
 
@@ -2126,15 +2122,7 @@ namespace Aml.Editor.Plugin
             }
 
         }
-        private void electricalInterfacesCollectionDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            electricalInterfacesCollectionDataGridView.CurrentRow.Selected = true;
-           // if (electricalInterfacesCollectionDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                AMC.WindowSizeChanger(electricalInterfacesTreeViewPanel);
-            }
-            
-        }
+
         private void treeViewElectricalInterfaces_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             string searchName = "";
@@ -2413,14 +2401,6 @@ namespace Aml.Editor.Plugin
 
         
 
-        private void genericInformationDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            genericInformationDataGridView.CurrentRow.Selected = true;
-            //if (genericInformationDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                AMC.WindowSizeChanger(genericInformationpanel);
-            }
-        }
 
         private void genericInformationtreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -3672,6 +3652,66 @@ namespace Aml.Editor.Plugin
         {
             string search = "https://github.com/DekaAthlos/TINF19C-ModellingWizard/releases/tag/0.0";
             System.Diagnostics.Process.Start(search);
+        }
+
+        private void elecInterAttDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void electricalInterfacesPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel_FrontPage_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void librariesSplitButton_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectedFileLocationTxtBx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectedFileURLTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addPicturesandDocsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Page1_TopPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void genericparametersAttrDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void genericInformationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     
