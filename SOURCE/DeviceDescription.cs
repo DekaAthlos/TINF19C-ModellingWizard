@@ -635,7 +635,9 @@ namespace Aml.Editor.Plugin
                                     }
 
                                 }
-                                catch (Exception){ throw;}
+                                catch (Exception){ 
+                                    throw;
+                                }
                             }
                             foreach (string eachstring in listofstrings)
                             {
@@ -3650,7 +3652,7 @@ namespace Aml.Editor.Plugin
 
         private void manualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string search = "https://github.com/DekaAthlos/TINF19C-ModellingWizard/releases/tag/0.0";
+            string search = "https://github.com/DekaAthlos/TINF19C-ModellingWizard/blob/Development/MANUAL/ModellingWizardDocumentation.zip";
             System.Diagnostics.Process.Start(search);
         }
 

@@ -47,7 +47,7 @@
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileNameLabel = new System.Windows.Forms.ToolStripLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.Page0_FullWondow = new System.Windows.Forms.Panel();
+            this.Page0_FullWindow = new System.Windows.Forms.Panel();
             this.Page0_FullWindowPanel2 = new System.Windows.Forms.Panel();
             this.Page0_FastFullWindow = new System.Windows.Forms.Panel();
             this.Page0_FastFullWindow2 = new System.Windows.Forms.Panel();
@@ -232,7 +232,7 @@
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
-            this.Page0_FullWondow.SuspendLayout();
+            this.Page0_FullWindow.SuspendLayout();
             this.Page0_FullWindowPanel2.SuspendLayout();
             this.Page0_FastFullWindow.SuspendLayout();
             this.Page0_FastFullWindow2.SuspendLayout();
@@ -444,16 +444,16 @@
             this.fileNameLabel.Name = "fileNameLabel";
             this.fileNameLabel.Size = new System.Drawing.Size(0, 22);
             // 
-            // Page0_FullWondow
+            // Page0_FullWindow
             // 
-            this.Page0_FullWondow.BackColor = System.Drawing.SystemColors.Control;
-            this.Page0_FullWondow.Controls.Add(this.Page0_FullWindowPanel2);
-            this.Page0_FullWondow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Page0_FullWondow.Location = new System.Drawing.Point(0, 0);
-            this.Page0_FullWondow.Margin = new System.Windows.Forms.Padding(0);
-            this.Page0_FullWondow.Name = "Page0_FullWondow";
-            this.Page0_FullWondow.Size = new System.Drawing.Size(1813, 888);
-            this.Page0_FullWondow.TabIndex = 2;
+            this.Page0_FullWindow.BackColor = System.Drawing.SystemColors.Control;
+            this.Page0_FullWindow.Controls.Add(this.Page0_FullWindowPanel2);
+            this.Page0_FullWindow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Page0_FullWindow.Location = new System.Drawing.Point(0, 0);
+            this.Page0_FullWindow.Margin = new System.Windows.Forms.Padding(0);
+            this.Page0_FullWindow.Name = "Page0_FullWindow";
+            this.Page0_FullWindow.Size = new System.Drawing.Size(1813, 888);
+            this.Page0_FullWindow.TabIndex = 2;
             // 
             // Page0_FullWindowPanel2
             // 
@@ -664,14 +664,14 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage2.Size = new System.Drawing.Size(1369, 327);
+            this.tabPage2.Size = new System.Drawing.Size(1369, 330);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "/";
+            this.tabPage2.Text = "Header";
             // 
             // tableLayoutPanel1
             // 
@@ -1166,11 +1166,11 @@
             this.header.AutoScroll = true;
             this.header.BackColor = System.Drawing.Color.WhiteSmoke;
             this.header.Controls.Add(this.headerpanelTabelLayoutPanel);
-            this.header.Location = new System.Drawing.Point(4, 24);
+            this.header.Location = new System.Drawing.Point(4, 22);
             this.header.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.header.Name = "header";
             this.header.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.header.Size = new System.Drawing.Size(1373, 332);
+            this.header.Size = new System.Drawing.Size(1373, 336);
             this.header.TabIndex = 1;
             this.header.Text = "Header";
             // 
@@ -1537,10 +1537,10 @@
             this.DocsTabPage.BackColor = System.Drawing.Color.LightGray;
             this.DocsTabPage.Controls.Add(this.addPicturesandDocsPanel);
             this.DocsTabPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocsTabPage.Location = new System.Drawing.Point(4, 24);
+            this.DocsTabPage.Location = new System.Drawing.Point(4, 22);
             this.DocsTabPage.Margin = new System.Windows.Forms.Padding(0);
             this.DocsTabPage.Name = "DocsTabPage";
-            this.DocsTabPage.Size = new System.Drawing.Size(1401, 805);
+            this.DocsTabPage.Size = new System.Drawing.Size(1401, 807);
             this.DocsTabPage.TabIndex = 4;
             this.DocsTabPage.Text = "Attachments";
             // 
@@ -1554,7 +1554,7 @@
             this.addPicturesandDocsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.addPicturesandDocsPanel.MinimumSize = new System.Drawing.Size(691, 22);
             this.addPicturesandDocsPanel.Name = "addPicturesandDocsPanel";
-            this.addPicturesandDocsPanel.Size = new System.Drawing.Size(1401, 805);
+            this.addPicturesandDocsPanel.Size = new System.Drawing.Size(1401, 807);
             this.addPicturesandDocsPanel.TabIndex = 0;
             this.addPicturesandDocsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.addPicturesandDocsPanel_Paint);
             // 
@@ -1571,7 +1571,7 @@
             this.Page2_BottomPanel.MinimumSize = new System.Drawing.Size(0, 750);
             this.Page2_BottomPanel.Name = "Page2_BottomPanel";
             this.Page2_BottomPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.Page2_BottomPanel.Size = new System.Drawing.Size(1401, 775);
+            this.Page2_BottomPanel.Size = new System.Drawing.Size(1401, 777);
             this.Page2_BottomPanel.TabIndex = 3;
             // 
             // attachablesInfoDataGridView
@@ -1588,7 +1588,7 @@
             this.attachablesInfoDataGridView.Name = "attachablesInfoDataGridView";
             this.attachablesInfoDataGridView.RowHeadersWidth = 51;
             this.attachablesInfoDataGridView.RowTemplate.Height = 24;
-            this.attachablesInfoDataGridView.Size = new System.Drawing.Size(1381, 614);
+            this.attachablesInfoDataGridView.Size = new System.Drawing.Size(1381, 616);
             this.attachablesInfoDataGridView.TabIndex = 4;
             // 
             // ElementName
@@ -2493,7 +2493,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.Page0_FullWondow);
+            this.Controls.Add(this.Page0_FullWindow);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(1750, 866);
@@ -2501,7 +2501,7 @@
             this.Size = new System.Drawing.Size(1813, 888);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.Page0_FullWondow.ResumeLayout(false);
+            this.Page0_FullWindow.ResumeLayout(false);
             this.Page0_FullWindowPanel2.ResumeLayout(false);
             this.Page0_FullWindowPanel2.PerformLayout();
             this.Page0_FastFullWindow.ResumeLayout(false);
@@ -2591,7 +2591,7 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Panel Page0_FullWondow;
+        private System.Windows.Forms.Panel Page0_FullWindow;
         private System.Windows.Forms.Panel Page0_FullWindowPanel2;
         private System.Windows.Forms.Panel Page0_FastFullWindow;
         private System.Windows.Forms.TabControl dataTabControl;
