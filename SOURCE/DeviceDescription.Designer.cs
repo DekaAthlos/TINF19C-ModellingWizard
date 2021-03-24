@@ -41,7 +41,6 @@
             this.importGSDFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadLibraryFile = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.helpButton = new System.Windows.Forms.ToolStripSplitButton();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -175,21 +174,6 @@
             this.InterfaceClassLibLabel = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator42 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStrip4 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.vendorNameTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.deviceNameTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.filePathLabel = new System.Windows.Forms.ToolStripLabel();
-            this.librariesSplitButton = new System.Windows.Forms.ToolStripSplitButton();
-            this.automationComponentLibraryv100ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.automationComponentLibraryv100FullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.electricConnectorLibraryv100ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.industrialSensorLibraryv100ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.imageListRCL = new System.Windows.Forms.ImageList(this.components);
@@ -231,6 +215,21 @@
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
+            this.filePathLabel = new System.Windows.Forms.ToolStripLabel();
+            this.vendorNameTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.deviceNameTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.librariesSplitButton = new System.Windows.Forms.ToolStripSplitButton();
+            this.automationComponentLibraryv100ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.automationComponentLibraryv100FullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.electricConnectorLibraryv100ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.industrialSensorLibraryv100ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.Page0_FullWindow.SuspendLayout();
             this.Page0_FullWindowPanel2.SuspendLayout();
@@ -282,7 +281,6 @@
             this.toolStrip7.SuspendLayout();
             this.treeViewInterfaceClassLibPanel.SuspendLayout();
             this.toolStrip9.SuspendLayout();
-            this.toolStrip4.SuspendLayout();
             this.contextMenuStripforInterfaceClassLib.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.identificationDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManufacturerDetails)).BeginInit();
@@ -293,28 +291,38 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.AutoSize = false;
             this.toolStrip1.BackColor = System.Drawing.Color.White;
-            this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileButton,
-            this.toolStripSeparator5,
+            this.toolStripSeparator8,
             this.helpButton,
-            this.fileNameLabel});
+            this.fileNameLabel,
+            this.toolStripSeparator7,
+            this.filePathLabel,
+            this.vendorNameTextBox,
+            this.toolStripSeparator6,
+            this.toolStripLabel4,
+            this.deviceNameTextBox,
+            this.toolStripSeparator3,
+            this.librariesSplitButton});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.MinimumSize = new System.Drawing.Size(0, 40);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1813, 25);
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip1.Size = new System.Drawing.Size(1813, 40);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // fileButton
             // 
+            this.fileButton.AutoSize = false;
             this.fileButton.BackColor = System.Drawing.Color.White;
             this.fileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fileButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -329,7 +337,7 @@
             this.fileButton.Image = ((System.Drawing.Image)(resources.GetObject("fileButton.Image")));
             this.fileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileButton.Name = "fileButton";
-            this.fileButton.Size = new System.Drawing.Size(43, 22);
+            this.fileButton.Size = new System.Drawing.Size(75, 42);
             this.fileButton.Text = "File";
             this.fileButton.ButtonClick += new System.EventHandler(this.fileButton_ButtonClick);
             this.fileButton.MouseHover += new System.EventHandler(this.fileButton_MouseHover);
@@ -337,28 +345,28 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveeToolStripMenuItem
             // 
             this.saveeToolStripMenuItem.Name = "saveeToolStripMenuItem";
-            this.saveeToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.saveeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveeToolStripMenuItem.Text = "Save As";
             this.saveeToolStripMenuItem.Click += new System.EventHandler(this.saveeToolStripMenuItem_Click);
             // 
@@ -368,7 +376,7 @@
             this.importIODDFileToolStripMenuItem,
             this.importGSDFileToolStripMenuItem});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // importIODDFileToolStripMenuItem
@@ -388,24 +396,20 @@
             // loadLibraryFile
             // 
             this.loadLibraryFile.Name = "loadLibraryFile";
-            this.loadLibraryFile.Size = new System.Drawing.Size(149, 22);
+            this.loadLibraryFile.Size = new System.Drawing.Size(180, 22);
             this.loadLibraryFile.Text = "Load Library";
             this.loadLibraryFile.Click += new System.EventHandler(this.loadLibraryFile_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
             // helpButton
             // 
+            this.helpButton.AutoSize = false;
             this.helpButton.BackColor = System.Drawing.Color.White;
             this.helpButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.helpButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -416,7 +420,7 @@
             this.helpButton.Image = ((System.Drawing.Image)(resources.GetObject("helpButton.Image")));
             this.helpButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(48, 22);
+            this.helpButton.Size = new System.Drawing.Size(75, 42);
             this.helpButton.Text = "Help";
             this.helpButton.ButtonClick += new System.EventHandler(this.helpButton_ButtonClick);
             this.helpButton.MouseHover += new System.EventHandler(this.helpButton_MouseHover);
@@ -425,14 +429,14 @@
             // 
             this.aboutToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // manualToolStripMenuItem
             // 
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manualToolStripMenuItem.Text = "Manual";
             this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
@@ -442,7 +446,7 @@
             this.fileNameLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.fileNameLabel.ForeColor = System.Drawing.Color.Black;
             this.fileNameLabel.Name = "fileNameLabel";
-            this.fileNameLabel.Size = new System.Drawing.Size(0, 22);
+            this.fileNameLabel.Size = new System.Drawing.Size(0, 42);
             // 
             // Page0_FullWindow
             // 
@@ -459,7 +463,6 @@
             // 
             this.Page0_FullWindowPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.Page0_FullWindowPanel2.Controls.Add(this.Page0_FastFullWindow);
-            this.Page0_FullWindowPanel2.Controls.Add(this.toolStrip4);
             this.Page0_FullWindowPanel2.Controls.Add(this.toolStrip1);
             this.Page0_FullWindowPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Page0_FullWindowPanel2.Location = new System.Drawing.Point(0, 0);
@@ -473,10 +476,10 @@
             this.Page0_FastFullWindow.BackColor = System.Drawing.SystemColors.Control;
             this.Page0_FastFullWindow.Controls.Add(this.Page0_FastFullWindow2);
             this.Page0_FastFullWindow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Page0_FastFullWindow.Location = new System.Drawing.Point(0, 55);
+            this.Page0_FastFullWindow.Location = new System.Drawing.Point(0, 40);
             this.Page0_FastFullWindow.Margin = new System.Windows.Forms.Padding(0);
             this.Page0_FastFullWindow.Name = "Page0_FastFullWindow";
-            this.Page0_FastFullWindow.Size = new System.Drawing.Size(1813, 833);
+            this.Page0_FastFullWindow.Size = new System.Drawing.Size(1813, 848);
             this.Page0_FastFullWindow.TabIndex = 3;
             // 
             // Page0_FastFullWindow2
@@ -486,7 +489,7 @@
             this.Page0_FastFullWindow2.Location = new System.Drawing.Point(0, 0);
             this.Page0_FastFullWindow2.Margin = new System.Windows.Forms.Padding(0);
             this.Page0_FastFullWindow2.Name = "Page0_FastFullWindow2";
-            this.Page0_FastFullWindow2.Size = new System.Drawing.Size(1813, 833);
+            this.Page0_FastFullWindow2.Size = new System.Drawing.Size(1813, 848);
             this.Page0_FastFullWindow2.TabIndex = 2;
             // 
             // splitContainer1
@@ -505,7 +508,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.treeViewPanel);
-            this.splitContainer1.Size = new System.Drawing.Size(1813, 833);
+            this.splitContainer1.Size = new System.Drawing.Size(1813, 848);
             this.splitContainer1.SplitterDistance = 1409;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
@@ -521,7 +524,7 @@
             this.dataTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.dataTabControl.Name = "dataTabControl";
             this.dataTabControl.SelectedIndex = 0;
-            this.dataTabControl.Size = new System.Drawing.Size(1409, 833);
+            this.dataTabControl.Size = new System.Drawing.Size(1409, 848);
             this.dataTabControl.TabIndex = 0;
             this.dataTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.dataTabControl_DrawItem);
             this.dataTabControl.Click += new System.EventHandler(this.dataTabControl_Click);
@@ -534,7 +537,7 @@
             this.genericData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.genericData.Name = "genericData";
             this.genericData.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.genericData.Size = new System.Drawing.Size(1401, 805);
+            this.genericData.Size = new System.Drawing.Size(1401, 820);
             this.genericData.TabIndex = 7;
             this.genericData.Text = "Generic Data";
             // 
@@ -549,7 +552,7 @@
             this.Page1_MainPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Page1_MainPanel.MinimumSize = new System.Drawing.Size(686, 100);
             this.Page1_MainPanel.Name = "Page1_MainPanel";
-            this.Page1_MainPanel.Size = new System.Drawing.Size(1397, 799);
+            this.Page1_MainPanel.Size = new System.Drawing.Size(1397, 814);
             this.Page1_MainPanel.TabIndex = 1;
             this.Page1_MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_FrontPage_Paint);
             // 
@@ -565,7 +568,7 @@
             this.Page1_BottomPanel.MinimumSize = new System.Drawing.Size(0, 400);
             this.Page1_BottomPanel.Name = "Page1_BottomPanel";
             this.Page1_BottomPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.Page1_BottomPanel.Size = new System.Drawing.Size(1397, 400);
+            this.Page1_BottomPanel.Size = new System.Drawing.Size(1397, 414);
             this.Page1_BottomPanel.TabIndex = 10;
             // 
             // tabControl1
@@ -577,7 +580,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1377, 355);
+            this.tabControl1.Size = new System.Drawing.Size(1377, 369);
             this.tabControl1.TabIndex = 9;
             // 
             // tabPage1
@@ -588,7 +591,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage1.Size = new System.Drawing.Size(1369, 327);
+            this.tabPage1.Size = new System.Drawing.Size(1369, 341);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Attributes";
             // 
@@ -610,7 +613,7 @@
             this.genericparametersAttrDataGridView.Name = "genericparametersAttrDataGridView";
             this.genericparametersAttrDataGridView.RowHeadersWidth = 50;
             this.genericparametersAttrDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.genericparametersAttrDataGridView.Size = new System.Drawing.Size(1365, 321);
+            this.genericparametersAttrDataGridView.Size = new System.Drawing.Size(1365, 335);
             this.genericparametersAttrDataGridView.TabIndex = 8;
             this.genericparametersAttrDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genericparametersAttrDataGridView_CellClick);
             this.genericparametersAttrDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genericparametersAttrDataGridView_CellContentClick);
@@ -669,7 +672,7 @@
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage2.Size = new System.Drawing.Size(1369, 330);
+            this.tabPage2.Size = new System.Drawing.Size(1369, 351);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Header";
             // 
@@ -1034,7 +1037,7 @@
             this.Interface.Location = new System.Drawing.Point(4, 24);
             this.Interface.Margin = new System.Windows.Forms.Padding(0);
             this.Interface.Name = "Interface";
-            this.Interface.Size = new System.Drawing.Size(1401, 805);
+            this.Interface.Size = new System.Drawing.Size(1401, 830);
             this.Interface.TabIndex = 6;
             this.Interface.Text = "Interfaces";
             // 
@@ -1050,7 +1053,7 @@
             this.electricalInterfacesPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.electricalInterfacesPanel.MinimumSize = new System.Drawing.Size(686, 22);
             this.electricalInterfacesPanel.Name = "electricalInterfacesPanel";
-            this.electricalInterfacesPanel.Size = new System.Drawing.Size(1401, 805);
+            this.electricalInterfacesPanel.Size = new System.Drawing.Size(1401, 830);
             this.electricalInterfacesPanel.TabIndex = 0;
             this.electricalInterfacesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.electricalInterfacesPanel_Paint);
             // 
@@ -1066,7 +1069,7 @@
             this.Page3_BottomPanel.MinimumSize = new System.Drawing.Size(0, 400);
             this.Page3_BottomPanel.Name = "Page3_BottomPanel";
             this.Page3_BottomPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.Page3_BottomPanel.Size = new System.Drawing.Size(1401, 405);
+            this.Page3_BottomPanel.Size = new System.Drawing.Size(1401, 430);
             this.Page3_BottomPanel.TabIndex = 10;
             // 
             // tabControlElectricalAttributes
@@ -1078,7 +1081,7 @@
             this.tabControlElectricalAttributes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControlElectricalAttributes.Name = "tabControlElectricalAttributes";
             this.tabControlElectricalAttributes.SelectedIndex = 0;
-            this.tabControlElectricalAttributes.Size = new System.Drawing.Size(1381, 360);
+            this.tabControlElectricalAttributes.Size = new System.Drawing.Size(1381, 385);
             this.tabControlElectricalAttributes.TabIndex = 9;
             // 
             // attributestab
@@ -1088,7 +1091,7 @@
             this.attributestab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.attributestab.Name = "attributestab";
             this.attributestab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.attributestab.Size = new System.Drawing.Size(1373, 332);
+            this.attributestab.Size = new System.Drawing.Size(1373, 357);
             this.attributestab.TabIndex = 0;
             this.attributestab.Text = "Attributes";
             this.attributestab.UseVisualStyleBackColor = true;
@@ -1111,7 +1114,7 @@
             this.elecInterAttDataGridView.Name = "elecInterAttDataGridView";
             this.elecInterAttDataGridView.RowHeadersWidth = 51;
             this.elecInterAttDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.elecInterAttDataGridView.Size = new System.Drawing.Size(1369, 326);
+            this.elecInterAttDataGridView.Size = new System.Drawing.Size(1369, 351);
             this.elecInterAttDataGridView.TabIndex = 8;
             this.elecInterAttDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elecInterAttDataGridView_CellClick);
             this.elecInterAttDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elecInterAttDataGridView_CellContentClick);
@@ -1540,7 +1543,7 @@
             this.DocsTabPage.Location = new System.Drawing.Point(4, 22);
             this.DocsTabPage.Margin = new System.Windows.Forms.Padding(0);
             this.DocsTabPage.Name = "DocsTabPage";
-            this.DocsTabPage.Size = new System.Drawing.Size(1401, 807);
+            this.DocsTabPage.Size = new System.Drawing.Size(1401, 830);
             this.DocsTabPage.TabIndex = 4;
             this.DocsTabPage.Text = "Attachments";
             // 
@@ -1554,7 +1557,7 @@
             this.addPicturesandDocsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.addPicturesandDocsPanel.MinimumSize = new System.Drawing.Size(691, 22);
             this.addPicturesandDocsPanel.Name = "addPicturesandDocsPanel";
-            this.addPicturesandDocsPanel.Size = new System.Drawing.Size(1401, 807);
+            this.addPicturesandDocsPanel.Size = new System.Drawing.Size(1401, 830);
             this.addPicturesandDocsPanel.TabIndex = 0;
             this.addPicturesandDocsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.addPicturesandDocsPanel_Paint);
             // 
@@ -1571,7 +1574,7 @@
             this.Page2_BottomPanel.MinimumSize = new System.Drawing.Size(0, 750);
             this.Page2_BottomPanel.Name = "Page2_BottomPanel";
             this.Page2_BottomPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.Page2_BottomPanel.Size = new System.Drawing.Size(1401, 777);
+            this.Page2_BottomPanel.Size = new System.Drawing.Size(1401, 800);
             this.Page2_BottomPanel.TabIndex = 3;
             // 
             // attachablesInfoDataGridView
@@ -1588,7 +1591,7 @@
             this.attachablesInfoDataGridView.Name = "attachablesInfoDataGridView";
             this.attachablesInfoDataGridView.RowHeadersWidth = 51;
             this.attachablesInfoDataGridView.RowTemplate.Height = 24;
-            this.attachablesInfoDataGridView.Size = new System.Drawing.Size(1381, 616);
+            this.attachablesInfoDataGridView.Size = new System.Drawing.Size(1381, 639);
             this.attachablesInfoDataGridView.TabIndex = 4;
             // 
             // ElementName
@@ -1839,7 +1842,7 @@
             this.treeViewPanel.Location = new System.Drawing.Point(0, 0);
             this.treeViewPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewPanel.Name = "treeViewPanel";
-            this.treeViewPanel.Size = new System.Drawing.Size(401, 833);
+            this.treeViewPanel.Size = new System.Drawing.Size(401, 848);
             this.treeViewPanel.TabIndex = 1;
             // 
             // splitContainer3
@@ -1857,8 +1860,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.treeViewInterfaceClassLibPanel);
-            this.splitContainer3.Size = new System.Drawing.Size(401, 833);
-            this.splitContainer3.SplitterDistance = 473;
+            this.splitContainer3.Size = new System.Drawing.Size(401, 848);
+            this.splitContainer3.SplitterDistance = 481;
             this.splitContainer3.TabIndex = 0;
             // 
             // Page0_RoleClassPanel
@@ -1870,7 +1873,7 @@
             this.Page0_RoleClassPanel.Location = new System.Drawing.Point(0, 0);
             this.Page0_RoleClassPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Page0_RoleClassPanel.Name = "Page0_RoleClassPanel";
-            this.Page0_RoleClassPanel.Size = new System.Drawing.Size(401, 473);
+            this.Page0_RoleClassPanel.Size = new System.Drawing.Size(401, 481);
             this.Page0_RoleClassPanel.TabIndex = 0;
             // 
             // treeViewRoleClassLib
@@ -1884,7 +1887,7 @@
             this.treeViewRoleClassLib.Name = "treeViewRoleClassLib";
             this.treeViewRoleClassLib.SelectedImageKey = "RCL.JPG";
             this.treeViewRoleClassLib.ShowNodeToolTips = true;
-            this.treeViewRoleClassLib.Size = new System.Drawing.Size(401, 448);
+            this.treeViewRoleClassLib.Size = new System.Drawing.Size(401, 456);
             this.treeViewRoleClassLib.TabIndex = 9;
             this.treeViewRoleClassLib.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewRoleClassLib_ItemDrag);
             this.treeViewRoleClassLib.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRoleClassLib_AfterSelect);
@@ -1938,7 +1941,7 @@
             this.treeViewInterfaceClassLibPanel.Location = new System.Drawing.Point(0, 0);
             this.treeViewInterfaceClassLibPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewInterfaceClassLibPanel.Name = "treeViewInterfaceClassLibPanel";
-            this.treeViewInterfaceClassLibPanel.Size = new System.Drawing.Size(401, 356);
+            this.treeViewInterfaceClassLibPanel.Size = new System.Drawing.Size(401, 363);
             this.treeViewInterfaceClassLibPanel.TabIndex = 1;
             // 
             // treeViewInterfaceClassLib
@@ -1951,7 +1954,7 @@
             this.treeViewInterfaceClassLib.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewInterfaceClassLib.Name = "treeViewInterfaceClassLib";
             this.treeViewInterfaceClassLib.SelectedImageKey = "ICL.JPG";
-            this.treeViewInterfaceClassLib.Size = new System.Drawing.Size(401, 331);
+            this.treeViewInterfaceClassLib.Size = new System.Drawing.Size(401, 338);
             this.treeViewInterfaceClassLib.TabIndex = 10;
             this.treeViewInterfaceClassLib.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewInterfaceClassLib_ItemDrag);
             this.treeViewInterfaceClassLib.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewInterfaceClassLib_BeforeSelect);
@@ -1992,137 +1995,6 @@
             // 
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(116, 25);
-            // 
-            // toolStrip4
-            // 
-            this.toolStrip4.AutoSize = false;
-            this.toolStrip4.BackColor = System.Drawing.Color.White;
-            this.toolStrip4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toolStrip4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel2,
-            this.vendorNameTextBox,
-            this.toolStripSeparator3,
-            this.toolStripLabel4,
-            this.deviceNameTextBox,
-            this.toolStripSeparator1,
-            this.filePathLabel,
-            this.librariesSplitButton});
-            this.toolStrip4.Location = new System.Drawing.Point(0, 25);
-            this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip4.Size = new System.Drawing.Size(1813, 30);
-            this.toolStrip4.TabIndex = 1;
-            this.toolStrip4.Text = "toolStrip4";
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.ForeColor = System.Drawing.Color.Black;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(79, 27);
-            this.toolStripLabel2.Text = "Vendor Name";
-            // 
-            // vendorNameTextBox
-            // 
-            this.vendorNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vendorNameTextBox.Name = "vendorNameTextBox";
-            this.vendorNameTextBox.Size = new System.Drawing.Size(219, 30);
-            this.vendorNameTextBox.Leave += new System.EventHandler(this.vendorNameTextBox_Leave);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 30);
-            // 
-            // toolStripLabel4
-            // 
-            this.toolStripLabel4.ForeColor = System.Drawing.Color.Black;
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(77, 27);
-            this.toolStripLabel4.Text = "Device Name";
-            // 
-            // deviceNameTextBox
-            // 
-            this.deviceNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.deviceNameTextBox.Name = "deviceNameTextBox";
-            this.deviceNameTextBox.Size = new System.Drawing.Size(219, 30);
-            this.deviceNameTextBox.Leave += new System.EventHandler(this.deviceNameTextBox_Leave);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
-            // 
-            // filePathLabel
-            // 
-            this.filePathLabel.Name = "filePathLabel";
-            this.filePathLabel.Size = new System.Drawing.Size(0, 27);
-            this.filePathLabel.Visible = false;
-            // 
-            // librariesSplitButton
-            // 
-            this.librariesSplitButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.librariesSplitButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.automationComponentLibraryv100ToolStripMenuItem,
-            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem,
-            this.automationComponentLibraryv100FullToolStripMenuItem,
-            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem,
-            this.electricConnectorLibraryv100ToolStripMenuItem,
-            this.industrialSensorLibraryv100ToolStripMenuItem});
-            this.librariesSplitButton.ForeColor = System.Drawing.Color.Black;
-            this.librariesSplitButton.Image = ((System.Drawing.Image)(resources.GetObject("librariesSplitButton.Image")));
-            this.librariesSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.librariesSplitButton.Name = "librariesSplitButton";
-            this.librariesSplitButton.Size = new System.Drawing.Size(117, 27);
-            this.librariesSplitButton.Text = "Standard Libraries";
-            this.librariesSplitButton.ButtonClick += new System.EventHandler(this.librariesSplitButton_ButtonClick);
-            this.librariesSplitButton.DoubleClick += new System.EventHandler(this.librariesSplitButton_DoubleClick);
-            this.librariesSplitButton.MouseHover += new System.EventHandler(this.librariesSplitButton_MouseHover);
-            // 
-            // automationComponentLibraryv100ToolStripMenuItem
-            // 
-            this.automationComponentLibraryv100ToolStripMenuItem.Name = "automationComponentLibraryv100ToolStripMenuItem";
-            this.automationComponentLibraryv100ToolStripMenuItem.Size = new System.Drawing.Size(372, 22);
-            this.automationComponentLibraryv100ToolStripMenuItem.Text = "AutomationComponentLibrary_v1_0_0";
-            this.automationComponentLibraryv100ToolStripMenuItem.Click += new System.EventHandler(this.automationComponentLibraryv100ToolStripMenuItem_Click);
-            // 
-            // automationComponentLibraryv100CAEX3BETAToolStripMenuItem
-            // 
-            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem.Name = "automationComponentLibraryv100CAEX3BETAToolStripMenuItem";
-            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem.Size = new System.Drawing.Size(372, 22);
-            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem.Text = "AutomationComponentLibrary_v1_0_0_CAEX3_BETA";
-            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem.Click += new System.EventHandler(this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem_Click);
-            // 
-            // automationComponentLibraryv100FullToolStripMenuItem
-            // 
-            this.automationComponentLibraryv100FullToolStripMenuItem.Name = "automationComponentLibraryv100FullToolStripMenuItem";
-            this.automationComponentLibraryv100FullToolStripMenuItem.Size = new System.Drawing.Size(372, 22);
-            this.automationComponentLibraryv100FullToolStripMenuItem.Text = "AutomationComponentLibrary_v1_0_0_Full";
-            this.automationComponentLibraryv100FullToolStripMenuItem.Click += new System.EventHandler(this.automationComponentLibraryv100FullToolStripMenuItem_Click);
-            // 
-            // automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem
-            // 
-            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem.Name = "automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem";
-            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem.Size = new System.Drawing.Size(372, 22);
-            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem.Text = "AutomationComponentLibrary_v1_0_0_Full_CAEX3_BETA";
-            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem.Click += new System.EventHandler(this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem_Click);
-            // 
-            // electricConnectorLibraryv100ToolStripMenuItem
-            // 
-            this.electricConnectorLibraryv100ToolStripMenuItem.Name = "electricConnectorLibraryv100ToolStripMenuItem";
-            this.electricConnectorLibraryv100ToolStripMenuItem.Size = new System.Drawing.Size(372, 22);
-            this.electricConnectorLibraryv100ToolStripMenuItem.Text = "ElectricConnectorLibrary_v1_0_0";
-            this.electricConnectorLibraryv100ToolStripMenuItem.Click += new System.EventHandler(this.electricConnectorLibraryv100ToolStripMenuItem_Click);
-            // 
-            // industrialSensorLibraryv100ToolStripMenuItem
-            // 
-            this.industrialSensorLibraryv100ToolStripMenuItem.Name = "industrialSensorLibraryv100ToolStripMenuItem";
-            this.industrialSensorLibraryv100ToolStripMenuItem.Size = new System.Drawing.Size(372, 22);
-            this.industrialSensorLibraryv100ToolStripMenuItem.Text = "IndustrialSensorLibrary_v1_0_0";
-            this.industrialSensorLibraryv100ToolStripMenuItem.Click += new System.EventHandler(this.industrialSensorLibraryv100ToolStripMenuItem_Click);
             // 
             // imageList3
             // 
@@ -2487,6 +2359,108 @@
             this.toolStripButton15.Size = new System.Drawing.Size(44, 24);
             this.toolStripButton15.Text = "Save";
             // 
+            // filePathLabel
+            // 
+            this.filePathLabel.Name = "filePathLabel";
+            this.filePathLabel.Size = new System.Drawing.Size(89, 42);
+            this.filePathLabel.Text = "Vendor Name";
+            // 
+            // vendorNameTextBox
+            // 
+            this.vendorNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vendorNameTextBox.Name = "vendorNameTextBox";
+            this.vendorNameTextBox.Size = new System.Drawing.Size(219, 45);
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.ForeColor = System.Drawing.Color.Black;
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(85, 42);
+            this.toolStripLabel4.Text = "Device Name";
+            // 
+            // deviceNameTextBox
+            // 
+            this.deviceNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.deviceNameTextBox.Name = "deviceNameTextBox";
+            this.deviceNameTextBox.Size = new System.Drawing.Size(219, 45);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.AutoSize = false;
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(12, 30);
+            // 
+            // librariesSplitButton
+            // 
+            this.librariesSplitButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.librariesSplitButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.automationComponentLibraryv100ToolStripMenuItem,
+            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem,
+            this.automationComponentLibraryv100FullToolStripMenuItem,
+            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem,
+            this.electricConnectorLibraryv100ToolStripMenuItem,
+            this.industrialSensorLibraryv100ToolStripMenuItem});
+            this.librariesSplitButton.ForeColor = System.Drawing.Color.Black;
+            this.librariesSplitButton.Image = ((System.Drawing.Image)(resources.GetObject("librariesSplitButton.Image")));
+            this.librariesSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.librariesSplitButton.Name = "librariesSplitButton";
+            this.librariesSplitButton.Size = new System.Drawing.Size(131, 42);
+            this.librariesSplitButton.Text = "Standard Libraries";
+            // 
+            // automationComponentLibraryv100ToolStripMenuItem
+            // 
+            this.automationComponentLibraryv100ToolStripMenuItem.Name = "automationComponentLibraryv100ToolStripMenuItem";
+            this.automationComponentLibraryv100ToolStripMenuItem.Size = new System.Drawing.Size(393, 22);
+            this.automationComponentLibraryv100ToolStripMenuItem.Text = "AutomationComponentLibrary_v1_0_0";
+            // 
+            // automationComponentLibraryv100CAEX3BETAToolStripMenuItem
+            // 
+            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem.Name = "automationComponentLibraryv100CAEX3BETAToolStripMenuItem";
+            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem.Size = new System.Drawing.Size(393, 22);
+            this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem.Text = "AutomationComponentLibrary_v1_0_0_CAEX3_BETA";
+            // 
+            // automationComponentLibraryv100FullToolStripMenuItem
+            // 
+            this.automationComponentLibraryv100FullToolStripMenuItem.Name = "automationComponentLibraryv100FullToolStripMenuItem";
+            this.automationComponentLibraryv100FullToolStripMenuItem.Size = new System.Drawing.Size(393, 22);
+            this.automationComponentLibraryv100FullToolStripMenuItem.Text = "AutomationComponentLibrary_v1_0_0_Full";
+            // 
+            // automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem
+            // 
+            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem.Name = "automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem";
+            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem.Size = new System.Drawing.Size(393, 22);
+            this.automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem.Text = "AutomationComponentLibrary_v1_0_0_Full_CAEX3_BETA";
+            // 
+            // electricConnectorLibraryv100ToolStripMenuItem
+            // 
+            this.electricConnectorLibraryv100ToolStripMenuItem.Name = "electricConnectorLibraryv100ToolStripMenuItem";
+            this.electricConnectorLibraryv100ToolStripMenuItem.Size = new System.Drawing.Size(393, 22);
+            this.electricConnectorLibraryv100ToolStripMenuItem.Text = "ElectricConnectorLibrary_v1_0_0";
+            // 
+            // industrialSensorLibraryv100ToolStripMenuItem
+            // 
+            this.industrialSensorLibraryv100ToolStripMenuItem.Name = "industrialSensorLibraryv100ToolStripMenuItem";
+            this.industrialSensorLibraryv100ToolStripMenuItem.Size = new System.Drawing.Size(393, 22);
+            this.industrialSensorLibraryv100ToolStripMenuItem.Text = "IndustrialSensorLibrary_v1_0_0";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.AutoSize = false;
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(12, 30);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.AutoSize = false;
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(12, 30);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.AutoSize = false;
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(12, 30);
+            // 
             // DeviceDescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2503,7 +2477,6 @@
             this.toolStrip1.PerformLayout();
             this.Page0_FullWindow.ResumeLayout(false);
             this.Page0_FullWindowPanel2.ResumeLayout(false);
-            this.Page0_FullWindowPanel2.PerformLayout();
             this.Page0_FastFullWindow.ResumeLayout(false);
             this.Page0_FastFullWindow2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -2575,8 +2548,6 @@
             this.treeViewInterfaceClassLibPanel.PerformLayout();
             this.toolStrip9.ResumeLayout(false);
             this.toolStrip9.PerformLayout();
-            this.toolStrip4.ResumeLayout(false);
-            this.toolStrip4.PerformLayout();
             this.contextMenuStripforInterfaceClassLib.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.identificationDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManufacturerDetails)).EndInit();
@@ -2595,7 +2566,6 @@
         private System.Windows.Forms.Panel Page0_FullWindowPanel2;
         private System.Windows.Forms.Panel Page0_FastFullWindow;
         private System.Windows.Forms.TabControl dataTabControl;
-        private System.Windows.Forms.ToolStrip toolStrip4;
         private System.Windows.Forms.Panel Page0_FastFullWindow2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel treeViewPanel;
@@ -2709,20 +2679,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox descriptionTxtBoxElecAttri;
         private System.Windows.Forms.ToolStripLabel fileNameLabel;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripTextBox vendorNameTextBox;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripTextBox deviceNameTextBox;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripLabel filePathLabel;
-        private System.Windows.Forms.ToolStripSplitButton librariesSplitButton;
-        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100CAEX3BETAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100FullToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem electricConnectorLibraryv100ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem industrialSensorLibraryv100ToolStripMenuItem;
         private System.Windows.Forms.TreeView treeViewElectricalInterfaces;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
@@ -2788,7 +2744,21 @@
         private System.Windows.Forms.ToolStripMenuItem importGSDFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadLibraryFile;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ToolStripLabel filePathLabel;
+        private System.Windows.Forms.ToolStripTextBox vendorNameTextBox;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripTextBox deviceNameTextBox;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSplitButton librariesSplitButton;
+        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100CAEX3BETAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100FullToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem electricConnectorLibraryv100ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem industrialSensorLibraryv100ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
     }
 }
