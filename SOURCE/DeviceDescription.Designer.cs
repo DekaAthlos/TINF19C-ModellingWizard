@@ -293,7 +293,6 @@
             // 
             this.toolStrip1.AutoSize = false;
             this.toolStrip1.BackColor = System.Drawing.Color.White;
-            this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -313,15 +312,17 @@
             this.librariesSplitButton});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.MinimumSize = new System.Drawing.Size(0, 40);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1813, 30);
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip1.Size = new System.Drawing.Size(1813, 40);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // fileButton
             // 
+            this.fileButton.AutoSize = false;
             this.fileButton.BackColor = System.Drawing.Color.White;
             this.fileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fileButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -336,7 +337,7 @@
             this.fileButton.Image = ((System.Drawing.Image)(resources.GetObject("fileButton.Image")));
             this.fileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileButton.Name = "fileButton";
-            this.fileButton.Size = new System.Drawing.Size(43, 27);
+            this.fileButton.Size = new System.Drawing.Size(75, 42);
             this.fileButton.Text = "File";
             this.fileButton.ButtonClick += new System.EventHandler(this.fileButton_ButtonClick);
             this.fileButton.MouseHover += new System.EventHandler(this.fileButton_MouseHover);
@@ -408,6 +409,7 @@
             // 
             // helpButton
             // 
+            this.helpButton.AutoSize = false;
             this.helpButton.BackColor = System.Drawing.Color.White;
             this.helpButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.helpButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -418,7 +420,7 @@
             this.helpButton.Image = ((System.Drawing.Image)(resources.GetObject("helpButton.Image")));
             this.helpButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(48, 27);
+            this.helpButton.Size = new System.Drawing.Size(75, 42);
             this.helpButton.Text = "Help";
             this.helpButton.ButtonClick += new System.EventHandler(this.helpButton_ButtonClick);
             this.helpButton.MouseHover += new System.EventHandler(this.helpButton_MouseHover);
@@ -427,14 +429,14 @@
             // 
             this.aboutToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // manualToolStripMenuItem
             // 
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manualToolStripMenuItem.Text = "Manual";
             this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
@@ -444,7 +446,7 @@
             this.fileNameLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.fileNameLabel.ForeColor = System.Drawing.Color.Black;
             this.fileNameLabel.Name = "fileNameLabel";
-            this.fileNameLabel.Size = new System.Drawing.Size(0, 27);
+            this.fileNameLabel.Size = new System.Drawing.Size(0, 42);
             // 
             // Page0_FullWondow
             // 
@@ -474,10 +476,10 @@
             this.Page0_FastFullWindow.BackColor = System.Drawing.SystemColors.Control;
             this.Page0_FastFullWindow.Controls.Add(this.Page0_FastFullWindow2);
             this.Page0_FastFullWindow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Page0_FastFullWindow.Location = new System.Drawing.Point(0, 30);
+            this.Page0_FastFullWindow.Location = new System.Drawing.Point(0, 40);
             this.Page0_FastFullWindow.Margin = new System.Windows.Forms.Padding(0);
             this.Page0_FastFullWindow.Name = "Page0_FastFullWindow";
-            this.Page0_FastFullWindow.Size = new System.Drawing.Size(1813, 858);
+            this.Page0_FastFullWindow.Size = new System.Drawing.Size(1813, 848);
             this.Page0_FastFullWindow.TabIndex = 3;
             // 
             // Page0_FastFullWindow2
@@ -487,7 +489,7 @@
             this.Page0_FastFullWindow2.Location = new System.Drawing.Point(0, 0);
             this.Page0_FastFullWindow2.Margin = new System.Windows.Forms.Padding(0);
             this.Page0_FastFullWindow2.Name = "Page0_FastFullWindow2";
-            this.Page0_FastFullWindow2.Size = new System.Drawing.Size(1813, 858);
+            this.Page0_FastFullWindow2.Size = new System.Drawing.Size(1813, 848);
             this.Page0_FastFullWindow2.TabIndex = 2;
             // 
             // splitContainer1
@@ -506,7 +508,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.treeViewPanel);
-            this.splitContainer1.Size = new System.Drawing.Size(1813, 858);
+            this.splitContainer1.Size = new System.Drawing.Size(1813, 848);
             this.splitContainer1.SplitterDistance = 1409;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
@@ -522,7 +524,7 @@
             this.dataTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.dataTabControl.Name = "dataTabControl";
             this.dataTabControl.SelectedIndex = 0;
-            this.dataTabControl.Size = new System.Drawing.Size(1409, 858);
+            this.dataTabControl.Size = new System.Drawing.Size(1409, 848);
             this.dataTabControl.TabIndex = 0;
             this.dataTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.dataTabControl_DrawItem);
             this.dataTabControl.Click += new System.EventHandler(this.dataTabControl_Click);
@@ -535,7 +537,7 @@
             this.genericData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.genericData.Name = "genericData";
             this.genericData.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.genericData.Size = new System.Drawing.Size(1401, 830);
+            this.genericData.Size = new System.Drawing.Size(1401, 820);
             this.genericData.TabIndex = 7;
             this.genericData.Text = "Generic Data";
             // 
@@ -550,7 +552,7 @@
             this.Page1_MainPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Page1_MainPanel.MinimumSize = new System.Drawing.Size(686, 100);
             this.Page1_MainPanel.Name = "Page1_MainPanel";
-            this.Page1_MainPanel.Size = new System.Drawing.Size(1397, 824);
+            this.Page1_MainPanel.Size = new System.Drawing.Size(1397, 814);
             this.Page1_MainPanel.TabIndex = 1;
             this.Page1_MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_FrontPage_Paint);
             // 
@@ -566,7 +568,7 @@
             this.Page1_BottomPanel.MinimumSize = new System.Drawing.Size(0, 400);
             this.Page1_BottomPanel.Name = "Page1_BottomPanel";
             this.Page1_BottomPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.Page1_BottomPanel.Size = new System.Drawing.Size(1397, 424);
+            this.Page1_BottomPanel.Size = new System.Drawing.Size(1397, 414);
             this.Page1_BottomPanel.TabIndex = 10;
             // 
             // tabControl1
@@ -578,7 +580,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1377, 379);
+            this.tabControl1.Size = new System.Drawing.Size(1377, 369);
             this.tabControl1.TabIndex = 9;
             // 
             // tabPage1
@@ -589,7 +591,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage1.Size = new System.Drawing.Size(1369, 351);
+            this.tabPage1.Size = new System.Drawing.Size(1369, 341);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Attributes";
             // 
@@ -611,7 +613,7 @@
             this.genericparametersAttrDataGridView.Name = "genericparametersAttrDataGridView";
             this.genericparametersAttrDataGridView.RowHeadersWidth = 50;
             this.genericparametersAttrDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.genericparametersAttrDataGridView.Size = new System.Drawing.Size(1365, 345);
+            this.genericparametersAttrDataGridView.Size = new System.Drawing.Size(1365, 335);
             this.genericparametersAttrDataGridView.TabIndex = 8;
             this.genericparametersAttrDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genericparametersAttrDataGridView_CellClick);
             this.genericparametersAttrDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genericparametersAttrDataGridView_CellContentClick);
@@ -1840,7 +1842,7 @@
             this.treeViewPanel.Location = new System.Drawing.Point(0, 0);
             this.treeViewPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewPanel.Name = "treeViewPanel";
-            this.treeViewPanel.Size = new System.Drawing.Size(401, 858);
+            this.treeViewPanel.Size = new System.Drawing.Size(401, 848);
             this.treeViewPanel.TabIndex = 1;
             // 
             // splitContainer3
@@ -1858,8 +1860,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.treeViewInterfaceClassLibPanel);
-            this.splitContainer3.Size = new System.Drawing.Size(401, 858);
-            this.splitContainer3.SplitterDistance = 487;
+            this.splitContainer3.Size = new System.Drawing.Size(401, 848);
+            this.splitContainer3.SplitterDistance = 481;
             this.splitContainer3.TabIndex = 0;
             // 
             // Page0_RoleClassPanel
@@ -1871,7 +1873,7 @@
             this.Page0_RoleClassPanel.Location = new System.Drawing.Point(0, 0);
             this.Page0_RoleClassPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Page0_RoleClassPanel.Name = "Page0_RoleClassPanel";
-            this.Page0_RoleClassPanel.Size = new System.Drawing.Size(401, 487);
+            this.Page0_RoleClassPanel.Size = new System.Drawing.Size(401, 481);
             this.Page0_RoleClassPanel.TabIndex = 0;
             // 
             // treeViewRoleClassLib
@@ -1885,7 +1887,7 @@
             this.treeViewRoleClassLib.Name = "treeViewRoleClassLib";
             this.treeViewRoleClassLib.SelectedImageKey = "RCL.JPG";
             this.treeViewRoleClassLib.ShowNodeToolTips = true;
-            this.treeViewRoleClassLib.Size = new System.Drawing.Size(401, 462);
+            this.treeViewRoleClassLib.Size = new System.Drawing.Size(401, 456);
             this.treeViewRoleClassLib.TabIndex = 9;
             this.treeViewRoleClassLib.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewRoleClassLib_ItemDrag);
             this.treeViewRoleClassLib.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRoleClassLib_AfterSelect);
@@ -1927,7 +1929,6 @@
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(88, 25);
             // 
@@ -1940,7 +1941,7 @@
             this.treeViewInterfaceClassLibPanel.Location = new System.Drawing.Point(0, 0);
             this.treeViewInterfaceClassLibPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewInterfaceClassLibPanel.Name = "treeViewInterfaceClassLibPanel";
-            this.treeViewInterfaceClassLibPanel.Size = new System.Drawing.Size(401, 367);
+            this.treeViewInterfaceClassLibPanel.Size = new System.Drawing.Size(401, 363);
             this.treeViewInterfaceClassLibPanel.TabIndex = 1;
             // 
             // treeViewInterfaceClassLib
@@ -1953,7 +1954,7 @@
             this.treeViewInterfaceClassLib.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewInterfaceClassLib.Name = "treeViewInterfaceClassLib";
             this.treeViewInterfaceClassLib.SelectedImageKey = "ICL.JPG";
-            this.treeViewInterfaceClassLib.Size = new System.Drawing.Size(401, 342);
+            this.treeViewInterfaceClassLib.Size = new System.Drawing.Size(401, 338);
             this.treeViewInterfaceClassLib.TabIndex = 10;
             this.treeViewInterfaceClassLib.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewInterfaceClassLib_ItemDrag);
             this.treeViewInterfaceClassLib.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewInterfaceClassLib_BeforeSelect);
@@ -1992,7 +1993,6 @@
             // 
             // toolStripTextBox2
             // 
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(116, 25);
             // 
@@ -2362,29 +2362,27 @@
             // filePathLabel
             // 
             this.filePathLabel.Name = "filePathLabel";
-            this.filePathLabel.Size = new System.Drawing.Size(89, 27);
+            this.filePathLabel.Size = new System.Drawing.Size(89, 42);
             this.filePathLabel.Text = "Vendor Name";
             // 
             // vendorNameTextBox
             // 
             this.vendorNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vendorNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.vendorNameTextBox.Name = "vendorNameTextBox";
-            this.vendorNameTextBox.Size = new System.Drawing.Size(219, 30);
+            this.vendorNameTextBox.Size = new System.Drawing.Size(219, 45);
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.ForeColor = System.Drawing.Color.Black;
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(85, 27);
+            this.toolStripLabel4.Size = new System.Drawing.Size(85, 42);
             this.toolStripLabel4.Text = "Device Name";
             // 
             // deviceNameTextBox
             // 
             this.deviceNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.deviceNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.deviceNameTextBox.Name = "deviceNameTextBox";
-            this.deviceNameTextBox.Size = new System.Drawing.Size(219, 30);
+            this.deviceNameTextBox.Size = new System.Drawing.Size(219, 45);
             // 
             // toolStripSeparator3
             // 
@@ -2406,7 +2404,7 @@
             this.librariesSplitButton.Image = ((System.Drawing.Image)(resources.GetObject("librariesSplitButton.Image")));
             this.librariesSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.librariesSplitButton.Name = "librariesSplitButton";
-            this.librariesSplitButton.Size = new System.Drawing.Size(131, 27);
+            this.librariesSplitButton.Size = new System.Drawing.Size(131, 42);
             this.librariesSplitButton.Text = "Standard Libraries";
             // 
             // automationComponentLibraryv100ToolStripMenuItem
