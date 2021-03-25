@@ -19,12 +19,13 @@ The Plugin offers the possibility to create new AML Devices and Interfaces and s
 Main tasks are e.g. improving the GUI and its usability but also giving the user a detailed manual to make sure the user understands how to use the plugin.
 
 The further development of the Modelling Wizard was carried out by the following students:
-  * Stefan-Nemanja Banov
-  * Simon Jess
-  * Phillip Tran
-  * Jakob Schmidt
-  * Timo Zaoral
-  * Tobias Roth
+
+  * Stefan-Nemanja Banov	| Projekt Manager
+  * Simon Jess			| Software Architect
+  * Phillip Tran		| Head of Development
+  * Jakob Schmidt		| Test Manager
+  * Timo Zaoral			| Product Manager
+  * Tobias Roth			| Technical Writer
   
 Link to the lecture content: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
