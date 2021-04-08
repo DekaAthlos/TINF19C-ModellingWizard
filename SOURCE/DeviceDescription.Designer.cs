@@ -467,7 +467,6 @@
             // vendorNameTextBox
             // 
             this.vendorNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vendorNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.vendorNameTextBox.Name = "vendorNameTextBox";
             this.vendorNameTextBox.Size = new System.Drawing.Size(219, 40);
             // 
@@ -487,7 +486,6 @@
             // deviceNameTextBox
             // 
             this.deviceNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.deviceNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.deviceNameTextBox.Name = "deviceNameTextBox";
             this.deviceNameTextBox.Size = new System.Drawing.Size(219, 40);
             // 
@@ -1178,11 +1176,11 @@
             this.Page3_BottomPanel.Controls.Add(this.tabControlElectricalAttributes);
             this.Page3_BottomPanel.Controls.Add(this.toolStrip2);
             this.Page3_BottomPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Page3_BottomPanel.Location = new System.Drawing.Point(0, 374);
+            this.Page3_BottomPanel.Location = new System.Drawing.Point(0, 454);
             this.Page3_BottomPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Page3_BottomPanel.MinimumSize = new System.Drawing.Size(0, 400);
             this.Page3_BottomPanel.Name = "Page3_BottomPanel";
-            this.Page3_BottomPanel.Size = new System.Drawing.Size(1410, 446);
+            this.Page3_BottomPanel.Size = new System.Drawing.Size(1410, 400);
             this.Page3_BottomPanel.TabIndex = 10;
             // 
             // tabControlElectricalAttributes
@@ -1194,7 +1192,7 @@
             this.tabControlElectricalAttributes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControlElectricalAttributes.Name = "tabControlElectricalAttributes";
             this.tabControlElectricalAttributes.SelectedIndex = 0;
-            this.tabControlElectricalAttributes.Size = new System.Drawing.Size(1410, 421);
+            this.tabControlElectricalAttributes.Size = new System.Drawing.Size(1410, 375);
             this.tabControlElectricalAttributes.TabIndex = 9;
             // 
             // attributestab
@@ -1204,7 +1202,7 @@
             this.attributestab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.attributestab.Name = "attributestab";
             this.attributestab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.attributestab.Size = new System.Drawing.Size(1402, 393);
+            this.attributestab.Size = new System.Drawing.Size(1402, 347);
             this.attributestab.TabIndex = 0;
             this.attributestab.Text = "Attributes";
             this.attributestab.UseVisualStyleBackColor = true;
@@ -1227,7 +1225,7 @@
             this.elecInterAttDataGridView.Name = "elecInterAttDataGridView";
             this.elecInterAttDataGridView.RowHeadersWidth = 51;
             this.elecInterAttDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.elecInterAttDataGridView.Size = new System.Drawing.Size(1398, 387);
+            this.elecInterAttDataGridView.Size = new System.Drawing.Size(1398, 341);
             this.elecInterAttDataGridView.TabIndex = 8;
             this.elecInterAttDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elecInterAttDataGridView_CellClick);
             this.elecInterAttDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.elecInterAttDataGridView_CellContentClick);
@@ -1521,9 +1519,9 @@
             this.Page3_TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.Page3_TopPanel.Location = new System.Drawing.Point(0, 0);
             this.Page3_TopPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Page3_TopPanel.MinimumSize = new System.Drawing.Size(0, 370);
+            this.Page3_TopPanel.MinimumSize = new System.Drawing.Size(0, 400);
             this.Page3_TopPanel.Name = "Page3_TopPanel";
-            this.Page3_TopPanel.Size = new System.Drawing.Size(1410, 374);
+            this.Page3_TopPanel.Size = new System.Drawing.Size(1410, 454);
             this.Page3_TopPanel.TabIndex = 1;
             // 
             // treeViewElectricalInterfaces
@@ -1533,11 +1531,11 @@
             this.treeViewElectricalInterfaces.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.treeViewElectricalInterfaces.ImageIndex = 0;
             this.treeViewElectricalInterfaces.ImageList = this.imageList2;
-            this.treeViewElectricalInterfaces.Location = new System.Drawing.Point(0, 310);
+            this.treeViewElectricalInterfaces.Location = new System.Drawing.Point(0, 379);
             this.treeViewElectricalInterfaces.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeViewElectricalInterfaces.Name = "treeViewElectricalInterfaces";
             this.treeViewElectricalInterfaces.SelectedImageIndex = 0;
-            this.treeViewElectricalInterfaces.Size = new System.Drawing.Size(1410, 64);
+            this.treeViewElectricalInterfaces.Size = new System.Drawing.Size(1410, 75);
             this.treeViewElectricalInterfaces.TabIndex = 0;
             this.treeViewElectricalInterfaces.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRoleClassLib_AfterSelect);
             this.treeViewElectricalInterfaces.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewElectricalInterfaces_NodeMouseClick);
@@ -1563,7 +1561,7 @@
             this.electricalInterfacesCollectionDataGridView.RowHeadersWidth = 51;
             this.electricalInterfacesCollectionDataGridView.RowTemplate.Height = 24;
             this.electricalInterfacesCollectionDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.electricalInterfacesCollectionDataGridView.Size = new System.Drawing.Size(1410, 285);
+            this.electricalInterfacesCollectionDataGridView.Size = new System.Drawing.Size(1410, 354);
             this.electricalInterfacesCollectionDataGridView.TabIndex = 1;
             this.electricalInterfacesCollectionDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.electricalInterfacesCollectionDataGridView_CellClick);
             this.electricalInterfacesCollectionDataGridView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.electricalInterfacesCollectionDataGridView_MouseUp);
@@ -2011,7 +2009,6 @@
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(88, 25);
             // 
@@ -2076,7 +2073,6 @@
             // 
             // toolStripTextBox2
             // 
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(116, 25);
             // 
