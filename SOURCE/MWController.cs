@@ -52,13 +52,6 @@ namespace Aml.Editor.Plugin
             }
             return deviceDescriptionForm;
         }
-        
-      
-        
-
-
-       
-      
 
         /// <summary>
         /// 

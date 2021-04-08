@@ -71,8 +71,7 @@ namespace Aml.Editor.Plugin
         {
             this.RefSemantics  = refSemantic;
             this.Attributes = attributes;
-           this.Values = value;
-
+            this.Values = value;
         }
         public override string ToString()
         {

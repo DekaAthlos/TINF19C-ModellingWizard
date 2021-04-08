@@ -467,6 +467,7 @@
             // vendorNameTextBox
             // 
             this.vendorNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vendorNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.vendorNameTextBox.Name = "vendorNameTextBox";
             this.vendorNameTextBox.Size = new System.Drawing.Size(219, 40);
             // 
@@ -486,6 +487,7 @@
             // deviceNameTextBox
             // 
             this.deviceNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.deviceNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.deviceNameTextBox.Name = "deviceNameTextBox";
             this.deviceNameTextBox.Size = new System.Drawing.Size(219, 40);
             // 
@@ -634,6 +636,7 @@
             this.dataTabControl.Size = new System.Drawing.Size(1418, 848);
             this.dataTabControl.TabIndex = 0;
             this.dataTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.dataTabControl_DrawItem);
+            this.dataTabControl.SelectedIndexChanged += new System.EventHandler(this.dataTabControl_SelectedIndexChanged);
             this.dataTabControl.Click += new System.EventHandler(this.dataTabControl_Click);
             // 
             // genericData
@@ -1284,7 +1287,7 @@
             this.header.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.header.Name = "header";
             this.header.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.header.Size = new System.Drawing.Size(1402, 397);
+            this.header.Size = new System.Drawing.Size(1402, 349);
             this.header.TabIndex = 1;
             this.header.Text = "Header";
             // 
@@ -1564,6 +1567,7 @@
             this.electricalInterfacesCollectionDataGridView.Size = new System.Drawing.Size(1410, 354);
             this.electricalInterfacesCollectionDataGridView.TabIndex = 1;
             this.electricalInterfacesCollectionDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.electricalInterfacesCollectionDataGridView_CellClick);
+            this.electricalInterfacesCollectionDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.electricalInterfacesCollectionDataGridView_CellContentClick);
             this.electricalInterfacesCollectionDataGridView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.electricalInterfacesCollectionDataGridView_MouseUp);
             // 
             // SerialNumber
@@ -2009,6 +2013,7 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(88, 25);
             // 
@@ -2073,6 +2078,7 @@
             // 
             // toolStripTextBox2
             // 
+            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(116, 25);
             // 
