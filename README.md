@@ -20,7 +20,7 @@ Main tasks are e.g. improving the GUI and its usability but also giving the user
 
 The further development of the Modelling Wizard was carried out by the following students:
 
-  * Stefan-Nemanja Banov	| Projekt Manager
+ <pre> * Stefan-Nemanja Banov	| Projekt Manager </pre>
   * Simon Jess			        | Software Architect
   * Phillip Tran	       	| Head of Development
   * Jakob Schmidt	      	| Test Manager
