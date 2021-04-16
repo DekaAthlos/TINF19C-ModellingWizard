@@ -25,7 +25,7 @@ The further development of the Modelling Wizard was carried out by the following
   * Phillip Tran	       	(Head of Development)
   * Jakob Schmidt	      	(Test Manager)
   * Timo Zaoral		       	(Product Manager)
-  * Tobias Roth			(Technical Writer)
+  * Tobias Roth			(Technical Editor)
   
 Link to the lecture content: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
