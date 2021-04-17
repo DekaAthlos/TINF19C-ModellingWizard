@@ -154,6 +154,9 @@
             this.addPicturesandDocsPanel = new System.Windows.Forms.Panel();
             this.Page2_BottomPanel = new System.Windows.Forms.Panel();
             this.attachablesInfoDataGridView = new System.Windows.Forms.DataGridView();
+            this.ElementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Add = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip19 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel12 = new System.Windows.Forms.ToolStripLabel();
             this.clearSelectedRowBtn = new System.Windows.Forms.ToolStripButton();
@@ -226,9 +229,6 @@
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
-            this.ElementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Add = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.Page0_FullWindow.SuspendLayout();
             this.Page0_FullWindowPanel2.SuspendLayout();
@@ -1725,6 +1725,26 @@
             this.attachablesInfoDataGridView.Size = new System.Drawing.Size(1410, 677);
             this.attachablesInfoDataGridView.TabIndex = 4;
             // 
+            // ElementName
+            // 
+            this.ElementName.HeaderText = "Element Name";
+            this.ElementName.MinimumWidth = 6;
+            this.ElementName.Name = "ElementName";
+            this.ElementName.Width = 250;
+            // 
+            // FilePath
+            // 
+            this.FilePath.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FilePath.HeaderText = "File Path";
+            this.FilePath.MinimumWidth = 6;
+            this.FilePath.Name = "FilePath";
+            // 
+            // Add
+            // 
+            this.Add.HeaderText = "Column1";
+            this.Add.Name = "Add";
+            this.Add.Visible = false;
+            // 
             // toolStrip19
             // 
             this.toolStrip19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
@@ -2460,26 +2480,6 @@
             this.toolStripButton15.Name = "toolStripButton15";
             this.toolStripButton15.Size = new System.Drawing.Size(44, 24);
             this.toolStripButton15.Text = "Save";
-            // 
-            // ElementName
-            // 
-            this.ElementName.HeaderText = "Element Name";
-            this.ElementName.MinimumWidth = 6;
-            this.ElementName.Name = "ElementName";
-            this.ElementName.Width = 250;
-            // 
-            // FilePath
-            // 
-            this.FilePath.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FilePath.HeaderText = "File Path";
-            this.FilePath.MinimumWidth = 6;
-            this.FilePath.Name = "FilePath";
-            // 
-            // Add
-            // 
-            this.Add.HeaderText = "Column1";
-            this.Add.Name = "Add";
-            this.Add.Visible = false;
             // 
             // DeviceDescription
             // 
