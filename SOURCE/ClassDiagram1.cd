@@ -1,38 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical">
   <Class Name="Aml.Editor.Plugin.SearchAMLLibraryFile">
-    <Position X="0.5" Y="0.5" Width="3" />
+    <Position X="2.5" Y="2.25" Width="3" />
+    <InheritanceLine Type="System.Object" FixedFromPoint="true">
+      <Path>
+        <Point X="9.5" Y="5.113" />
+        <Point X="5.5" Y="5.113" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AEAAAAAAACCAAAwEAAAAgABEAASAAAGAAACEAAAEAEE=</HashCode>
       <FileName>SearchAMLLibraryFile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Aml.Editor.Plugin.SearchAMLComponentFile">
-    <Position X="9.75" Y="2.5" Width="2.5" />
+    <Position X="9" Y="7.5" Width="2.5" />
+    <InheritanceLine Type="System.Object" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="10.25" Y="6.2" />
+        <Point X="10.25" Y="7.5" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAEAAAAAAABAQBAAgAAEAEBAAAAAEIBACA=</HashCode>
       <FileName>SearchAMLComponentFile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Aml.Editor.Plugin.DeviceDescription" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="System.Windows.Forms.UserControl" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.188" Y="1.941" />
+        <Point X="16.188" Y="3.5" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>fmLfxn8fg3/IWD7rwP335sn/arvH2xLM59r3e+r9h74=</HashCode>
+      <HashCode>f+Dfxtcfg3/IeTb7yP335un/aqvH3RPMf9bi+vq9ra4=</HashCode>
       <FileName>DeviceDescription.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="System.Object" Collapsed="true">
-    <Position X="4.25" Y="6" Width="1.5" />
+  <Class Name="System.Object">
+    <Position X="9.5" Y="3.75" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="System.Windows.Forms.UserControl" Collapsed="true">
-    <Position X="13.25" Y="1.5" Width="1.5" />
+    <Position X="15.5" Y="1.25" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Aml.Editor.Plugin.MWData" Collapsed="true">
-    <Position X="5.25" Y="2" Width="1.5" />
+    <Position X="15.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>SAAAAAAAAKgCAAAAAAAAEIAAAAABAAAAJEAAAAAAAAA=</HashCode>
+      <HashCode>SAAAAAAAgAgCAAAAAAAAEIAAAAABAACAJAAAAAAAAAA=</HashCode>
       <FileName>MWData.cs</FileName>
     </TypeIdentifier>
   </Class>
