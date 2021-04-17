@@ -227,8 +227,8 @@
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
             this.ElementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Add = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.Page0_FullWindow.SuspendLayout();
             this.Page0_FullWindowPanel2.SuspendLayout();
@@ -1714,8 +1714,8 @@
             this.attachablesInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.attachablesInfoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ElementName,
-            this.Column1,
-            this.FilePath});
+            this.FilePath,
+            this.Add});
             this.attachablesInfoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.attachablesInfoDataGridView.Location = new System.Drawing.Point(0, 141);
             this.attachablesInfoDataGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -2468,18 +2468,18 @@
             this.ElementName.Name = "ElementName";
             this.ElementName.Width = 250;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
-            // 
             // FilePath
             // 
             this.FilePath.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FilePath.HeaderText = "File Path";
             this.FilePath.MinimumWidth = 6;
             this.FilePath.Name = "FilePath";
+            // 
+            // Add
+            // 
+            this.Add.HeaderText = "Column1";
+            this.Add.Name = "Add";
+            this.Add.Visible = false;
             // 
             // DeviceDescription
             // 
@@ -2778,7 +2778,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn componentFile;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ElementName;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Add;
     }
 }
