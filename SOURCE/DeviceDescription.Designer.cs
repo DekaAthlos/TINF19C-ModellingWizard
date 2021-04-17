@@ -142,6 +142,11 @@
             this.Page3_TopPanel = new System.Windows.Forms.Panel();
             this.treeViewElectricalInterfaces = new System.Windows.Forms.TreeView();
             this.electricalInterfacesCollectionDataGridView = new System.Windows.Forms.DataGridView();
+            this.SerialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SelectedClassorInterface = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libraryFile = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.componentFile = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip24 = new System.Windows.Forms.ToolStrip();
             this.deleterowsInelectricalInterfacesDataGridView = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
@@ -149,8 +154,6 @@
             this.addPicturesandDocsPanel = new System.Windows.Forms.Panel();
             this.Page2_BottomPanel = new System.Windows.Forms.Panel();
             this.attachablesInfoDataGridView = new System.Windows.Forms.DataGridView();
-            this.ElementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip19 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel12 = new System.Windows.Forms.ToolStripLabel();
             this.clearSelectedRowBtn = new System.Windows.Forms.ToolStripButton();
@@ -223,11 +226,9 @@
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
-            this.SerialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SelectedClassorInterface = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libraryFile = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.componentFile = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ElementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.Page0_FullWindow.SuspendLayout();
             this.Page0_FullWindowPanel2.SuspendLayout();
@@ -1585,6 +1586,49 @@
             this.electricalInterfacesCollectionDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.electricalInterfacesCollectionDataGridView_CellContentClick);
             this.electricalInterfacesCollectionDataGridView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.electricalInterfacesCollectionDataGridView_MouseUp);
             // 
+            // SerialNumber
+            // 
+            this.SerialNumber.HeaderText = "Index";
+            this.SerialNumber.MinimumWidth = 6;
+            this.SerialNumber.Name = "SerialNumber";
+            this.SerialNumber.ReadOnly = true;
+            this.SerialNumber.Width = 50;
+            // 
+            // SelectedClassorInterface
+            // 
+            this.SelectedClassorInterface.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SelectedClassorInterface.HeaderText = "Interface ";
+            this.SelectedClassorInterface.MinimumWidth = 6;
+            this.SelectedClassorInterface.Name = "SelectedClassorInterface";
+            this.SelectedClassorInterface.ReadOnly = true;
+            // 
+            // libraryFile
+            // 
+            this.libraryFile.HeaderText = "LibraryFile";
+            this.libraryFile.MinimumWidth = 6;
+            this.libraryFile.Name = "libraryFile";
+            this.libraryFile.ReadOnly = true;
+            this.libraryFile.Visible = false;
+            this.libraryFile.Width = 125;
+            // 
+            // componentFile
+            // 
+            this.componentFile.HeaderText = "ComponentFile";
+            this.componentFile.MinimumWidth = 6;
+            this.componentFile.Name = "componentFile";
+            this.componentFile.ReadOnly = true;
+            this.componentFile.Visible = false;
+            this.componentFile.Width = 125;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Add to AML-File";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Visible = false;
+            this.dataGridViewCheckBoxColumn1.Width = 125;
+            // 
             // toolStrip24
             // 
             this.toolStrip24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
@@ -1670,6 +1714,7 @@
             this.attachablesInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.attachablesInfoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ElementName,
+            this.Column1,
             this.FilePath});
             this.attachablesInfoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.attachablesInfoDataGridView.Location = new System.Drawing.Point(0, 141);
@@ -1679,20 +1724,6 @@
             this.attachablesInfoDataGridView.RowTemplate.Height = 24;
             this.attachablesInfoDataGridView.Size = new System.Drawing.Size(1410, 677);
             this.attachablesInfoDataGridView.TabIndex = 4;
-            // 
-            // ElementName
-            // 
-            this.ElementName.HeaderText = "Element Name";
-            this.ElementName.MinimumWidth = 6;
-            this.ElementName.Name = "ElementName";
-            this.ElementName.Width = 250;
-            // 
-            // FilePath
-            // 
-            this.FilePath.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FilePath.HeaderText = "File Path";
-            this.FilePath.MinimumWidth = 6;
-            this.FilePath.Name = "FilePath";
             // 
             // toolStrip19
             // 
@@ -2430,48 +2461,25 @@
             this.toolStripButton15.Size = new System.Drawing.Size(44, 24);
             this.toolStripButton15.Text = "Save";
             // 
-            // SerialNumber
+            // ElementName
             // 
-            this.SerialNumber.HeaderText = "Index";
-            this.SerialNumber.MinimumWidth = 6;
-            this.SerialNumber.Name = "SerialNumber";
-            this.SerialNumber.ReadOnly = true;
-            this.SerialNumber.Width = 50;
+            this.ElementName.HeaderText = "Element Name";
+            this.ElementName.MinimumWidth = 6;
+            this.ElementName.Name = "ElementName";
+            this.ElementName.Width = 250;
             // 
-            // SelectedClassorInterface
+            // Column1
             // 
-            this.SelectedClassorInterface.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SelectedClassorInterface.HeaderText = "Interface ";
-            this.SelectedClassorInterface.MinimumWidth = 6;
-            this.SelectedClassorInterface.Name = "SelectedClassorInterface";
-            this.SelectedClassorInterface.ReadOnly = true;
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
             // 
-            // libraryFile
+            // FilePath
             // 
-            this.libraryFile.HeaderText = "LibraryFile";
-            this.libraryFile.MinimumWidth = 6;
-            this.libraryFile.Name = "libraryFile";
-            this.libraryFile.ReadOnly = true;
-            this.libraryFile.Visible = false;
-            this.libraryFile.Width = 125;
-            // 
-            // componentFile
-            // 
-            this.componentFile.HeaderText = "ComponentFile";
-            this.componentFile.MinimumWidth = 6;
-            this.componentFile.Name = "componentFile";
-            this.componentFile.ReadOnly = true;
-            this.componentFile.Visible = false;
-            this.componentFile.Width = 125;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Add to AML-File";
-            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn1.Visible = false;
-            this.dataGridViewCheckBoxColumn1.Width = 125;
+            this.FilePath.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FilePath.HeaderText = "File Path";
+            this.FilePath.MinimumWidth = 6;
+            this.FilePath.Name = "FilePath";
             // 
             // DeviceDescription
             // 
@@ -2696,8 +2704,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.TextBox selectedFileURLTextBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ElementName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.Label AMLfileLabel;
         private System.Windows.Forms.Label AMLURLLabel;
         private System.Windows.Forms.TabPage genericData;
@@ -2771,5 +2777,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn libraryFile;
         private System.Windows.Forms.DataGridViewCheckBoxColumn componentFile;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ElementName;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
     }
 }
