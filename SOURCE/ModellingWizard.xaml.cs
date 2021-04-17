@@ -165,7 +165,7 @@ namespace Aml.Editor.Plugin
         /// <value>The display name.</value>
         public string DisplayName
         {
-            get { return "Modeling Wizard for Devices (Version 02.00.00)(18.04.2021)"; }
+            get { return "Modelling wizard for devices [Version 02.00.00.00 (18.04.2021)]"; }
         }
 
         /// <summary>

@@ -145,7 +145,7 @@
 
                     </StackPanel>
 
-                    <Border BorderBrush="Gray" BorderThickness="0,2,0,0">
+                    <Border BorderBrush="Gray" BorderThickness="0,0,0,0" Width="491" Height="45">
                         <Button
                             x:Name="Close"
                             Margin="10"
