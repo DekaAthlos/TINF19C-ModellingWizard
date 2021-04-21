@@ -1465,7 +1465,7 @@ namespace Aml.Editor.Plugin
 
                         device.filepath = Path.GetDirectoryName(saveFileDialog.FileName);
                         device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
-                        filePathLabel.Text = Path.GetDirectoryName(saveFileDialog.FileName);
+                        //filePathLabel.Text = Path.GetDirectoryName(saveFileDialog.FileName);
                         device.fileName = saveFileDialog.FileName;
 
 
