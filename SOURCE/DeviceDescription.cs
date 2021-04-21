@@ -1484,7 +1484,7 @@ namespace Aml.Editor.Plugin
                         {
                             // Display error Dialog
                             MessageBox.Show(result1, "Automation Component Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clear();
+                            newToolStripMenuItem_Click(sender, e);
                         }
                     }
 
@@ -1517,6 +1517,7 @@ namespace Aml.Editor.Plugin
                 {
                     // Display error Dialog
                     MessageBox.Show(result, "Automation Component Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    newToolStripMenuItem_Click(sender, e);
                 }
             }
 
@@ -1887,7 +1888,7 @@ namespace Aml.Editor.Plugin
                                     }
                                 }*/
 
-                                if (internalElements.Name != "ElectricalInterfaces" && internalElements.Name != "DeviceIdentification")
+                                if (internalElements.Name != "Interfaces" && internalElements.Name != "ElectricalInterfaces" && internalElements.Name != "DeviceIdentification")
                                 {
                                     int num = attachablesInfoDataGridView.Rows.Add();
                                     attachablesInfoDataGridView.Rows[num].Cells[0].Value = internalElements.Name;
@@ -1924,7 +1925,7 @@ namespace Aml.Editor.Plugin
                                         }
                                     }
                                 }
-                                if (internalElements.Name == "ElectricalInterfaces")
+                                if (internalElements.Name == "Interfaces" || internalElements.Name == "ElectricalInterfaces")
                                 {
                                     int i = 1;
                                     foreach (var subinternalElements in internalElements.InternalElement)
