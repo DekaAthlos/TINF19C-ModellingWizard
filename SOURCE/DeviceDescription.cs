@@ -1404,120 +1404,128 @@ namespace Aml.Editor.Plugin
         {
             if (vendorNameTextBox.Text == "" && deviceNameTextBox.Text == "")
             {
-                MessageBox.Show("Enter Vendor Name and Device Name before saving an Autoamtion Component", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Enter Vendor Name and Device Name before saving an Automation Component", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (vendorNameTextBox.Text != null && deviceNameTextBox.Text != null)
+            else if (vendorNameTextBox.Text == "")
             {
-                device.vendorName = vendorNameTextBox.Text;
+                MessageBox.Show("Error no vendor name set!", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (deviceNameTextBox.Text == "")
+            {
+                MessageBox.Show("Error no device name set!", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                device.deviceName = deviceNameTextBox.Text;
+            device.vendorName = vendorNameTextBox.Text;
+
+            device.deviceName = deviceNameTextBox.Text;
 
 
-                device.dataGridAttachablesParametrsList = new List<AttachablesDataGridViewParameters>();
-                if (attachablesInfoDataGridView != null)
+            device.dataGridAttachablesParametrsList = new List<AttachablesDataGridViewParameters>();
+            if (attachablesInfoDataGridView != null)
+            {
+                int i = 0;
+                int j = attachablesInfoDataGridView.Rows.Count - 1;
+                if (i <= 0)
                 {
-                    int i = 0;
-                    int j = attachablesInfoDataGridView.Rows.Count - 1;
-                    if (i <= 0)
+                    while (i < j)
                     {
-                        while (i < j)
+
+                        AttachablesDataGridViewParameters parametersFromAttachablesDataGrid = new AttachablesDataGridViewParameters();
+
+                        try
                         {
+                            parametersFromAttachablesDataGrid.ElementName = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[0].Value);
+                            parametersFromAttachablesDataGrid.FilePath = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[1].Value);
+                            parametersFromAttachablesDataGrid.AddToFile = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[2].Value);
+                        }
+                        catch (Exception ex) { MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning); }
 
-                            AttachablesDataGridViewParameters parametersFromAttachablesDataGrid = new AttachablesDataGridViewParameters();
+                        device.dataGridAttachablesParametrsList.Add(parametersFromAttachablesDataGrid);
+                        i++;
+                    }
+                }
+            }
 
-                            try
-                            {
-                                parametersFromAttachablesDataGrid.ElementName = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[0].Value);
-                                parametersFromAttachablesDataGrid.FilePath = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[1].Value);
-                                parametersFromAttachablesDataGrid.AddToFile = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[2].Value);
-                            }
-                            catch (Exception ex) { MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning); }
 
-                            device.dataGridAttachablesParametrsList.Add(parametersFromAttachablesDataGrid);
-                            i++;
+            if (fileNameLabel.Text == "")
+            {
+
+                try
+                {
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+                    // saveFileDialog.Filter = "AML Files( *.amlx )| *.amlx;";
+                    saveFileDialog.FileName = vendorNameTextBox.Text + "-" + deviceNameTextBox.Text + "-V.1.0-" + DateTime.Now.Date.ToShortDateString();
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+
+                        device.filepath = Path.GetDirectoryName(saveFileDialog.FileName);
+                        device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
+                        filePathLabel.Text = Path.GetDirectoryName(saveFileDialog.FileName);
+                        device.fileName = saveFileDialog.FileName;
+
+
+                        fileNameLabel.Text = "";
+                        // storing user defined values of Attachebles data grid view in to list 
+
+                        // Pass the device to the controller
+                        string result1 = mWController.CreateDeviceOnClick(device, isEditing);
+
+
+
+                        //clear();
+
+                        // Display the result
+                        if (result1 != null)
+                        {
+                            // Display error Dialog
+                            MessageBox.Show(result1, "Automation Component Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clear();
                         }
                     }
+
+
                 }
-
-
-                if (fileNameLabel.Text == "")
+                catch (Exception)
                 {
 
-                    try
-                    {
-                        SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-                        // saveFileDialog.Filter = "AML Files( *.amlx )| *.amlx;";
-                        saveFileDialog.FileName = vendorNameTextBox.Text + "-" + deviceNameTextBox.Text + "-V.1.0-" + DateTime.Now.Date.ToShortDateString();
-
-                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                        {
-
-                            device.filepath = Path.GetDirectoryName(saveFileDialog.FileName);
-                            device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
-                            filePathLabel.Text = Path.GetDirectoryName(saveFileDialog.FileName);
-                            device.fileName = saveFileDialog.FileName;
-
-
-                            fileNameLabel.Text = "";
-                            // storing user defined values of Attachebles data grid view in to list 
-
-                            // Pass the device to the controller
-                            string result1 = mWController.CreateDeviceOnClick(device, isEditing);
-
-
-
-                            //clear();
-
-                            // Display the result
-                            if (result1 != null)
-                            {
-                                // Display error Dialog
-                                MessageBox.Show(result1, "Automation Component Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                        }
-
-
-                    }
-                    catch (Exception)
-                    {
-
-                        throw;
-                    }
-
+                    throw;
                 }
-                if (fileNameLabel.Text != "")
-                {
-                    //device.filepath = filePathLabel.Text;
-                    // device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
-                    device.fileName = vendorNameTextBox.Text + "-" + deviceNameTextBox.Text + "-V.1.0-" + DateTime.Now.Date.ToShortDateString();
-
-                    fileNameLabel.Text = "";
-                    // storing user defined values of Attachebles data grid view in to list 
-
-                    // Pass the device to the controller
-                    string result = mWController.CreateDeviceOnClick(device, isEditing);
-
-
-                    //clear();
-
-                    // Display the result
-                    if (result != null)
-                    {
-                        // Display error Dialog
-                        MessageBox.Show(result, "Automation Component Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-
-                device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-                device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-
-                device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-                device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-                // Assigning values and parameters in "Identification data grid" to properties given in class "DatatableParametersCarrier" in MWDevice
 
             }
+            if (fileNameLabel.Text != "")
+            {
+                //device.filepath = filePathLabel.Text;
+                // device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
+                device.fileName = vendorNameTextBox.Text + "-" + deviceNameTextBox.Text + "-V.1.0-" + DateTime.Now.Date.ToShortDateString();
+
+                fileNameLabel.Text = "";
+                // storing user defined values of Attachebles data grid view in to list 
+
+                // Pass the device to the controller
+                string result = mWController.CreateDeviceOnClick(device, isEditing);
+
+
+                //clear();
+
+                // Display the result
+                if (result != null)
+                {
+                    // Display error Dialog
+                    MessageBox.Show(result, "Automation Component Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+            device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+            device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+
+            device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+            device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+            // Assigning values and parameters in "Identification data grid" to properties given in class "DatatableParametersCarrier" in MWDevice
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3462,12 +3470,6 @@ namespace Aml.Editor.Plugin
 
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-
 
 
         /// <summary>
@@ -3512,7 +3514,7 @@ namespace Aml.Editor.Plugin
 
         private void librariesSplitButton_ButtonClick(object sender, EventArgs e)
         {
-
+            librariesSplitButton.ShowDropDown();
         }
 
 

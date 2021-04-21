@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeviceDescription));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.fileButton = new System.Windows.Forms.ToolStripSplitButton();
+            this.fileButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,12 +42,12 @@
             this.loadLibraryFile = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpButton = new System.Windows.Forms.ToolStripSplitButton();
+            this.helpButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileNameLabel = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.librariesSplitButton = new System.Windows.Forms.ToolStripSplitButton();
+            this.librariesSplitButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.automationComponentLibraryv100ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.automationComponentLibraryv100CAEX3BETAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.automationComponentLibraryv100FullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -318,12 +318,11 @@
             this.toolStrip1.Size = new System.Drawing.Size(1813, 40);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // fileButton
             // 
             this.fileButton.AutoSize = false;
-            this.fileButton.BackColor = System.Drawing.Color.White;
+            this.fileButton.BackColor = System.Drawing.Color.Transparent;
             this.fileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fileButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
@@ -339,8 +338,6 @@
             this.fileButton.Name = "fileButton";
             this.fileButton.Size = new System.Drawing.Size(75, 42);
             this.fileButton.Text = "File";
-            this.fileButton.ButtonClick += new System.EventHandler(this.fileButton_ButtonClick);
-            this.fileButton.MouseHover += new System.EventHandler(this.fileButton_MouseHover);
             // 
             // newToolStripMenuItem
             // 
@@ -368,6 +365,7 @@
             this.saveeToolStripMenuItem.Name = "saveeToolStripMenuItem";
             this.saveeToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.saveeToolStripMenuItem.Text = "Save As";
+            this.saveeToolStripMenuItem.Visible = false;
             this.saveeToolStripMenuItem.Click += new System.EventHandler(this.saveeToolStripMenuItem_Click);
             // 
             // importToolStripMenuItem
@@ -416,7 +414,7 @@
             // helpButton
             // 
             this.helpButton.AutoSize = false;
-            this.helpButton.BackColor = System.Drawing.Color.White;
+            this.helpButton.BackColor = System.Drawing.Color.Transparent;
             this.helpButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.helpButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
@@ -428,8 +426,6 @@
             this.helpButton.Name = "helpButton";
             this.helpButton.Size = new System.Drawing.Size(75, 42);
             this.helpButton.Text = "Help";
-            this.helpButton.ButtonClick += new System.EventHandler(this.helpButton_ButtonClick);
-            this.helpButton.MouseHover += new System.EventHandler(this.helpButton_MouseHover);
             // 
             // aboutToolStripMenuItem
             // 
@@ -476,7 +472,7 @@
             this.librariesSplitButton.Image = ((System.Drawing.Image)(resources.GetObject("librariesSplitButton.Image")));
             this.librariesSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.librariesSplitButton.Name = "librariesSplitButton";
-            this.librariesSplitButton.Size = new System.Drawing.Size(131, 37);
+            this.librariesSplitButton.Size = new System.Drawing.Size(128, 37);
             this.librariesSplitButton.Text = "Standard Libraries";
             // 
             // automationComponentLibraryv100ToolStripMenuItem
@@ -2620,7 +2616,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripforInterfaceClassLib;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asInterfaceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSplitButton helpButton;
+        private System.Windows.Forms.ToolStripDropDownButton helpButton;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
         private System.Windows.Forms.TabPage Interface;
@@ -2733,7 +2729,7 @@
         private System.Windows.Forms.ToolStrip deleteRoleClassesButton;
         private System.Windows.Forms.ToolStripLabel toolStripLabel20;
         private System.Windows.Forms.ToolStripButton deleteRoleClassButton;
-        private System.Windows.Forms.ToolStripSplitButton fileButton;
+        private System.Windows.Forms.ToolStripDropDownButton fileButton;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
@@ -2749,13 +2745,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox deviceNameTextBox;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripSplitButton librariesSplitButton;
-        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100CAEX3BETAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100FullToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem electricConnectorLibraryv100ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem industrialSensorLibraryv100ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
@@ -2780,5 +2769,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ElementName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Add;
+        private System.Windows.Forms.ToolStripDropDownButton librariesSplitButton;
+        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100CAEX3BETAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100FullToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem automationComponentLibraryv100FullCAEX3BETAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem electricConnectorLibraryv100ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem industrialSensorLibraryv100ToolStripMenuItem;
     }
 }

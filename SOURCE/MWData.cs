@@ -368,7 +368,7 @@ namespace Aml.Editor.Plugin
                 RoleRequirementsType roleRequirements = null ;
                 foreach (var internalElement in systemUnitClass.InternalElement)
                 {
-                    if (internalElement.Name.Equals("ElectricalInterfaces"))
+                    if (internalElement.Name.Equals("Interfaces"))
                     {
                         electricalInterface = internalElement;
                         roleRequirements = electricalInterface.RoleRequirements.Append();
@@ -377,7 +377,7 @@ namespace Aml.Editor.Plugin
                     }
                 }
                 if (electricalInterface == null)
-                    electricalInterface = systemUnitClass.InternalElement.Append("ElectricalInterfaces");
+                    electricalInterface = systemUnitClass.InternalElement.Append("Interfaces");
                    roleRequirements = electricalInterface.RoleRequirements.Append();
 
                     roleRequirements.RefBaseRoleClassPath = structureRoleFamilyType.CAEXPath();
