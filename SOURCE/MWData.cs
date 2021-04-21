@@ -45,14 +45,14 @@ namespace Aml.Editor.Plugin
         private void fillDeviceWithData(MWDevice device, AttributeSequence attributes)
         {
             // iterate over all atttributes
-            foreach (AttributeType attribute in attributes)
+            /*foreach (AttributeType attribute in attributes)
             {
                 // apply the value of the attribute to the correct interface parameter
                 switch (attribute.Name)
                 {
                    
                 }
-            }
+            }*/
         }
 
         /// <summary>
@@ -70,7 +70,6 @@ namespace Aml.Editor.Plugin
             // Init final .amlx Filepath
             //first of all create a folder on "Vendor Name"
             string vendorCompanyName = device.vendorName;
-            string vendorCompanyNameFilePath = "";
           
           
 
@@ -166,9 +165,6 @@ namespace Aml.Editor.Plugin
                 }
                  foreach (var pair in device.DictionaryForRoleClassofComponent)
                  {
-
-                    SupportedRoleClassType supportedRoleClass = null;
-
 
                     Match numberfromElectricalConnectorType = Regex.Match(pair.Key.ToString(), @"\((\d+)\)");
                      string initialnumberbetweenparanthesisofElectricalConnectorType = numberfromElectricalConnectorType.Groups[1].Value;
