@@ -332,7 +332,7 @@
             this.importToolStripMenuItem,
             this.loadLibraryFile,
             this.exitToolStripMenuItem});
-            this.fileButton.ForeColor = System.Drawing.Color.LightGray;
+            this.fileButton.ForeColor = System.Drawing.Color.DarkOrange;
             this.fileButton.Image = ((System.Drawing.Image)(resources.GetObject("fileButton.Image")));
             this.fileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileButton.Name = "fileButton";
@@ -420,7 +420,7 @@
             this.aboutToolStripMenuItem,
             this.manualToolStripMenuItem});
             this.helpButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.helpButton.ForeColor = System.Drawing.Color.LightGray;
+            this.helpButton.ForeColor = System.Drawing.Color.DarkOrange;
             this.helpButton.Image = ((System.Drawing.Image)(resources.GetObject("helpButton.Image")));
             this.helpButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.helpButton.Name = "helpButton";
@@ -431,14 +431,14 @@
             // 
             this.aboutToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // manualToolStripMenuItem
             // 
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manualToolStripMenuItem.Text = "Manual";
             this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
@@ -468,7 +468,7 @@
             this.electricConnectorLibraryv100ToolStripMenuItem,
             this.industrialSensorLibraryv100ToolStripMenuItem});
             this.librariesSplitButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.librariesSplitButton.ForeColor = System.Drawing.Color.LightGray;
+            this.librariesSplitButton.ForeColor = System.Drawing.Color.DarkOrange;
             this.librariesSplitButton.Image = ((System.Drawing.Image)(resources.GetObject("librariesSplitButton.Image")));
             this.librariesSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.librariesSplitButton.Name = "librariesSplitButton";
@@ -525,7 +525,7 @@
             // 
             // filePathLabel
             // 
-            this.filePathLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.filePathLabel.ForeColor = System.Drawing.Color.DarkOrange;
             this.filePathLabel.Name = "filePathLabel";
             this.filePathLabel.Size = new System.Drawing.Size(89, 37);
             this.filePathLabel.Text = "Vendor Name";
@@ -533,7 +533,6 @@
             // vendorNameTextBox
             // 
             this.vendorNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vendorNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.vendorNameTextBox.Name = "vendorNameTextBox";
             this.vendorNameTextBox.Size = new System.Drawing.Size(219, 40);
             // 
@@ -545,7 +544,7 @@
             // 
             // toolStripLabel4
             // 
-            this.toolStripLabel4.ForeColor = System.Drawing.Color.LightGray;
+            this.toolStripLabel4.ForeColor = System.Drawing.Color.DarkOrange;
             this.toolStripLabel4.Name = "toolStripLabel4";
             this.toolStripLabel4.Size = new System.Drawing.Size(85, 37);
             this.toolStripLabel4.Text = "Device Name";
@@ -553,7 +552,6 @@
             // deviceNameTextBox
             // 
             this.deviceNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.deviceNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.deviceNameTextBox.Name = "deviceNameTextBox";
             this.deviceNameTextBox.Size = new System.Drawing.Size(219, 40);
             // 
@@ -2045,7 +2043,6 @@
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(88, 25);
             // 
@@ -2110,7 +2107,6 @@
             // 
             // toolStripTextBox2
             // 
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(116, 25);
             // 

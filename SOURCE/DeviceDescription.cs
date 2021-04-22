@@ -1449,10 +1449,6 @@ namespace Aml.Editor.Plugin
                 }
             }
 
-
-            if (fileNameLabel.Text == "")
-            {
-
                 try
                 {
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -1495,31 +1491,6 @@ namespace Aml.Editor.Plugin
 
                     throw;
                 }
-
-            }
-            if (fileNameLabel.Text != "")
-            {
-                //device.filepath = filePathLabel.Text;
-                // device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
-                device.fileName = vendorNameTextBox.Text + "-" + deviceNameTextBox.Text + "-V.1.0-" + DateTime.Now.Date.ToShortDateString();
-
-                fileNameLabel.Text = "";
-                // storing user defined values of Attachebles data grid view in to list 
-
-                // Pass the device to the controller
-                string result = mWController.CreateDeviceOnClick(device, isEditing);
-
-
-                //clear();
-
-                // Display the result
-                if (result != null)
-                {
-                    // Display error Dialog
-                    MessageBox.Show(result, "Automation Component Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    newToolStripMenuItem_Click(sender, e);
-                }
-            }
 
             device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
             device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
