@@ -70,12 +70,20 @@ namespace Aml.Editor.Plugin
             // Init final .amlx Filepath
             //first of all create a folder on "Vendor Name"
             string vendorCompanyName = device.vendorName;
-          
-          
+
+            string amlFilePath;
 
             string fileName = device.fileName;
 
-            string amlFilePath = System.IO.Path.Combine(device.filepath, fileName + ".amlx");
+            if (fileName.Contains(".amlx"))
+            {
+                amlFilePath = System.IO.Path.Combine(device.filepath, fileName);
+            }
+            else
+            {
+               amlFilePath = System.IO.Path.Combine(device.filepath, fileName + ".amlx");
+            }
+
 
 
             FileInfo file = new FileInfo(amlFilePath);
@@ -113,7 +121,13 @@ namespace Aml.Editor.Plugin
                 // create a new CAEX document
                 document = CAEXDocument.New_CAEXDocument();
                 try
-                {amlx = new AutomationMLContainer(amlFilePath, FileMode.Create); } catch (Exception){}
+                {
+                    amlx = new AutomationMLContainer(amlFilePath, FileMode.Create);
+                }
+                catch (Exception)
+                {
+
+                }
                  
 
             }
@@ -163,40 +177,43 @@ namespace Aml.Editor.Plugin
                     }
                    
                 }
-                 foreach (var pair in device.DictionaryForRoleClassofComponent)
-                 {
+
+                foreach (var pair in device.DictionaryForRoleClassofComponent)
+                {
 
                     Match numberfromElectricalConnectorType = Regex.Match(pair.Key.ToString(), @"\((\d+)\)");
-                     string initialnumberbetweenparanthesisofElectricalConnectorType = numberfromElectricalConnectorType.Groups[1].Value;
-                   // string stringinparanthesis = Regex.Match(pair.Key.ToString(), @"\{(\d+)\}").Groups[1].Value;
+                    string initialnumberbetweenparanthesisofElectricalConnectorType =
+                        numberfromElectricalConnectorType.Groups[1].Value;
+                    // string stringinparanthesis = Regex.Match(pair.Key.ToString(), @"\{(\d+)\}").Groups[1].Value;
 
                     string supportedRoleClassFromDictionary = Regex.Replace(pair.Key.ToString(), @"\(.+?\)", "");
-                     supportedRoleClassFromDictionary = Regex.Replace(supportedRoleClassFromDictionary, @"\{.+?\}", "");
+                    supportedRoleClassFromDictionary = Regex.Replace(supportedRoleClassFromDictionary, @"\{.+?\}", "");
 
 
-                   
+
                     var SRC = systemUnitClass.SupportedRoleClass.Append();
 
-                    
+
 
                     var attributesOfSystemUnitClass = systemUnitClass.Attribute;
 
-                     foreach (var valueList in pair.Value)
-                     {
-                         foreach (var item in valueList)
-                         {
-                           
-                            
-                            if ( item.AttributePath.Contains("/") || item.AttributePath.Contains("."))
+                    foreach (var valueList in pair.Value)
+                    {
+                        foreach (var item in valueList)
+                        {
+
+
+                            if (item.AttributePath.Contains("/") || item.AttributePath.Contains("."))
                             {
                                 int count = 2;
                                 int counter = 0;
                                 Stack<char> stack = new Stack<char>();
-                                string searchAttributeName = item.AttributePath.Substring(0, item.AttributePath.Length - item.Name.Length);
+                                string searchAttributeName =
+                                    item.AttributePath.Substring(0, item.AttributePath.Length - item.Name.Length);
 
                                 foreach (var character in searchAttributeName.Reverse())
                                 {
-                                   
+
                                     if (!char.IsLetterOrDigit(character))
                                     {
                                         counter++;
@@ -204,13 +221,14 @@ namespace Aml.Editor.Plugin
                                         {
                                             break;
                                         }
-                                       
+
                                     }
+
                                     if (char.IsLetterOrDigit(character))
                                     {
                                         stack.Push(character);
                                     }
-                                    
+
                                 }
 
                                 string finalAttributeName = new string(stack.ToArray());
@@ -233,7 +251,7 @@ namespace Aml.Editor.Plugin
                                         {
                                             var refsem = eachattribute.RefSemantic.Append();
                                             refsem.CorrespondingAttributePath = val.FirstAttribute.Value;
-                                            
+
                                         }
 
 
@@ -241,13 +259,15 @@ namespace Aml.Editor.Plugin
                                         SRC.RefRoleClassPath = item.SupportesRoleClassType;
 
                                     }
+
                                     if (attribute.Attribute.Exists)
                                     {
 
-                                        SearchForAttributesInsideAttributesofAutomationComponent(finalAttributeName, attribute, item,SRC);
+                                        SearchForAttributesInsideAttributesofAutomationComponent(finalAttributeName,
+                                            attribute, item, SRC);
                                     }
                                 }
-                               
+
                             }
                             else
                             {
@@ -258,10 +278,10 @@ namespace Aml.Editor.Plugin
                                 eachattribute.AttributeDataType = item.DataType;
                                 eachattribute.Description = item.Description;
                                 eachattribute.Copyright = item.CopyRight;
-                                
+
                                 eachattribute.ID = item.ID;
 
-                               
+
                                 foreach (var val in item.RefSemanticList.Elements)
                                 {
                                     var refsem = eachattribute.RefSemantic.Append();
@@ -271,58 +291,24 @@ namespace Aml.Editor.Plugin
 
                                 SRC.RefRoleClassPath = item.SupportesRoleClassType;
                             }
-                            
+
 
                         }
-                     }
-                   
+                    }
+
 
                     foreach (var pairofList in device.DictionaryForExternalInterfacesUnderRoleClassofComponent)
-                     {
-                         Match numberfromElectricalConnectorPins = Regex.Match(pairofList.Key.ToString(), @"\((\d+)\)");
-                         string initialnumberbetweenparanthesisElectricalConnectorPins = numberfromElectricalConnectorPins.Groups[1].Value;
+                    {
+                        Match numberfromElectricalConnectorPins = Regex.Match(pairofList.Key.ToString(), @"\((\d+)\)");
+                        string initialnumberbetweenparanthesisElectricalConnectorPins =
+                            numberfromElectricalConnectorPins.Groups[1].Value;
 
-                         string electricalConnectorPinName = Regex.Replace(pairofList.Key.ToString(), @"\(.*?\)", "");
-                         electricalConnectorPinName = Regex.Replace(electricalConnectorPinName, @"\{.*?\}", "");
-                         electricalConnectorPinName = electricalConnectorPinName.Replace(supportedRoleClassFromDictionary, "");
-
-
-
-
-                         /*if (initialnumberbetweenparanthesisofElectricalConnectorType == initialnumberbetweenparanthesisElectricalConnectorPins)
-                         {
-                             supportedRoleClass.RoleReference = pairofList.Key.ToString();
-
-                             systemUnitClass.SupportedRoleClass.Append(supportedRoleClass);
-                             systemUnitClass.BaseClass.Name = supportedRoleClassFromDictionary;
-
-                             var attributesOfSystemUnitClassattributes = systemUnitClass.Attribute;
-
-                             foreach (var valueList in pairofList.Value)
-                             {
-                                 foreach (var item in valueList)
-                                 {
-                                     var eachattribute = attributesOfSystemUnitClassattributes.Append(item.Name.ToString());
-                                     eachattribute.Value = item.Value;
-                                     eachattribute.DefaultValue = item.Default;
-                                     eachattribute.Unit = item.Unit;
-                                     //eachattribute.AttributeDataType = 
-                                     eachattribute.Description = item.Description;
-                                     eachattribute.Copyright = item.CopyRight;
-
-                                     eachattribute.ID = item.ID;
-
-
-
-                                    // systemUnitClass.BaseClass.Name   = item.RefBaseClassPath;
-                                 }
-                             }
-                         }*/
-                     }
- 
-
-                 }
-
+                        string electricalConnectorPinName = Regex.Replace(pairofList.Key.ToString(), @"\(.*?\)", "");
+                        electricalConnectorPinName = Regex.Replace(electricalConnectorPinName, @"\{.*?\}", "");
+                        electricalConnectorPinName =
+                            electricalConnectorPinName.Replace(supportedRoleClassFromDictionary, "");
+                    }
+                }
             }
             else
             {
@@ -357,7 +343,6 @@ namespace Aml.Editor.Plugin
           
 
             // Create the internalElement Electrical Interfaces
-
             if (device.vendorName != null)
             {
                 InternalElementType electricalInterface = null;
@@ -594,27 +579,19 @@ namespace Aml.Editor.Plugin
 
                                         electricalConnectorPins.RefBaseClassPath = item.RefBaseClassPath;
                                     }
-
-                                   
                                 }
                             }
                         }
                     }
-
-
                 }
-
-                
- 
             }
 
-           
 
             // create the PackageUri for the root aml file
             Uri partUri = PackUriHelper.CreatePartUri(new Uri("/" + fileName + "-root.aml", UriKind.Relative));
 
 
-            // tcreate the aml file as a temporary file
+            // create the aml file as a temporary file
             string path = Path.GetTempFileName();
             document.SaveToFile(path, true);
 
@@ -624,7 +601,7 @@ namespace Aml.Editor.Plugin
                 amlx.Package.DeletePart(partUri);
                 
                 // delete all files in the amlx package.
-               // Directory.Delete(Path.GetFullPath(amlx.ContainerFilename), true);
+                // Directory.Delete(Path.GetFullPath(amlx.ContainerFilename), true);
 
             }
            
@@ -634,35 +611,30 @@ namespace Aml.Editor.Plugin
             
            if (!isEdit)
             {
-
                 foreach (AttachablesDataGridViewParameters listWithUri in device.listWithURIConvertedToString)
                 {
-                    
                     if (listWithUri.ElementName != null)
                     {
                         Uri newuri = null;
                         newuri = new Uri(listWithUri.ElementName, UriKind.Relative);
                         amlx.AddAnyContent(root, listWithUri.FilePath.ToString(), newuri);
-                       
                     }
-                   
-
                 }
             }
-             DirectoryInfo directory = new DirectoryInfo(Path.GetDirectoryName(amlFilePath));
-             foreach (FileInfo fileInfos in directory.GetFiles())
+            DirectoryInfo directory = new DirectoryInfo(Path.GetDirectoryName(amlFilePath)); 
+            
+            foreach (FileInfo fileInfos in directory.GetFiles())
              {
                  if (fileInfos.Extension != ".amlx")
                  {
                      fileInfos.Delete();
                  }
-                 
-
              }
            
 
             amlx.Save();
             amlx.Close();
+
             if (isEdit)
             {
                 return "Sucessfully updated device!\nFilepath " + amlFilePath;
@@ -674,8 +646,7 @@ namespace Aml.Editor.Plugin
             
         }
 
-        public void SearchForAttributesInsideAttributesofAutomationComponent(string searchName, AttributeType attribute, ClassOfListsFromReferencefile item
-            ,SupportedRoleClassType SRC)
+        public void SearchForAttributesInsideAttributesofAutomationComponent(string searchName, AttributeType attribute, ClassOfListsFromReferencefile item, SupportedRoleClassType SRC)
         {
             foreach (var nestedAttribute in attribute.Attribute)
             {
@@ -708,8 +679,7 @@ namespace Aml.Editor.Plugin
            
         }
 
-        public void SearchAttributesInsideAttributesOFElectricConnectorType(string searchName, AttributeType attribute, ClassOfListsFromReferencefile item
-            ,ExternalInterfaceType electricConnectorType)
+        public void SearchAttributesInsideAttributesOFElectricConnectorType(string searchName, AttributeType attribute, ClassOfListsFromReferencefile item, ExternalInterfaceType electricConnectorType)
         {
             foreach (var nestedAttribute in attribute.Attribute)
             {
@@ -1044,7 +1014,17 @@ namespace Aml.Editor.Plugin
 
             // create the amlx file
             string name = Path.GetFileNameWithoutExtension(filename);
-            AutomationMLContainer amlx = new AutomationMLContainer(".\\modellingwizard\\" + name + ".amlx", FileMode.Create);
+
+            AutomationMLContainer amlx;
+
+            if (name.Contains(".amlx"))
+            {
+                 amlx = new AutomationMLContainer(".\\modellingwizard\\" + name, FileMode.Create);
+            }
+            else
+            {
+                 amlx = new AutomationMLContainer(".\\modellingwizard\\" + name + ".amlx", FileMode.Create);
+            }
 
             // create the aml package path
             Uri partUri = PackUriHelper.CreatePartUri(new Uri("/" + name + "-root.aml", UriKind.Relative));
@@ -1076,6 +1056,7 @@ namespace Aml.Editor.Plugin
         {
             // Just as an interface
         }
+
         public void copyFiles(string sourceFilePath, string destinationFilePath )
         {
             string sourFile = Path.GetFileName(sourceFilePath);
