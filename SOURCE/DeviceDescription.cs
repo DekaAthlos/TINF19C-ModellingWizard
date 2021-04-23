@@ -1397,9 +1397,6 @@ namespace Aml.Editor.Plugin
             catch (Exception) { }
         }
 
-
-
-
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (vendorNameTextBox.Text == "" && deviceNameTextBox.Text == "")
@@ -1416,6 +1413,42 @@ namespace Aml.Editor.Plugin
             {
                 MessageBox.Show("Error no device name set!", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            }
+
+            foreach (var pair in device.DictionaryForRoleClassofComponent)
+            {
+                foreach (var valueList in pair.Value)
+                {
+                    foreach (var item in valueList)
+                    {
+                        var attributeName = item.AttributePath.ToString();
+
+                        if (attributeName.Equals("IdentificationData.Manufacturer") || attributeName.Equals("IdentificationData.DeviceClass") || attributeName.Equals("IdentificationData.Model") || attributeName.Equals("IdentificationData.ProductCode"))
+                        {
+                            if (item.Value == null)
+                            {
+                                MessageBox.Show("Error no " + attributeName.Split('.')[1] + " set!", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                        }
+                        else if (attributeName.Equals("IdentificationData.ManufacturerURI"))
+                        {
+                            if (item.Value == null)
+                            {
+                                MessageBox.Show("Error no " + attributeName.Split('.')[1] + " set!", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                            else
+                            {
+                                if (!item.Value.StartsWith("https://") && !item.Value.StartsWith("http://") && !item.Value.StartsWith("www.") && !item.Value.StartsWith("WWW.") && !item.Value.StartsWith("/"))
+                                {
+                                    MessageBox.Show("Error " + attributeName.Split('.')[1] + " is not valid!", "URI not valid!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             device.vendorName = vendorNameTextBox.Text;
@@ -1449,48 +1482,181 @@ namespace Aml.Editor.Plugin
                 }
             }
 
-                try
+            try
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+                // saveFileDialog.Filter = "AML Files( *.amlx )| *.amlx;";
+                saveFileDialog.FileName = vendorNameTextBox.Text + "-" + deviceNameTextBox.Text + "-V.1.0-" + DateTime.Now.Date.ToShortDateString();
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-                    // saveFileDialog.Filter = "AML Files( *.amlx )| *.amlx;";
-                    saveFileDialog.FileName = vendorNameTextBox.Text + "-" + deviceNameTextBox.Text + "-V.1.0-" + DateTime.Now.Date.ToShortDateString();
+                    device.filepath = Path.GetDirectoryName(saveFileDialog.FileName);
+                    device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
+                    //filePathLabel.Text = Path.GetDirectoryName(saveFileDialog.FileName);
+                    device.fileName = saveFileDialog.FileName;
 
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+
+                    fileNameLabel.Text = "";
+                    // storing user defined values of Attachebles data grid view in to list 
+
+                    // Pass the device to the controller
+                    string result1 = mWController.CreateDeviceOnClick(device, isEditing);
+
+                    //clear();
+
+                    // Display the result
+                    if (result1 != null)
                     {
-
-                        device.filepath = Path.GetDirectoryName(saveFileDialog.FileName);
-                        device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
-                        //filePathLabel.Text = Path.GetDirectoryName(saveFileDialog.FileName);
-                        device.fileName = saveFileDialog.FileName;
-
-
-                        fileNameLabel.Text = "";
-                        // storing user defined values of Attachebles data grid view in to list 
-
-                        // Pass the device to the controller
-                        string result1 = mWController.CreateDeviceOnClick(device, isEditing);
+                        // Display error Dialog
+                        MessageBox.Show(result1, "Automation Component Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
 
 
+            }
+            catch (Exception)
+            {
 
-                        //clear();
+                throw;
+            }
 
-                        // Display the result
-                        if (result1 != null)
+            device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+            device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+
+            device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+            device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+            // Assigning values and parameters in "Identification data grid" to properties given in class "DatatableParametersCarrier" in MWDevice
+        }
+
+        private void saveeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (vendorNameTextBox.Text == "" && deviceNameTextBox.Text == "")
+            {
+                MessageBox.Show("Enter Vendor Name and Device Name before saving an Automation Component", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (vendorNameTextBox.Text == "")
+            {
+                MessageBox.Show("Error no vendor name set!", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (deviceNameTextBox.Text == "")
+            {
+                MessageBox.Show("Error no device name set!", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            foreach (var pair in device.DictionaryForRoleClassofComponent)
+            {
+                foreach (var valueList in pair.Value)
+                {
+                    foreach (var item in valueList)
+                    {
+                        var attributeName = item.AttributePath.ToString();
+
+                        if (attributeName.Equals("IdentificationData.Manufacturer") || attributeName.Equals("IdentificationData.DeviceClass") || attributeName.Equals("IdentificationData.Model") || attributeName.Equals("IdentificationData.ProductCode"))
                         {
-                            // Display error Dialog
-                            MessageBox.Show(result1, "Automation Component Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            newToolStripMenuItem_Click(sender, e);
+                            if (item.Value == null)
+                            {
+                                MessageBox.Show("Error no " + attributeName.Split('.')[1] + " set!", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                        }
+                        else if (attributeName.Equals("IdentificationData.ManufacturerURI"))
+                        {
+                            if (item.Value == null)
+                            {
+                                MessageBox.Show("Error no " + attributeName.Split('.')[1] + " set!", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                            else
+                            {
+                                if (!item.Value.StartsWith("https://") && !item.Value.StartsWith("http://") && !item.Value.StartsWith("www.") && !item.Value.StartsWith("WWW.") && !item.Value.StartsWith("/"))
+                                {
+                                    MessageBox.Show("Error " + attributeName.Split('.')[1] + " is not valid!", "URI not valid!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                            }
                         }
                     }
-
-
                 }
-                catch (Exception)
+            }
+
+            device.vendorName = vendorNameTextBox.Text;
+
+            device.deviceName = deviceNameTextBox.Text;
+
+
+            device.dataGridAttachablesParametrsList = new List<AttachablesDataGridViewParameters>();
+            if (attachablesInfoDataGridView != null)
+            {
+                int i = 0;
+                int j = attachablesInfoDataGridView.Rows.Count - 1;
+                if (i <= 0)
+                {
+                    while (i < j)
+                    {
+
+                        AttachablesDataGridViewParameters parametersFromAttachablesDataGrid = new AttachablesDataGridViewParameters();
+
+                        try
+                        {
+                            parametersFromAttachablesDataGrid.ElementName = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[0].Value);
+                            parametersFromAttachablesDataGrid.FilePath = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[1].Value);
+                            parametersFromAttachablesDataGrid.AddToFile = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[2].Value);
+                        }
+                        catch (Exception ex) { MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning); }
+
+                        device.dataGridAttachablesParametrsList.Add(parametersFromAttachablesDataGrid);
+                        i++;
+                    }
+                }
+            }
+
+            try
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+                // saveFileDialog.Filter = "AML Files( *.amlx )| *.amlx;";
+                saveFileDialog.FileName = vendorNameTextBox.Text + "-" + deviceNameTextBox.Text + "-V.1.0-" + DateTime.Now.Date.ToShortDateString();
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
 
-                    throw;
+                    device.filepath = Path.GetDirectoryName(saveFileDialog.FileName);
+                    device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
+                    //filePathLabel.Text = Path.GetDirectoryName(saveFileDialog.FileName);
+                    device.fileName = saveFileDialog.FileName;
+
+
+                    fileNameLabel.Text = "";
+                    // storing user defined values of Attachebles data grid view in to list 
+
+                    // Pass the device to the controller
+                    string result1 = mWController.CreateDeviceOnClick(device, isEditing);
+
+
+
+                    //clear();
+
+                    // Display the result
+                    if (result1 != null)
+                    {
+                        // Display error Dialog
+                        MessageBox.Show(result1, "Automation Component Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        newToolStripMenuItem_Click(sender, e);
+                    }
                 }
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
             device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
             device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
@@ -1561,88 +1727,6 @@ namespace Aml.Editor.Plugin
         {
             About about = new About();
             about.ShowDialog();
-        }
-
-        private void saveeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (vendorNameTextBox.Text == "" && deviceNameTextBox.Text == "")
-            {
-                MessageBox.Show("Enter Vendor Name and Device Name before saving an Autoamtion Component", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            device.vendorName = vendorNameTextBox.Text;
-            device.deviceName = deviceNameTextBox.Text;
-            device.dataGridAttachablesParametrsList = new List<AttachablesDataGridViewParameters>();
-
-
-            if (attachablesInfoDataGridView != null)
-            {
-                int i = 0;
-                int j = attachablesInfoDataGridView.Rows.Count - 1;
-                if (i <= 0)
-                {
-                    while (i < j)
-                    {
-
-                        AttachablesDataGridViewParameters parametersFromAttachablesDataGrid = new AttachablesDataGridViewParameters();
-
-                        try
-                        {
-                            parametersFromAttachablesDataGrid.ElementName = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[0].Value);
-                            parametersFromAttachablesDataGrid.FilePath = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[1].Value);
-                            parametersFromAttachablesDataGrid.AddToFile = Convert.ToString(attachablesInfoDataGridView.Rows[i].Cells[2].Value);
-                        }
-                        catch (Exception ex) { MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning); }
-
-                        device.dataGridAttachablesParametrsList.Add(parametersFromAttachablesDataGrid);
-                        i++;
-                    }
-                }
-            }
-
-
-            // if (generateAML.Text == "Save AML File")
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.FileName = vendorNameTextBox.Text + "-" + deviceNameTextBox.Text + "-V.1.0-" + DateTime.Now.Date.ToShortDateString();
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-
-                device.filepath = Path.GetDirectoryName(saveFileDialog.FileName);
-                device.environment = Path.GetDirectoryName(saveFileDialog.FileName);
-                device.fileName = saveFileDialog.FileName;
-            }
-
-            fileNameLabel.Text = "";
-
-            // storing user defined values of Attachebles data grid view in to list 
-
-
-
-
-            // Pass the device to the controller
-            string result = mWController.CreateDeviceOnClick(device, isEditing);
-
-
-            // Display the result
-            if (result != null)
-            {
-                // Display error Dialog
-                MessageBox.Show(result, "Automation Component Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-
-
-            device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-
-            // Assigning values and parameters in "Identification data grid" to properties given in class "DatatableParametersCarrier" in MWDevice
-
-
-
         }
 
         private void manualToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2712,6 +2796,7 @@ namespace Aml.Editor.Plugin
         {
             vendorNameTextBox.Text = "";
             deviceNameTextBox.Text = "";
+            fileNameLabel.Text = "";
             genericInformationDataGridView.Rows.Clear();
             genericInformationtreeView.Nodes.Clear();
             genericparametersAttrDataGridView.Rows.Clear();
@@ -3534,7 +3619,7 @@ namespace Aml.Editor.Plugin
 
 
 
-         private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
         {
 
         }

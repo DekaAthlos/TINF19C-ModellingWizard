@@ -146,6 +146,7 @@ namespace Aml.Editor.Plugin
                 device.listWithURIConvertedToString = new List<AttachablesDataGridViewParameters>();
                 foreach (AttachablesDataGridViewParameters eachparameter in device.dataGridAttachablesParametrsList)
                 {
+
                     if (eachparameter.FilePath.Contains("https://") || eachparameter.FilePath.Contains("http://") || eachparameter.FilePath.Contains("www") || eachparameter.FilePath.Contains("WWW"))
                     {
                         interneturl(eachparameter.FilePath, eachparameter.ElementName.ToString(), "ExternalDataConnector", systemUnitClass);
@@ -196,7 +197,6 @@ namespace Aml.Editor.Plugin
                     {
                         foreach (var item in valueList)
                         {
-
 
                             if (item.AttributePath.Contains("/") || item.AttributePath.Contains("."))
                             {
@@ -337,7 +337,7 @@ namespace Aml.Editor.Plugin
 
           
 
-            // Create the internalElement Electrical Interfaces
+            // Create the internalElement Interfaces
             if (device.vendorName != null)
             {
                 InternalElementType electricalInterface = null;
