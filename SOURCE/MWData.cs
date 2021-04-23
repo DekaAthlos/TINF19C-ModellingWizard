@@ -26,16 +26,11 @@ namespace Aml.Editor.Plugin
             this.mWController = mWController;
         }
 
-       
-
-      
-
         /// <summary>
         /// Read the all attributes in <paramref name="attributes"/> and write the values into <paramref name="mWInterface"/>
         /// </summary>
         /// <param name="mWInterface">the object to write the data into</param>
         /// <param name="attributes">the list of attributes</param>
-       
 
         /// <summary>
         /// Read the all attributes in <paramref name="attributes"/> and write the values into <paramref name="device"/>
@@ -879,9 +874,6 @@ namespace Aml.Editor.Plugin
 
             return documentPart;
         }
-      
-      
-
 
         /// <summary>
         /// Calls the iodd2aml Converter using <see cref="System.Reflection"/>

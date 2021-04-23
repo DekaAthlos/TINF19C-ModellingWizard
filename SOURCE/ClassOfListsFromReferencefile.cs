@@ -57,7 +57,6 @@ namespace Aml.Editor.Plugin
             this.RefSemanticList = refSemanticList;
             this.SupportesRoleClassType = supportesRoleClassType;
             this.DataType = dataType;
-
         }
 
         public override string ToString()
@@ -66,7 +65,5 @@ namespace Aml.Editor.Plugin
                 +Description+"="+CopyRight+"="+Semantic+"="+AttributePath+ "=" + RefBaseClassPath + "=" + ID
                 + "=" + ReferencedClassName + "=" + RefSemanticList + "=" + SupportesRoleClassType + "=" + DataType + ")";
         }
-
-
     }
 }

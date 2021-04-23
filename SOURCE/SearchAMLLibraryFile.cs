@@ -27,7 +27,6 @@ namespace Aml.Editor.Plugin
         /// </summary>
         /// 
         public Dictionary<string, string> DictioanryOfIDofInterfaceClassLibraryNodes { get; set; }
-       
 
         public Dictionary<string, List<ClassOfListsFromReferencefile>> dictionaryofRoleClassattributes { get; set; }
 
@@ -48,8 +47,6 @@ namespace Aml.Editor.Plugin
 
         }
 
-
-
         /// <summary>
         /// This method is responsible to iterate over "Interafce Class Libraries & Interafce Classes in it", and strore attributes of "Referenced Class Name" in 
         /// the dictionary.
@@ -57,7 +54,6 @@ namespace Aml.Editor.Plugin
         /// <param name="doc">This is the "CAEXDocument, where the search has to be done "</param>
         /// <param name="referencedClassName">This is "String" variable, that stores the name of the "Referenced Class Name"</param>
         /// <param name="classType">This "InterfaceFamilyType", which is a"Ground Class".</param>
-
         public void SearchForReferencedClassName(CAEXDocument doc, string referencedClassName, InterfaceFamilyType classType)
         {
             //This is the "String" variable, where the "Refernced Class Name" of the "Referenced class Name" has to be stored
@@ -117,7 +113,6 @@ namespace Aml.Editor.Plugin
 
         }
 
-
         /// <summary>
         /// This class is responsible to search for interface classes ´nested inside Interface classes and recursion of 
         /// this interface classes.
@@ -126,8 +121,7 @@ namespace Aml.Editor.Plugin
         /// <param name="referencedClassName">This is "String" variable, that stores the name of the "Referenced Class Name"</param>
         /// <param name="classType">This "InterfaceFamilyType", which is a"Ground Class"</param>
         /// <param name="classTypeSearchForReferencedClassName">This is "InterfaceFamilyType", where the "referenced Class Name" is presented</param>
-        public void SearchForInterfaceClassesInsideInterfaceClass(CAEXDocument doc, string referencedClassName, InterfaceFamilyType classType,
-           InterfaceFamilyType classTypeSearchForReferencedClassName)
+        public void SearchForInterfaceClassesInsideInterfaceClass(CAEXDocument doc, string referencedClassName, InterfaceFamilyType classType, InterfaceFamilyType classTypeSearchForReferencedClassName)
         {
             //This is the "String" variable, where the "Refernced Class Name" of the "Referenced class Name" has to be stored
             string referencedClassNameofReferencedClassName = "";
@@ -176,8 +170,6 @@ namespace Aml.Editor.Plugin
             }
         }
 
-
-
         public void CheckForAttributesOfReferencedClassName(InterfaceFamilyType classType)
         {
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -217,6 +209,7 @@ namespace Aml.Editor.Plugin
             
 
         }
+
         public void CkeckForNestedAttributesOfReferencedClassName(AttributeType attributeType, InterfaceFamilyType classType)
         {
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -248,7 +241,6 @@ namespace Aml.Editor.Plugin
             }
            
         }
-
 
         /// <summary>
         /// This method search for "Attributes" of "referenced Class name".
@@ -304,6 +296,7 @@ namespace Aml.Editor.Plugin
             }
 
         }
+        
         /// <summary>
         /// This method is responsible to check nested attributes of "Referenced Class Name" 
         /// </summary>
@@ -349,7 +342,6 @@ namespace Aml.Editor.Plugin
                 }
             }
         }
-
 
         /// <summary>
         /// This the method that stores Attribute values of "Referened Class name" of "Interface Class" in the dictionary. 
@@ -404,6 +396,7 @@ namespace Aml.Editor.Plugin
 
 
         }
+        
         /// <summary>
         /// This method store nested attributes of each attribute of "Referenced CLASS name" in the dictionary.
         /// </summary>
@@ -452,8 +445,6 @@ namespace Aml.Editor.Plugin
 
         }
 
-
-
         /// <summary>
         /// //This method search for "Referenced Class" of "External Interface"
         /// </summary>
@@ -461,7 +452,6 @@ namespace Aml.Editor.Plugin
         /// <param name="referencedClassName">This is "String variable" in which "Refrenced Class name" is stored.</param>
         /// <param name="classType">This is "InterfaceFamilyType", which is a "Ground Class"´used to generate key name in dictionary.</param>
         /// <param name="externalInterface">This is the "ExternalInterfaceType", for which refernced name attributes has to be stored.</param>
-
         public void SearchForReferencedClassNameofExternalIterface(CAEXDocument doc, string referencedClassName, InterfaceFamilyType classType, ExternalInterfaceType externalInterface)
         {
             //This is "String variable" in which "Refrenced Class name" is stored
@@ -507,8 +497,7 @@ namespace Aml.Editor.Plugin
         /// <param name="classType">This is "InterfaceFamilyType", which is a "Ground Class"´used to generate key name in dictionary.</param>
         /// <param name="classTypeSearchForReferencedClassName">This is "Interface Class TYPE"; where "Interfac Classes" inside has to be searched.</param>
         /// <param name="externalInterface">This is the "ExternalInterfaceType", for which refernced name attributes has to be stored.</param>
-        public void SearchForInterfaceClassesInsideInterfaceClassofExternalIterface(CAEXDocument doc, string referencedClassName, InterfaceFamilyType classType,
-           InterfaceFamilyType classTypeSearchForReferencedClassName, ExternalInterfaceType externalInterface)
+        public void SearchForInterfaceClassesInsideInterfaceClassofExternalIterface(CAEXDocument doc, string referencedClassName, InterfaceFamilyType classType, InterfaceFamilyType classTypeSearchForReferencedClassName, ExternalInterfaceType externalInterface)
         {
             //This is "String variable" in which "Refrenced Class name" is stored
             string referencedClassNameofReferencedClassName = "";
@@ -537,7 +526,6 @@ namespace Aml.Editor.Plugin
 
             }
         }
-
 
         /// <summary>
         /// This method is responsible to Check "attributes" of "Referenced Class Name"
@@ -599,6 +587,7 @@ namespace Aml.Editor.Plugin
            
 
         }
+        
         /// <summary>
         /// This method is responsible to check "Nested ATtributes" of "External Interface's Attribute "
         /// </summary>
@@ -654,15 +643,13 @@ namespace Aml.Editor.Plugin
 
         }
 
-
         /// <summary>
         /// This method is responsible to check "attributes" OF "Refrenced Class Name" of "ExternalInterface"
         /// </summary>
         /// <param name="classTypeSearchForReferencedClassName">This is "InterfaceFamilyType", for which attributes are checked.</param>
         /// <param name="classType">This is "Interface Family Type", which is a "Ground Class" used for creating Key to the dictionary.</param>
         /// <param name="externalInterface"></param>
-        public void CheckForAttributesOfReferencedClassNameofExternalIterface(InterfaceFamilyType classTypeSearchForReferencedClassName, InterfaceFamilyType classType,
-             ExternalInterfaceType externalInterface)
+        public void CheckForAttributesOfReferencedClassNameofExternalIterface(InterfaceFamilyType classTypeSearchForReferencedClassName, InterfaceFamilyType classType, ExternalInterfaceType externalInterface)
         {
             //Initiate new list of "Attributes" values.
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -716,6 +703,7 @@ namespace Aml.Editor.Plugin
             }
 
         }
+        
         /// <summary>
         /// This method is responsible to check the "Nested Attributes" of "Attributes" of"Interface Class's External interafce"
         /// </summary>
@@ -723,8 +711,7 @@ namespace Aml.Editor.Plugin
         /// <param name="attributeType">This is "AttributeType", which attribtes has to be stored.</param>
         /// <param name="classType">This is "InterfceClassType", which is a "Ground Class" used for creating a key in dictionary. </param>
         /// <param name="externalInterface"></param>
-        public void CkeckForNestedAttributesOfReferencedClassNameofExternalIterface(InterfaceFamilyType classTypeSearchForReferencedClassName, AttributeType attributeType, InterfaceFamilyType classType,
-             ExternalInterfaceType externalInterface)
+        public void CkeckForNestedAttributesOfReferencedClassNameofExternalIterface(InterfaceFamilyType classTypeSearchForReferencedClassName, AttributeType attributeType, InterfaceFamilyType classType, ExternalInterfaceType externalInterface)
         {
             //Initiate new list of "Attribute " values
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -769,7 +756,6 @@ namespace Aml.Editor.Plugin
             }
         }
 
-
         /// <summary>
         /// This method store each "Attribute value" into respective dictionary
         /// </summary>
@@ -777,8 +763,7 @@ namespace Aml.Editor.Plugin
         /// <param name="classType">This is "InterfaceFamilyType", which is "ground class" used while creating "key name" .</param>
         /// <param name="attributeType">This is "AttributeType", whose values are going to be stored.</param>
         /// <param name="externalInterface">This "ExternalInterfaceType", to which these attributes belong to.</param>
-        public void StoreEachAttributeValueInListOfReferencedClassNameofExternalIterface(List<List<ClassOfListsFromReferencefile>> list,
-            InterfaceFamilyType classType, AttributeType attributeType, ExternalInterfaceType externalInterface)
+        public void StoreEachAttributeValueInListOfReferencedClassNameofExternalIterface(List<List<ClassOfListsFromReferencefile>> list, InterfaceFamilyType classType, AttributeType attributeType, ExternalInterfaceType externalInterface)
         {
             //Initiate the list of "Attribiute values".
             list = new List<List<ClassOfListsFromReferencefile>>();
@@ -829,6 +814,7 @@ namespace Aml.Editor.Plugin
 
 
         }
+        
         /// <summary>
         /// This method stores "Attributes" of "Referenced Class's External Interface"
         /// </summary>
@@ -837,8 +823,7 @@ namespace Aml.Editor.Plugin
         /// <param name="classType">This is "InterfaceFamilyType", which is "Ground Class" used while naming a key in dictioonary.</param>
         /// <param name="attributeType">This "AttributeType" is  nested attribute of parent attribute. </param>
         /// <param name="externalInterface"></param>
-        public void StoreEachAttributeValueInListOfReferencedClassNameofExternalIterface(List<List<ClassOfListsFromReferencefile>> list,
-            AttributeType AttributeInAttribute, InterfaceFamilyType classType, AttributeType attributeType, ExternalInterfaceType externalInterface)
+        public void StoreEachAttributeValueInListOfReferencedClassNameofExternalIterface(List<List<ClassOfListsFromReferencefile>> list, AttributeType AttributeInAttribute, InterfaceFamilyType classType, AttributeType attributeType, ExternalInterfaceType externalInterface)
         {
             //Initiate ne list of "Attribute Values"
             list = new List<List<ClassOfListsFromReferencefile>>();
@@ -951,6 +936,7 @@ namespace Aml.Editor.Plugin
             }
 
         }
+        
         /// <summary>
         /// This method is responsible for checking "Attributes" under "Referenced Class Name"
         /// </summary>
@@ -1004,6 +990,7 @@ namespace Aml.Editor.Plugin
             }
 
         }
+        
         /// <summary>
         /// This method check for nested attributes under attributes of "Referenced Class Name"
         /// </summary>
@@ -1215,6 +1202,7 @@ namespace Aml.Editor.Plugin
             }
 
         }
+       
         /// <summary>
         /// This function is responsible for checking "nested attributes" under "attributes" of the "External Interface"
         /// </summary>
@@ -1268,15 +1256,13 @@ namespace Aml.Editor.Plugin
             }
         }
 
-
         /// <summary>
         /// This function is responsible to check and store "Attributes" under "External Interface" of "Referenced Class Name" of "Role Class"
         /// </summary>
         /// <param name="classTypeSearchForReferencedClassName">This is the "Referenced Class Name" of Role Classe's "External Interface".</param>
         /// <param name="classType">This is the "Role Class"</param>
         /// <param name="externalInterface">Thi is the "External Interface"  we are looking for.</param>
-        public void CheckForAttributesOfReferencedClassNameofExternalIterface(RoleFamilyType classTypeSearchForReferencedClassName, RoleFamilyType classType,
-             ExternalInterfaceType externalInterface)
+        public void CheckForAttributesOfReferencedClassNameofExternalIterface(RoleFamilyType classTypeSearchForReferencedClassName, RoleFamilyType classType, ExternalInterfaceType externalInterface)
         {
             // Initiate new list of attributes
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -1343,8 +1329,7 @@ namespace Aml.Editor.Plugin
         /// <param name="attributeType">This is "AttributeType ", which retrives attribute values </param>
         /// <param name="classType">This is the "Ground Class", which we are looking in</param>
         /// <param name="externalInterface">This is the "external interface", under which the attributes has to be stored. </param>
-        public void CkeckForNestedAttributesOfReferencedClassNameofExternalIterface(RoleFamilyType classTypeSearchForReferencedClassName, AttributeType attributeType, RoleFamilyType classType,
-             ExternalInterfaceType externalInterface)
+        public void CkeckForNestedAttributesOfReferencedClassNameofExternalIterface(RoleFamilyType classTypeSearchForReferencedClassName, AttributeType attributeType, RoleFamilyType classType, ExternalInterfaceType externalInterface)
         {
             //Initiate new attribute list.
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -1393,7 +1378,6 @@ namespace Aml.Editor.Plugin
             }
         }
 
-
         /// <summary>
         /// This method is responsible to store each attribute value of "Referenced Class Name" of "External Interface" of Role Class.
         /// This method stores each value in attribute into a dictionary (DictionaryForExternalInterfacesInstancesAttributesOfRoleClassLib)
@@ -1402,8 +1386,7 @@ namespace Aml.Editor.Plugin
         /// <param name="classType">RoleFamilyType is the "ground Class" We are storing this "Attributes" for</param>
         /// <param name="attributeType">This is each attribute</param>
         /// <param name="externalInterface">This is "external interface" we are storing "Attributes" for</param>
-        public void StoreEachAttributeValueInListOfReferencedClassNameofExternalIterface(List<List<ClassOfListsFromReferencefile>> list,
-            RoleFamilyType classType, AttributeType attributeType, ExternalInterfaceType externalInterface)
+        public void StoreEachAttributeValueInListOfReferencedClassNameofExternalIterface(List<List<ClassOfListsFromReferencefile>> list, RoleFamilyType classType, AttributeType attributeType, ExternalInterfaceType externalInterface)
         {
             //Initiate list as new list.
             list = new List<List<ClassOfListsFromReferencefile>>();
@@ -1457,6 +1440,7 @@ namespace Aml.Editor.Plugin
 
 
         }
+        
         /// <summary>
         /// This method stores the nested attributes in "DictionaryForExternalInterfacesInstancesAttributesOfRoleClassLib"
         /// </summary>
@@ -1465,8 +1449,7 @@ namespace Aml.Editor.Plugin
         /// <param name="classType">This is the "RoleFamilyType" used to define the "keyname" of the dictionary </param>
         /// <param name="attributeType">This is "AttributeType" under which "Nested Attributes" are present</param>
         /// <param name="externalInterface">This is the "ExternalInterfaceType" used to define the "keyname" of the dictionary and also the attribute holder "External Interface"</param>
-        public void StoreEachAttributeValueInListOfReferencedClassNameofExternalIterface(List<List<ClassOfListsFromReferencefile>> list,
-            AttributeType AttributeInAttribute, RoleFamilyType classType, AttributeType attributeType, ExternalInterfaceType externalInterface)
+        public void StoreEachAttributeValueInListOfReferencedClassNameofExternalIterface(List<List<ClassOfListsFromReferencefile>> list, AttributeType AttributeInAttribute, RoleFamilyType classType, AttributeType attributeType, ExternalInterfaceType externalInterface)
         {
             //Initate new list of attributes.
             list = new List<List<ClassOfListsFromReferencefile>>();
@@ -1514,7 +1497,6 @@ namespace Aml.Editor.Plugin
             }
 
         }
-
 
         /// <summary>
         /// This method is responsible to check for "Referenced Class Name" of "External Interfaces" under the "Role Class"
@@ -1575,8 +1557,7 @@ namespace Aml.Editor.Plugin
         /// <param name="referencedClassName">This is the "Referenced Class Name" i.e. "String" used to search for the name of thE  "Referenced Class Name"</param>
         /// <param name="classType">This is "RoleFamilyType" i.e. "Ground Class"</param>
         /// <param name="classTypeSearchForReferencedClassName">This is "RoleFamilyType", under which the role clasees are searched.</param>
-        public void SearchForInterfaceClassesInsideInterfaceClass(CAEXDocument doc, string referencedClassName, RoleFamilyType classType,
-          RoleFamilyType classTypeSearchForReferencedClassName)
+        public void SearchForInterfaceClassesInsideInterfaceClass(CAEXDocument doc, string referencedClassName, RoleFamilyType classType, RoleFamilyType classTypeSearchForReferencedClassName)
         {
             //This is a "String" variable, where the "Referenced class Name" is stroed...
             string referencedClassNameofReferencedClassName = "";
@@ -1631,8 +1612,7 @@ namespace Aml.Editor.Plugin
         /// <param name="classType">This is the "Ground Class" we stared search at.</param>
         /// <param name="classTypeSearchForReferencedClassName"> This is "RoleFamilType" to search, if "Role Classes" are present. </param>
         /// <param name="externalInterface"></param>
-        public void SearchForInterfaceClassesInsideInterfaceClassofExternalIterface(CAEXDocument doc, string referencedClassName, RoleFamilyType classType,
-          RoleFamilyType classTypeSearchForReferencedClassName, ExternalInterfaceType externalInterface)
+        public void SearchForInterfaceClassesInsideInterfaceClassofExternalIterface(CAEXDocument doc, string referencedClassName, RoleFamilyType classType, RoleFamilyType classTypeSearchForReferencedClassName, ExternalInterfaceType externalInterface)
         {
             // This string represents the "Refernced Class Name" of the "Referenced Class Name"
             string referencedClassNameofReferencedClassName = "";
@@ -1664,6 +1644,7 @@ namespace Aml.Editor.Plugin
 
             }
         }
+        
         /// <summary>
         /// This method is responsible for checking attributes under "Referenced Class Name"
         /// </summary>
@@ -1716,6 +1697,7 @@ namespace Aml.Editor.Plugin
             }
 
         }
+        
         /// <summary>
         /// This method check for "nested attributes" of "referenced class name"
         /// </summary>
@@ -1760,13 +1742,11 @@ namespace Aml.Editor.Plugin
             }
         }
 
-
         /// <summary>
         /// This method takes arguments "TreeNode" and "RoleFamilyType" to print tree nodes in "Role Class Library TreeView " in Plugin.
         /// </summary>
         /// <param name="oParentNode">This is a "TreeNode", which is parent node for the new node that is going to be created using this method. </param>
         /// <param name="classType">This is "RoleFamilyType", which is a "Ground Class"</param>
-
         public void PrintNodesRecursiveInRoleClassLib(CAEXDocument document, TreeNode oParentNode, RoleFamilyType classType, string referencedclassName)
         {
 
@@ -1913,6 +1893,7 @@ namespace Aml.Editor.Plugin
             }
 
         }
+        
         /// <summary>
         /// This method is called to print "External Interfaces" in both "Role class Library and Interface Class Library" in the plugin.
         /// </summary>

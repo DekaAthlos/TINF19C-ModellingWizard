@@ -42,7 +42,7 @@ namespace Aml.Editor.Plugin
         /// <returns>the CreateDevice GUI for this session</returns>
        
         /// <summary>
-        /// creáte the new DeviceDescription GUI or return the previously created GUI
+        /// create the new DeviceDescription GUI or return the previously created GUI
         /// </summary>
         public DeviceDescription GetDeviceDescriptionForm()
         {

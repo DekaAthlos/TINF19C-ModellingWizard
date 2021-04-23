@@ -19,13 +19,10 @@ namespace Aml.Editor.Plugin
         public string deviceName { get; set; }
        
         // Can contain letters:
-       
         public List<DataGridParameters> dataGridParametersLists { get; set; }
-       
-
+        
 
         //Properties for Electrical Interface
-
         public List<ElectricalParameters> ElectricalInterfaces { get; set; }
         public List<List<ElectricalParameters>> ElectricalInterfaceInstances { get; set; }
 
@@ -58,6 +55,7 @@ namespace Aml.Editor.Plugin
     }
     // This class helps to carry parameters in "identification data table to AutomationML"
 
+
     public class DataGridParameters
     {
         public string RefSemantics { get; set; }
@@ -77,12 +75,9 @@ namespace Aml.Editor.Plugin
         {
             return "DataGridParameters(" + RefSemantics + "=" + Attributes + "=" + Values + ")";
         }
-
     }
   
-   
-   
-   
+    
 
 
     /// <summary>
@@ -159,8 +154,6 @@ namespace Aml.Editor.Plugin
         {
             return "ElectricalParametersInElectricalDataDataGridView("+ ReferenceID + "=" + Attributes + "=" + Values + "=" + Units + ")";
         }
-
-        
     }
 
     public class PinParametersInPinInfoDataGridView
@@ -188,20 +181,14 @@ namespace Aml.Editor.Plugin
         {
             return "PinParametersInPinInfoDataGridView(" +PinNumber+"="+ ReferenceID + "=" + Attributes + "=" + Values + "=" + Units + ")";
         }
-
-
     }
-
-
 
     // this class is responsible to load every parameter in "attachablesInfoDataGridView" into a list.
     public class AttachablesDataGridViewParameters
     {
-
         public string ElementName { get; set; }
         public string FilePath { get; set; }
         public string  AddToFile { get; set; }
-
 
         public AttachablesDataGridViewParameters()
         {
@@ -212,19 +199,14 @@ namespace Aml.Editor.Plugin
             this.ElementName = elementName;
             this.FilePath = filePath;
             this.AddToFile = Convert.ToString(addToFile);
-
-
-
         }
         public override string ToString()
         {
             return "AttachablesDataGridViewParameters(" + ElementName + "=" + FilePath +"="+ AddToFile + ")";
         }
-
-
-
-        
     }
+
+
     public class ElectricalInterfaceParameters
     {
         public string AttributeName { get; set; }
@@ -267,7 +249,3 @@ namespace Aml.Editor.Plugin
         }
     }
 }
-
-
-
-

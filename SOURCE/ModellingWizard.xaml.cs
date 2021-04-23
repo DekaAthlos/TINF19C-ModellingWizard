@@ -10,7 +10,7 @@ using System.Windows.Media.Imaging;
 namespace Aml.Editor.Plugin
 {
     /// <summary>
-    /// ModellingWizard is an PlugIn, which implements the IAMLEditorView Interface. The PlugIn is
+    /// ModellingWizard is an PlugIn, which implements the AMLEditorView Interface. The PlugIn is
     /// a UserControl, which is managed by the AutomationML Editors Window- and Docking - Manager.
     /// The Export Attribute enables the AutomationML Editor to load the PlugIn with the <a
     /// href="http://msdn.microsoft.com/en-us/library/dd460648%28v=vs.110%29.aspx">Microsoft Managed
@@ -190,7 +190,6 @@ namespace Aml.Editor.Plugin
             get { return false; }
         }
 
-
         /// <summary>
         /// Gets a value indicating whether this instance is read only. A Read only PlugIn should not
         /// change any CAEX Objects.
@@ -238,7 +237,6 @@ namespace Aml.Editor.Plugin
         /// </summary>
         public BitmapImage PaneImage => null;
 
-
         /// <summary>
         /// Changes the current amlFilePath. The Host Application will call this method when the
         /// PlugIns <see cref="P:Aml.Editor.Plugin.Contracts.IAMLEditorPlugin.IsReactive" /> Property is set to true and the Currently opened
@@ -249,7 +247,6 @@ namespace Aml.Editor.Plugin
         {
             //mWController.ChangeAMLFilePath(amlFilePath);
         }
-
 
         /// <summary>
         /// Changes the selected object. The Host Application will call this method when the PlugIns
@@ -320,9 +317,6 @@ namespace Aml.Editor.Plugin
             var dialog = new About();
             dialog.ShowDialog();
         }
-
-       
-       
 
         /// <summary>
         /// Test, if the <see cref="StartCommand"/> can execute. The <see cref="IsActive"/> Property
