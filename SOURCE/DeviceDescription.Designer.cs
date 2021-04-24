@@ -628,11 +628,13 @@
             this.dataTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataTabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.dataTabControl.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataTabControl.ItemSize = new System.Drawing.Size(100, 22);
             this.dataTabControl.Location = new System.Drawing.Point(0, 0);
             this.dataTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.dataTabControl.Name = "dataTabControl";
             this.dataTabControl.SelectedIndex = 0;
             this.dataTabControl.Size = new System.Drawing.Size(1381, 848);
+            this.dataTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.dataTabControl.TabIndex = 0;
             this.dataTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.dataTabControl_DrawItem);
             this.dataTabControl.SelectedIndexChanged += new System.EventHandler(this.dataTabControl_SelectedIndexChanged);
@@ -1677,7 +1679,7 @@
             this.DocsTabPage.AllowDrop = true;
             this.DocsTabPage.BackColor = System.Drawing.Color.LightGray;
             this.DocsTabPage.Controls.Add(this.addPicturesandDocsPanel);
-            this.DocsTabPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocsTabPage.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.DocsTabPage.Location = new System.Drawing.Point(4, 26);
             this.DocsTabPage.Margin = new System.Windows.Forms.Padding(0);
             this.DocsTabPage.Name = "DocsTabPage";
