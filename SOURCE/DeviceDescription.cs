@@ -2224,25 +2224,6 @@ namespace Aml.Editor.Plugin
                     {
 
                     }
-
-                    try
-                    {
-                        if (open.FileName != null)
-                        {
-                            DirectoryInfo newdirectory = new DirectoryInfo(Path.GetDirectoryName(open.FileName));
-                            foreach (FileInfo fileInfos in newdirectory.GetFiles())
-                            {
-                                if (fileInfos.Extension != ".amlx")
-                                {
-                                    fileInfos.Delete();
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception)
-                    {
-                        return;
-                    }
                 }
             }
         }
