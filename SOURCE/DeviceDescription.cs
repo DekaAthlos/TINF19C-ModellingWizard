@@ -779,12 +779,6 @@ namespace Aml.Editor.Plugin
 
                     electricalInterfacesCollectionDataGridView.Rows[num].Selected = false;
 
-                    /*int rowindex = electricalInterfacesCollectionDataGridView.Rows[num].Cells[1].RowIndex;
-                     int columnindex = electricalInterfacesCollectionDataGridView.Rows[num].Cells[1].ColumnIndex;
-
-
-                    electricalInterfacesCollectionDataGridView_CellClick(new object(), new DataGridViewCellEventArgs(columnindex, rowindex));*/
-
                     treeViewElectricalInterfaces.Nodes.Clear();
 
                     TreeNode parentNode;
@@ -993,10 +987,6 @@ namespace Aml.Editor.Plugin
                     genericInformationDataGridView.Rows[num].Cells[1].Value = row;
                     genericInformationDataGridView.Rows[num].Cells[3].Value = true;
 
-                    /*int rowindex = genericInformationDataGridView.Rows[num].Cells[1].RowIndex;
-                    int columnindex = genericInformationDataGridView.Rows[num].Cells[1].ColumnIndex;
-
-                    genericInformationDataGridView_CellClick(new object(), new DataGridViewCellEventArgs(columnindex, rowindex));*/
 
                     dragging = false;
 
@@ -1156,7 +1146,89 @@ namespace Aml.Editor.Plugin
         }
 
 
+        private void autoloadGenericInformationtreeView(TreeNode node)
+        {
+            string searchName = "";
+            var AutomationMLDataTables = new AutomationMLDataTables();
 
+            TreeNode targetNode = node;
+
+            /* targetNode.SelectedImageIndex = targetNode.ImageIndex;*/
+            ClearHeaderTabPageValuesofgenericData();
+            genericparametersAttrDataGridView.Rows.Clear();
+
+            try
+            {
+                if (targetNode.Parent != null)
+                {
+                    searchName = targetNode.Parent.Text + targetNode.Text;
+                    genericDataHeaderLabel.Text = searchName;
+                    foreach (var pair in device.DictionaryForExternalInterfacesUnderRoleClassofComponent)
+                    {
+                        if (pair.Key.ToString() == searchName)
+                        {
+                            DataTable AMLDataTable = AutomationMLDataTables.AMLAttributeParameters();
+                            AutomationMLDataTables.CreateDataTableWithColumns(AMLDataTable, genericparametersAttrDataGridView, pair);
+                        }
+
+                    }
+                    foreach (var pair in device.DictionaryForExternalInterfacesUnderRoleClassofComponent)
+                    {
+                        if (pair.Key.ToString() == searchName)
+                        {
+                            foreach (var valueList in pair.Value)
+                            {
+                                foreach (var item in valueList)
+                                {
+                                    genericDataDescriptionTxtBx.Text = item.Description;
+                                    genericDataCopyrightTxtBx.Text = item.CopyRight;
+                                    genericDataRefClassNameTxtBx.Text = item.ReferencedClassName;
+                                    genericDataRefBaseClassPathTxtBx.Text = item.RefBaseClassPath;
+                                    genericDataAttributePathTxtBx.Text = item.AttributePath;
+                                    genericDataIDTxtBx.Text = item.ID;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+
+                    searchName = targetNode.Text;
+                    genericDataHeaderLabel.Text = searchName;
+                    foreach (var pair in device.DictionaryForRoleClassofComponent)
+                    {
+                        if (pair.Key.ToString() == searchName)
+                        {
+                            DataTable AMLDataTable = AutomationMLDataTables.AMLAttributeParameters();
+                            AutomationMLDataTables.CreateDataTableWithColumns(AMLDataTable, genericparametersAttrDataGridView, pair);
+
+                        }
+
+                    }
+                    foreach (var pair in device.DictionaryForRoleClassofComponent)
+                    {
+                        if (pair.Key.ToString() == searchName)
+                        {
+
+                            foreach (var valueList in pair.Value)
+                            {
+                                foreach (var item in valueList)
+                                {
+                                    genericDataDescriptionTxtBx.Text = item.Description;
+                                    genericDataCopyrightTxtBx.Text = item.CopyRight;
+                                    genericDataRefClassNameTxtBx.Text = item.ReferencedClassName;
+                                    genericDataRefBaseClassPathTxtBx.Text = item.RefBaseClassPath;
+                                    genericDataAttributePathTxtBx.Text = item.AttributePath;
+                                    genericDataIDTxtBx.Text = item.ID;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception) { }
+        }
 
         private void genericInformationtreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -1693,29 +1765,27 @@ namespace Aml.Editor.Plugin
                                     {
                                         device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
                                     }
+
+                                    TreeNode parentNode = genericInformationtreeView.Nodes.Add("(" + SRCSerialNumber + ")" + SRC,
+                                        "(" + SRCSerialNumber + ")" + SRC, 2);
+                                    autoloadGenericInformationtreeView(parentNode);
                                 }
                                 catch (Exception)
                                 {
 
                                     throw;
                                 }
-
                             }
-
                         }
-
                     }
                 }
-
             }
-
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             {
                 Environment.Exit(0);
-
             }
         }
 
@@ -1928,9 +1998,10 @@ namespace Aml.Editor.Plugin
                                                     }
                                                 }
 
-                                                parentNode = genericInformationtreeView.Nodes.Add(
-                                                    "(" + SRCSerialNumber + ")" + SRCName,
-                                                    "(" + SRCSerialNumber + ")" + SRCName, 2);
+                                                parentNode = genericInformationtreeView.Nodes.Add("(" + SRCSerialNumber + ")" + SRCName, "(" + SRCSerialNumber + ")" + SRCName, 2);
+
+                                                    autoloadGenericInformationtreeView(parentNode);
+                                                
                                             }
                                         }
 
@@ -1943,28 +2014,7 @@ namespace Aml.Editor.Plugin
 
                                 foreach (var internalElements in classType.InternalElement)
                                 {
-                                    /*if (internalElements.Name.Equals("DeviceIdentification"))
-                                    {
-                                        foreach (var attribute in internalElements.Attribute)
-                                        {
-                                            switch (attribute.Name)
-                                            {
-
-                                                case "VendorName":
-                                                   vendorNameTextBox.Text = attribute.Value;
-                                                    break;
-
-                                                case "DeviceName":
-                                                    deviceNameTextBox.Text = attribute.Value;
-                                                    break;
-
-                                            }
-                                        }
-                                    }*/
-
-                                    if (internalElements.Name != "Interfaces" &&
-                                        internalElements.Name != "ElectricalInterfaces" &&
-                                        internalElements.Name != "DeviceIdentification")
+                                    if (internalElements.Name != "Interfaces" && internalElements.Name != "ElectricalInterfaces" && internalElements.Name != "DeviceIdentification")
                                     {
                                         int num = attachablesInfoDataGridView.Rows.Add();
                                         attachablesInfoDataGridView.Rows[num].Cells[0].Value = internalElements.Name;
@@ -2951,6 +3001,8 @@ namespace Aml.Editor.Plugin
                     {
                         if (childNode.Name == "AutomationComponent")
                         {
+                            autoloadGenericInformationtreeView(childNode);
+
                             int num = genericInformationDataGridView.Rows.Add();
                             List<string> listofSerialNumbers = new List<string>();
                             List<int> listofFinalSerialNumber = new List<int>();
