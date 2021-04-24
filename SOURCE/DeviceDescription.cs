@@ -305,12 +305,8 @@ namespace Aml.Editor.Plugin
 
         private void treeViewInterfaceClassLib_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-
-            if (e.Button == MouseButtons.Right)
-            {
-                treeViewInterfaceClassLib.SelectedNode = e.Node;
-                e.Node.ContextMenuStrip = contextMenuStripforInterfaceClassLib;
-            }
+            treeViewInterfaceClassLib.SelectedNode = e.Node;
+            e.Node.ContextMenuStrip = contextMenuStripforInterfaceClassLib;
         }
 
         private void treeViewInterfaceClassLib_AfterSelect(object sender, TreeViewEventArgs e)
@@ -2797,6 +2793,8 @@ namespace Aml.Editor.Plugin
             vendorNameTextBox.Text = "";
             deviceNameTextBox.Text = "";
             fileNameLabel.Text = "";
+            genericDataHeaderLabel.Text = "";
+            electricalInterfacesHeaderlabel.Text = "";
             genericInformationDataGridView.Rows.Clear();
             genericInformationtreeView.Nodes.Clear();
             genericparametersAttrDataGridView.Rows.Clear();
@@ -2804,6 +2802,9 @@ namespace Aml.Editor.Plugin
             electricalInterfacesCollectionDataGridView.Rows.Clear();
             elecInterAttDataGridView.Rows.Clear();
             treeViewElectricalInterfaces.Nodes.Clear();
+            ClearHeaderTabPageValuesofgenericData();
+            ClearHeaderTabPageValuesofElectricalInterfaces();
+
 
             device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
             device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();

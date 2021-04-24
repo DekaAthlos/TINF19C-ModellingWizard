@@ -2143,8 +2143,6 @@
             // contextMenuStripforInterfaceClassLib
             // 
             this.contextMenuStripforInterfaceClassLib.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStripforInterfaceClassLib.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem});
             this.contextMenuStripforInterfaceClassLib.Name = "contextMenuStripforInterfaceClassLib";
             this.contextMenuStripforInterfaceClassLib.Size = new System.Drawing.Size(97, 26);
             // 
