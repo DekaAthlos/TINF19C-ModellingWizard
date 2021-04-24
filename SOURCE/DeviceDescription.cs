@@ -2537,11 +2537,24 @@ namespace Aml.Editor.Plugin
                 if (e.Index == this.dataTabControl.SelectedIndex)
                 {
                     //This line of code will help you to change the appearance like size,name,style.
-                    Font = new Font(e.Font, FontStyle.Bold | FontStyle.Bold);
-                    Font = new Font(e.Font, FontStyle.Bold);
+                    Font = e.Font;
 
                     //backBrush = new System.Drawing.SolidBrush(Color.Black);
                     foreBrush = Brushes.Black;
+                    treeViewInterfaceClassLib.Visible = false;
+                    treeViewRoleClassLib.Visible = false;
+                    if (e.Index == 0)
+                    {
+                        //treeViewInterfaceClassLib.Nodes.Clear();
+                        treeViewRoleClassLib.Visible = true;
+                        treeViewInterfaceClassLib.Visible = false;
+                    }
+                    else if (e.Index == 1)
+                    {
+                        //treeViewRoleClassLib.Nodes.Clear();
+                        treeViewInterfaceClassLib.Visible = true;
+                        treeViewRoleClassLib.Visible = false;
+                    }
                 }
                 else
                 {
@@ -2557,7 +2570,7 @@ namespace Aml.Editor.Plugin
 
                 //Thsi will help you to fill the interior portion of
                 //selected tabpage.
-                e.Graphics.FillRectangle(new SolidBrush(Color.LightBlue), e.Bounds);
+                /*e.Graphics.FillRectangle(new SolidBrush(Color.LightBlue), e.Bounds);*/
                 Rectangle rect = e.Bounds;
                 rect = new Rectangle(rect.X, rect.Y + 3, rect.Width, rect.Height - 3);
                 e.Graphics.DrawString(sTabName, Font, foreBrush, rect, sf);

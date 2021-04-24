@@ -282,7 +282,6 @@
             this.toolStrip7.SuspendLayout();
             this.treeViewInterfaceClassLibPanel.SuspendLayout();
             this.toolStrip9.SuspendLayout();
-            this.contextMenuStripforInterfaceClassLib.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.identificationDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManufacturerDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductPriceDetails)).BeginInit();
@@ -627,6 +626,7 @@
             this.dataTabControl.Controls.Add(this.Interface);
             this.dataTabControl.Controls.Add(this.DocsTabPage);
             this.dataTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataTabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.dataTabControl.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataTabControl.Location = new System.Drawing.Point(0, 0);
             this.dataTabControl.Margin = new System.Windows.Forms.Padding(0);
@@ -1674,6 +1674,7 @@
             // 
             // DocsTabPage
             // 
+            this.DocsTabPage.AllowDrop = true;
             this.DocsTabPage.BackColor = System.Drawing.Color.LightGray;
             this.DocsTabPage.Controls.Add(this.addPicturesandDocsPanel);
             this.DocsTabPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1839,7 +1840,7 @@
             this.addRole.BackColor = System.Drawing.Color.WhiteSmoke;
             this.addRole.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.addRole.ForeColor = System.Drawing.Color.Black;
-            this.addRole.Image = global::Aml.Editor.Plugin.Properties.Resources.icons8_plus_mathe_30;
+            this.addRole.Image = ((System.Drawing.Image)(resources.GetObject("addRole.Image")));
             this.addRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addRole.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.addRole.Margin = new System.Windows.Forms.Padding(3);
@@ -1959,7 +1960,7 @@
             // treeViewPanel
             // 
             this.treeViewPanel.AutoScroll = true;
-            this.treeViewPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.treeViewPanel.BackColor = System.Drawing.Color.Transparent;
             this.treeViewPanel.Controls.Add(this.splitContainer3);
             this.treeViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewPanel.Location = new System.Drawing.Point(0, 0);
@@ -1989,7 +1990,7 @@
             // 
             // Page0_RoleClassPanel
             // 
-            this.Page0_RoleClassPanel.BackColor = System.Drawing.Color.LightGray;
+            this.Page0_RoleClassPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.Page0_RoleClassPanel.Controls.Add(this.treeViewRoleClassLib);
             this.Page0_RoleClassPanel.Controls.Add(this.toolStrip7);
             this.Page0_RoleClassPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2058,7 +2059,7 @@
             // 
             // treeViewInterfaceClassLibPanel
             // 
-            this.treeViewInterfaceClassLibPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.treeViewInterfaceClassLibPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.treeViewInterfaceClassLibPanel.Controls.Add(this.treeViewInterfaceClassLib);
             this.treeViewInterfaceClassLibPanel.Controls.Add(this.toolStrip9);
             this.treeViewInterfaceClassLibPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2144,7 +2145,7 @@
             // 
             this.contextMenuStripforInterfaceClassLib.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripforInterfaceClassLib.Name = "contextMenuStripforInterfaceClassLib";
-            this.contextMenuStripforInterfaceClassLib.Size = new System.Drawing.Size(97, 26);
+            this.contextMenuStripforInterfaceClassLib.Size = new System.Drawing.Size(61, 4);
             // 
             // addToolStripMenuItem
             // 
@@ -2397,7 +2398,7 @@
             // identificationDataBtn
             // 
             this.identificationDataBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.identificationDataBtn.Image = global::Aml.Editor.Plugin.Properties.Resources.icons8_expand_arrow_24;
+            this.identificationDataBtn.Image = ((System.Drawing.Image)(resources.GetObject("identificationDataBtn.Image")));
             this.identificationDataBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.identificationDataBtn.Location = new System.Drawing.Point(0, 0);
             this.identificationDataBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -2441,7 +2442,7 @@
             // commercialDataBtn
             // 
             this.commercialDataBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.commercialDataBtn.Image = global::Aml.Editor.Plugin.Properties.Resources.icons8_expand_arrow_24;
+            this.commercialDataBtn.Image = ((System.Drawing.Image)(resources.GetObject("commercialDataBtn.Image")));
             this.commercialDataBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.commercialDataBtn.Location = new System.Drawing.Point(0, 0);
             this.commercialDataBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -2572,7 +2573,6 @@
             this.treeViewInterfaceClassLibPanel.PerformLayout();
             this.toolStrip9.ResumeLayout(false);
             this.toolStrip9.PerformLayout();
-            this.contextMenuStripforInterfaceClassLib.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.identificationDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManufacturerDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductPriceDetails)).EndInit();
