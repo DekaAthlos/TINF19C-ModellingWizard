@@ -2003,6 +2003,7 @@
             // treeViewRoleClassLib
             // 
             this.treeViewRoleClassLib.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.treeViewRoleClassLib.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.treeViewRoleClassLib.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewRoleClassLib.ImageKey = "RCL.JPG";
             this.treeViewRoleClassLib.ImageList = this.imageList1;
@@ -2072,6 +2073,7 @@
             // treeViewInterfaceClassLib
             // 
             this.treeViewInterfaceClassLib.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.treeViewInterfaceClassLib.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.treeViewInterfaceClassLib.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewInterfaceClassLib.ImageIndex = 0;
             this.treeViewInterfaceClassLib.ImageList = this.imageList2;
