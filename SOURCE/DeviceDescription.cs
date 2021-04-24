@@ -2796,7 +2796,9 @@ namespace Aml.Editor.Plugin
                     var index = attachablesInfoDataGridView.Rows.Add();
                     attachablesInfoDataGridView.Rows[index].Cells["ElementName"].Value = AMLURLLabel.Text;
                     attachablesInfoDataGridView.Rows[index].Cells["FilePath"].Value = selectedFileURLTextBox.Text;
+
                     AMLURLLabel.Text = "";
+                    AMLfileLabel.Text = "";
                     selectedFileURLTextBox.Text = "";
                 }
             }
