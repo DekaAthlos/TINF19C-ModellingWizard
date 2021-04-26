@@ -2329,9 +2329,6 @@ namespace Aml.Editor.Plugin
 
             searchAMLLibraryFile.DictioanryOfIDofInterfaceClassLibraryNodes = new Dictionary<string, string>();
 
-            treeViewRoleClassLib.Nodes.Clear();
-            treeViewInterfaceClassLib.Nodes.Clear();
-
             CAEXDocument document = null;
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "AML Files(*.aml; *.amlx;*.xml;*.AML )|*.aml; *.amlx;*.xml;*.AML;";
@@ -2340,6 +2337,9 @@ namespace Aml.Editor.Plugin
             {
                 try
                 {
+                    treeViewRoleClassLib.Nodes.Clear();
+                    treeViewInterfaceClassLib.Nodes.Clear();
+
                     string file = open.FileName;
                     FileInfo fileInfo = new FileInfo(file);
                     string objectName = fileInfo.Name;
