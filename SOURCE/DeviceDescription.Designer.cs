@@ -468,6 +468,7 @@
             this.vendorNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.vendorNameTextBox.Name = "vendorNameTextBox";
             this.vendorNameTextBox.Size = new System.Drawing.Size(219, 40);
+            this.vendorNameTextBox.TextChanged += new System.EventHandler(this.vendorNameTextBox_TextChanged);
             // 
             // toolStripSeparator6
             // 
@@ -488,6 +489,7 @@
             this.deviceNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.deviceNameTextBox.Name = "deviceNameTextBox";
             this.deviceNameTextBox.Size = new System.Drawing.Size(219, 40);
+            this.deviceNameTextBox.TextChanged += new System.EventHandler(this.deviceNameTextBox_TextChanged);
             // 
             // librariesSplitButton
             // 

@@ -3809,5 +3809,93 @@ namespace Aml.Editor.Plugin
         {
 
         }
+
+        private void vendorNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            vendorNameTextBox_Leave(sender, e);
+            foreach (DataGridViewRow row in genericInformationDataGridView.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    if (row.Cells[0].Value.ToString() == "1" && row.Cells[1].Value.ToString() == "AutomationComponent{Class:  AutomationMLBaseRole}")
+                    {
+                        string SRCSerialNumber = row.Cells[0].Value.ToString();
+                        string SRC = row.Cells[1].Value.ToString();
+                        foreach (var pair in searchAMLLibraryFile.DictionaryForRoleClassInstanceAttributes)
+                        {
+                            if (pair.Key.ToString() == SRC)
+                            {
+                                try
+                                {
+                                    if (device.DictionaryForRoleClassofComponent.ContainsKey("(" + SRCSerialNumber + ")" + SRC))
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Remove("(" + SRCSerialNumber + ")" + SRC);
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
+                                    else
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
+
+                                    genericInformationtreeView.Nodes.Clear();
+                                    TreeNode parentNode = genericInformationtreeView.Nodes.Add("(" + SRCSerialNumber + ")" + SRC,
+                                        "(" + SRCSerialNumber + ")" + SRC, 2);
+                                    autoloadGenericInformationtreeView(parentNode);
+                                }
+                                catch (Exception)
+                                {
+
+                                    throw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void deviceNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            deviceNameTextBox_Leave(sender, e);
+            foreach (DataGridViewRow row in genericInformationDataGridView.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    if (row.Cells[0].Value.ToString() == "1" && row.Cells[1].Value.ToString() == "AutomationComponent{Class:  AutomationMLBaseRole}")
+                    {
+                        string SRCSerialNumber = row.Cells[0].Value.ToString();
+                        string SRC = row.Cells[1].Value.ToString();
+                        foreach (var pair in searchAMLLibraryFile.DictionaryForRoleClassInstanceAttributes)
+                        {
+                            if (pair.Key.ToString() == SRC)
+                            {
+                                try
+                                {
+                                    if (device.DictionaryForRoleClassofComponent.ContainsKey("(" + SRCSerialNumber + ")" + SRC))
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Remove("(" + SRCSerialNumber + ")" + SRC);
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
+                                    else
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
+
+                                    genericInformationtreeView.Nodes.Clear();
+                                    TreeNode parentNode = genericInformationtreeView.Nodes.Add("(" + SRCSerialNumber + ")" + SRC,
+                                        "(" + SRCSerialNumber + ")" + SRC, 2);
+                                    autoloadGenericInformationtreeView(parentNode);
+                                }
+                                catch (Exception)
+                                {
+
+                                    throw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
