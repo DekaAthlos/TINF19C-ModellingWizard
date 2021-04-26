@@ -77,6 +77,14 @@ namespace Aml.Editor.Plugin
         /// <param name="mWController"></param>
         public DeviceDescription(MWController mWController)
         {
+            // These are the dictionaries created in MWDevice Class to store attributes inside them.
+            //These dictionaries are initiated as new dictionaries in here.
+            device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+            device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+
+            device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+            device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+
             this.mWController = mWController;
             InitializeComponent();
 
@@ -86,13 +94,44 @@ namespace Aml.Editor.Plugin
             // This Function look for "AutomationComponent" Role and assign it to "Generic Data Tab" as a compulsary role along with attributes.
             checkForAutomtionComponent();
 
-            // These are the dictionaries created in MWDevice Class to store attributes inside them.
-            //These dictionaries are initiated as new dictionaries in here.
-            device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+            foreach (DataGridViewRow row in genericInformationDataGridView.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    if (row.Cells[0].Value.ToString() == "1" && row.Cells[1].Value.ToString() == "AutomationComponent{Class:  AutomationMLBaseRole}")
+                    {
+                        string SRCSerialNumber = row.Cells[0].Value.ToString();
+                        string SRC = row.Cells[1].Value.ToString();
+                        foreach (var pair in searchAMLLibraryFile.DictionaryForRoleClassInstanceAttributes)
+                        {
+                            if (pair.Key.ToString() == SRC)
+                            {
+                                try
+                                {
+                                    if (device.DictionaryForRoleClassofComponent.ContainsKey("(" + SRCSerialNumber + ")" + SRC))
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Remove("(" + SRCSerialNumber + ")" + SRC);
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
+                                    else
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
 
-            device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+                                    TreeNode parentNode = genericInformationtreeView.Nodes.Add("(" + SRCSerialNumber + ")" + SRC,
+                                        "(" + SRCSerialNumber + ")" + SRC, 2);
+                                    autoloadGenericInformationtreeView(parentNode);
+                                }
+                                catch (Exception)
+                                {
+
+                                    throw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -3014,6 +3053,12 @@ namespace Aml.Editor.Plugin
                 {
                     foreach (TreeNode childNode in node.Nodes)
                     {
+
+                        if(childNode.Name == "AutomationMLBaseRole")
+                        {
+                            autoloadGenericInformationtreeView(childNode);
+                        }
+                        
                         if (childNode.Name == "AutomationComponent")
                         {
                             autoloadGenericInformationtreeView(childNode);
