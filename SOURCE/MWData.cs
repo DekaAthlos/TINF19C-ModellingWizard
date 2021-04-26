@@ -332,11 +332,6 @@ namespace Aml.Editor.Plugin
                     systemUnitClass = document.CAEXFile.SystemUnitClassLib.Append("ComponentSystemUnitClassLib").SystemUnitClass.Append(device.deviceName);
             }
 
-
-           
-
-          
-
             // Create the internalElement Interfaces
             if (device.vendorName != null)
             {
@@ -581,10 +576,11 @@ namespace Aml.Editor.Plugin
                 }
             }
 
+            string[] splitName = fileName.Split('\\');
+            string newFileName = splitName[splitName.Length - 1];
 
             // create the PackageUri for the root aml file
-            Uri partUri = PackUriHelper.CreatePartUri(new Uri("/" + fileName + "-root.aml", UriKind.Relative));
-
+            Uri partUri = PackUriHelper.CreatePartUri(new Uri("/" + newFileName + "-root.aml", UriKind.Relative));
 
             // create the aml file as a temporary file
             string path = Path.GetTempFileName();
@@ -599,7 +595,7 @@ namespace Aml.Editor.Plugin
                 // Directory.Delete(Path.GetFullPath(amlx.ContainerFilename), true);
 
             }
-           
+
             // write the new aml file into the package
             PackagePart root = amlx.AddRoot(path, partUri);
             
