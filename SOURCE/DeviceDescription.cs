@@ -1616,25 +1616,23 @@ namespace Aml.Editor.Plugin
                     // Display the result
                     if (result1 != null)
                     {
-                        // Display error Dialog
+                        // Display Dialog
                         MessageBox.Show(result1, "Automation Component Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                }
 
+                    device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+                    device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+
+                    device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+                    device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+                    // Assigning values and parameters in "Identification data grid" to properties given in class "DatatableParametersCarrier" in MWDevice
+                }
 
             }
             catch (Exception)
             {
-
-                throw;
+                return;
             }
-
-            device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-
-            device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            // Assigning values and parameters in "Identification data grid" to properties given in class "DatatableParametersCarrier" in MWDevice
         }
 
         private void saveeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1755,22 +1753,19 @@ namespace Aml.Editor.Plugin
                         MessageBox.Show(result1, "Automation Component Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         newToolStripMenuItem_Click(sender, e);
                     }
+
+                    device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+                    device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+
+                    device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+                    device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
+                    // Assigning values and parameters in "Identification data grid" to properties given in class "DatatableParametersCarrier" in MWDevice
                 }
-
-
             }
             catch (Exception)
             {
-
-                throw;
+                return;
             }
-
-            device.DictionaryForInterfaceClassesInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            device.DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-
-            device.DictionaryForRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            device.DictionaryForExternalInterfacesUnderRoleClassofComponent = new Dictionary<string, List<List<ClassOfListsFromReferencefile>>>();
-            // Assigning values and parameters in "Identification data grid" to properties given in class "DatatableParametersCarrier" in MWDevice
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
