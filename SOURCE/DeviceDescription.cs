@@ -2039,7 +2039,7 @@ namespace Aml.Editor.Plugin
 
                                                 parentNode = genericInformationtreeView.Nodes.Add("(" + SRCSerialNumber + ")" + SRCName, "(" + SRCSerialNumber + ")" + SRCName, 2);
 
-                                                    autoloadGenericInformationtreeView(parentNode);
+                                                autoloadGenericInformationtreeView(parentNode);
                                                 
                                             }
                                         }
@@ -3850,6 +3850,39 @@ namespace Aml.Editor.Plugin
                             }
                         }
                     }
+                    else if (row.Cells[0].Value.ToString() == "1" && row.Cells[1].Value.ToString() == "(1)AutomationMLComponentStandardRCL/AutomationComponent")
+                    {
+                        string SRCSerialNumber = row.Cells[0].Value.ToString();
+                        string SRC = row.Cells[1].Value.ToString();
+                        foreach (var pair in searchAMLComponentFile.DictionaryofRolesforAutomationComponenet)
+                        {
+                            if (pair.Key.ToString() == SRC)
+                            {
+                                try
+                                {
+                                    if (device.DictionaryForRoleClassofComponent.ContainsKey("(" + SRCSerialNumber + ")" + SRC))
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Remove("(" + SRCSerialNumber + ")" + SRC);
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
+                                    else
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
+
+                                    genericInformationtreeView.Nodes.Clear();
+                                    TreeNode parentNode = genericInformationtreeView.Nodes.Add("(" + SRCSerialNumber + ")" + SRC,
+                                        "(" + SRCSerialNumber + ")" + SRC, 2);
+                                    autoloadGenericInformationtreeView(parentNode);
+                                }
+                                catch (Exception)
+                                {
+
+                                    throw;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -3866,6 +3899,38 @@ namespace Aml.Editor.Plugin
                         string SRCSerialNumber = row.Cells[0].Value.ToString();
                         string SRC = row.Cells[1].Value.ToString();
                         foreach (var pair in searchAMLLibraryFile.DictionaryForRoleClassInstanceAttributes)
+                        {
+                            if (pair.Key.ToString() == SRC)
+                            {
+                                try
+                                {
+                                    if (device.DictionaryForRoleClassofComponent.ContainsKey("(" + SRCSerialNumber + ")" + SRC))
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Remove("(" + SRCSerialNumber + ")" + SRC);
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
+                                    else
+                                    {
+                                        device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRC, pair.Value);
+                                    }
+
+                                    genericInformationtreeView.Nodes.Clear();
+                                    TreeNode parentNode = genericInformationtreeView.Nodes.Add("(" + SRCSerialNumber + ")" + SRC,
+                                        "(" + SRCSerialNumber + ")" + SRC, 2);
+                                    autoloadGenericInformationtreeView(parentNode);
+                                }
+                                catch (Exception)
+                                {
+
+                                    throw;
+                                }
+                            }
+                        }
+                    } else if (row.Cells[0].Value.ToString() == "1" && row.Cells[1].Value.ToString() == "(1)AutomationMLComponentStandardRCL/AutomationComponent")
+                    {
+                        string SRCSerialNumber = row.Cells[0].Value.ToString();
+                        string SRC = row.Cells[1].Value.ToString();
+                        foreach (var pair in searchAMLComponentFile.DictionaryofRolesforAutomationComponenet)
                         {
                             if (pair.Key.ToString() == SRC)
                             {
