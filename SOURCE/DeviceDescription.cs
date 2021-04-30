@@ -2032,6 +2032,261 @@ namespace Aml.Editor.Plugin
 
                                         i++;
                                     }
+
+
+                                    foreach (var internalElements in classType.InternalElement)
+                                    {
+                                        if (internalElements.Name != "Interfaces" && internalElements.Name != "ElectricalInterfaces" && internalElements.Name != "DeviceIdentification")
+                                        {
+                                            int num = attachablesInfoDataGridView.Rows.Add();
+                                            attachablesInfoDataGridView.Rows[num].Cells[0].Value = internalElements.Name;
+                                            foreach (var externalInterface in internalElements.ExternalInterface)
+                                            {
+
+                                                foreach (var attribute in externalInterface.Attribute)
+                                                {
+                                                    if (attribute.Value.Contains("https://") ||
+                                                        attribute.Value.Contains("http://") ||
+                                                        attribute.Value.Contains("www") || attribute.Value.Contains("WWW"))
+                                                    {
+                                                        attachablesInfoDataGridView.Rows[num].Cells[1].Value =
+                                                            attribute.Value;
+                                                        attachablesInfoDataGridView.Rows[num].Cells[2].Value = true;
+                                                    }
+
+                                                    foreach (FileInfo fileInfo1 in directory.GetFiles())
+                                                    {
+                                                        string name = attribute.Value.ToString();
+                                                        if (name.Contains("%20"))
+                                                        {
+                                                            //name.Replace("%20", " ");
+                                                            name = Uri.UnescapeDataString(name);
+                                                        }
+
+                                                        if (name.Contains("%28") || name.Contains("%29"))
+                                                        {
+                                                            name = Uri.UnescapeDataString(name);
+                                                        }
+
+                                                        if (name.Contains(fileInfo1.ToString()))
+                                                        {
+                                                            attachablesInfoDataGridView.Rows[num].Cells[1].Value =
+                                                                fileInfo1.FullName;
+                                                            attachablesInfoDataGridView.Rows[num].Cells[2].Value = true;
+                                                        }
+                                                    }
+                                                    //attachablesInfoDataGridView.Rows[num].Cells[1].Value = attribute.Value;
+                                                }
+                                            }
+                                        }
+
+
+                                        if (internalElements.Name == "Interfaces" ||
+                                            internalElements.Name == "ElectricalInterfaces")
+                                        {
+                                            int counter = 1;
+                                            foreach (var subinternalElements in internalElements.InternalElement)
+                                            {
+                                                foreach (var electricalConnectorType in subinternalElements
+                                                    .ExternalInterface)
+                                                {
+
+                                                    if (electricalConnectorType != null)
+                                                    {
+
+                                                        searchAMLComponentFile.CheckForAttributesOfExternalIterface(counter,
+                                                            electricalConnectorType);
+
+                                                        int num = electricalInterfacesCollectionDataGridView.Rows.Add();
+                                                        List<string> listofSerialNumbers = new List<string>();
+                                                        List<int> listofFinalSerialNumber = new List<int>();
+                                                        string number = "";
+                                                        int finalNumber = 0;
+                                                        int ultimatenumber = 0;
+                                                        if (electricalInterfacesCollectionDataGridView.Rows.Count > 2)
+                                                        {
+                                                            foreach (DataGridViewRow row in
+                                                                electricalInterfacesCollectionDataGridView.Rows)
+                                                            {
+                                                                if (row.Cells[0].Value == null)
+                                                                {
+                                                                    number = "0";
+                                                                    listofSerialNumbers.Add(number);
+                                                                }
+
+                                                                if (row.Cells[0].Value != null)
+                                                                {
+                                                                    number = row.Cells[0].Value.ToString();
+                                                                    listofSerialNumbers.Add(number);
+                                                                }
+                                                            }
+
+                                                            foreach (string str in listofSerialNumbers)
+                                                            {
+                                                                finalNumber = Convert.ToInt32(str);
+                                                                listofFinalSerialNumber.Add(finalNumber);
+                                                            }
+
+                                                            ultimatenumber = listofFinalSerialNumber.Max();
+                                                            electricalInterfacesCollectionDataGridView.Rows[num].Cells[0]
+                                                                .Value = ++ultimatenumber;
+                                                        }
+                                                        else
+                                                        {
+                                                            electricalInterfacesCollectionDataGridView.Rows[num].Cells[0]
+                                                                .Value = 1;
+                                                        }
+
+                                                        electricalInterfacesCollectionDataGridView.Rows[num].Cells[1]
+                                                                .Value = "(" + counter + ")" +
+                                                                         electricalConnectorType.Name.ToString()
+                                                                         + "{" + "Class:" + "  " +
+                                                                         electricalConnectorType.BaseClass + "}";
+                                                        electricalInterfacesCollectionDataGridView.Rows[num].Cells[4]
+                                                            .Value = true;
+
+
+                                                        /* int rowindex = electricalInterfacesCollectionDataGridView.Rows[num].Cells[1].RowIndex;
+                                                          int columnindex = electricalInterfacesCollectionDataGridView.Rows[num].Cells[1].ColumnIndex;*/
+
+
+
+
+                                                        foreach (var electricalConnectorPins in electricalConnectorType
+                                                            .ExternalInterface)
+                                                        {
+                                                            if (electricalConnectorPins != null)
+                                                            {
+                                                                searchAMLComponentFile
+                                                                    .CheckForAttributesOfEclectricalConnectorPins(counter,
+                                                                        electricalConnectorPins, electricalConnectorType);
+                                                            }
+                                                        }
+
+
+                                                        treeViewElectricalInterfaces.Nodes.Clear();
+
+                                                        TreeNode parentNode;
+                                                        TreeNode childNodes;
+
+                                                        var AutomationMLDataTables = new AutomationMLDataTables();
+                                                        electricalInterfacesCollectionDataGridView.CurrentRow.Selected =
+                                                            true;
+
+
+                                                        if (electricalInterfacesCollectionDataGridView.Rows[num].Cells[0]
+                                                            .Value != null)
+                                                        {
+                                                            string interfaceSerialNumber =
+                                                                electricalInterfacesCollectionDataGridView.Rows[num]
+                                                                    .Cells[0].Value.ToString();
+
+
+                                                            if (Convert.ToBoolean(electricalInterfacesCollectionDataGridView
+                                                                .Rows[num].Cells[4].Value) == true)
+                                                            {
+                                                                elecInterAttDataGridView.Rows.Clear();
+                                                                string interfaceClass =
+                                                                    electricalInterfacesCollectionDataGridView.Rows[num]
+                                                                        .Cells[1].Value.ToString();
+                                                                foreach (var pair in searchAMLComponentFile
+                                                                    .DictionaryofElectricalConnectorType)
+                                                                {
+                                                                    if (pair.Key.ToString() == interfaceClass)
+                                                                    {
+                                                                        try
+                                                                        {
+                                                                            if (device
+                                                                                .DictionaryForInterfaceClassesInElectricalInterfaces
+                                                                                .ContainsKey("(" + interfaceSerialNumber +
+                                                                                    ")" + interfaceClass))
+                                                                            {
+                                                                                device
+                                                                                    .DictionaryForInterfaceClassesInElectricalInterfaces
+                                                                                    .Remove("(" + interfaceSerialNumber +
+                                                                                        ")" + interfaceClass);
+                                                                                device
+                                                                                    .DictionaryForInterfaceClassesInElectricalInterfaces
+                                                                                    .Add(
+                                                                                        "(" + interfaceSerialNumber + ")" +
+                                                                                        interfaceClass, pair.Value);
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                device
+                                                                                    .DictionaryForInterfaceClassesInElectricalInterfaces
+                                                                                    .Add(
+                                                                                        "(" + interfaceSerialNumber + ")" +
+                                                                                        interfaceClass, pair.Value);
+                                                                            }
+                                                                        }
+                                                                        catch (Exception)
+                                                                        {
+                                                                            throw;
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                                parentNode =
+                                                                    treeViewElectricalInterfaces.Nodes.Add(
+                                                                        "(" + interfaceSerialNumber + ")" + interfaceClass,
+                                                                        "(" + interfaceSerialNumber + ")" + interfaceClass,
+                                                                        2);
+
+                                                                foreach (var pair in searchAMLComponentFile
+                                                                    .DictioanryofElectricalConnectorPinType)
+                                                                {
+                                                                    if (pair.Key.Contains(interfaceClass))
+                                                                    {
+                                                                        try
+                                                                        {
+                                                                            if (device
+                                                                                .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
+                                                                                .ContainsKey("(" + interfaceSerialNumber +
+                                                                                    ")" + pair.Key.ToString()))
+                                                                            {
+                                                                                device
+                                                                                    .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
+                                                                                    .Remove("(" + interfaceSerialNumber +
+                                                                                        ")" + pair.Key.ToString());
+                                                                                device
+                                                                                    .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
+                                                                                    .Add(
+                                                                                        "(" + interfaceSerialNumber + ")" +
+                                                                                        pair.Key.ToString(), pair.Value);
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                device
+                                                                                    .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
+                                                                                    .Add(
+                                                                                        "(" + interfaceSerialNumber + ")" +
+                                                                                        pair.Key.ToString(), pair.Value);
+                                                                            }
+                                                                        }
+                                                                        catch (Exception)
+                                                                        {
+
+                                                                            throw;
+                                                                        }
+
+
+                                                                        childNodes = parentNode.Nodes.Add(
+                                                                            pair.Key.Replace(interfaceClass, "").ToString()
+                                                                            , pair.Key.Replace(interfaceClass, "").ToString(),
+                                                                            2);
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                counter++;
+                                            }
+                                        }
+                                    }
+
                                 }
                                 else if (classType.SupportedRoleClass.Exists == false)
                                 {
@@ -2178,269 +2433,271 @@ namespace Aml.Editor.Plugin
 
                                             i++;
                                         }
+
+                                        foreach (var internalElements in classTypeTwo.InternalElement)
+                                        {
+                                            if (internalElements.Name != "Interfaces" && internalElements.Name != "ElectricalInterfaces" && internalElements.Name != "DeviceIdentification")
+                                            {
+                                                int num = attachablesInfoDataGridView.Rows.Add();
+                                                attachablesInfoDataGridView.Rows[num].Cells[0].Value = internalElements.Name;
+                                                foreach (var externalInterface in internalElements.ExternalInterface)
+                                                {
+
+                                                    foreach (var attribute in externalInterface.Attribute)
+                                                    {
+                                                        if (attribute.Value.Contains("https://") ||
+                                                            attribute.Value.Contains("http://") ||
+                                                            attribute.Value.Contains("www") || attribute.Value.Contains("WWW"))
+                                                        {
+                                                            attachablesInfoDataGridView.Rows[num].Cells[1].Value =
+                                                                attribute.Value;
+                                                            attachablesInfoDataGridView.Rows[num].Cells[2].Value = true;
+                                                        }
+
+                                                        foreach (FileInfo fileInfo1 in directory.GetFiles())
+                                                        {
+                                                            string name = attribute.Value.ToString();
+                                                            if (name.Contains("%20"))
+                                                            {
+                                                                //name.Replace("%20", " ");
+                                                                name = Uri.UnescapeDataString(name);
+                                                            }
+
+                                                            if (name.Contains("%28") || name.Contains("%29"))
+                                                            {
+                                                                name = Uri.UnescapeDataString(name);
+                                                            }
+
+                                                            if (name.Contains(fileInfo1.ToString()))
+                                                            {
+                                                                attachablesInfoDataGridView.Rows[num].Cells[1].Value =
+                                                                    fileInfo1.FullName;
+                                                                attachablesInfoDataGridView.Rows[num].Cells[2].Value = true;
+                                                            }
+                                                        }
+                                                        //attachablesInfoDataGridView.Rows[num].Cells[1].Value = attribute.Value;
+                                                    }
+                                                }
+                                            }
+
+
+                                            if (internalElements.Name == "Interfaces" ||
+                                                internalElements.Name == "ElectricalInterfaces")
+                                            {
+                                                int counter = 1;
+                                                foreach (var subinternalElements in internalElements.InternalElement)
+                                                {
+                                                    foreach (var electricalConnectorType in subinternalElements
+                                                        .ExternalInterface)
+                                                    {
+
+                                                        if (electricalConnectorType != null)
+                                                        {
+
+                                                            searchAMLComponentFile.CheckForAttributesOfExternalIterface(counter,
+                                                                electricalConnectorType);
+
+                                                            int num = electricalInterfacesCollectionDataGridView.Rows.Add();
+                                                            List<string> listofSerialNumbers = new List<string>();
+                                                            List<int> listofFinalSerialNumber = new List<int>();
+                                                            string number = "";
+                                                            int finalNumber = 0;
+                                                            int ultimatenumber = 0;
+                                                            if (electricalInterfacesCollectionDataGridView.Rows.Count > 2)
+                                                            {
+                                                                foreach (DataGridViewRow row in
+                                                                    electricalInterfacesCollectionDataGridView.Rows)
+                                                                {
+                                                                    if (row.Cells[0].Value == null)
+                                                                    {
+                                                                        number = "0";
+                                                                        listofSerialNumbers.Add(number);
+                                                                    }
+
+                                                                    if (row.Cells[0].Value != null)
+                                                                    {
+                                                                        number = row.Cells[0].Value.ToString();
+                                                                        listofSerialNumbers.Add(number);
+                                                                    }
+                                                                }
+
+                                                                foreach (string str in listofSerialNumbers)
+                                                                {
+                                                                    finalNumber = Convert.ToInt32(str);
+                                                                    listofFinalSerialNumber.Add(finalNumber);
+                                                                }
+
+                                                                ultimatenumber = listofFinalSerialNumber.Max();
+                                                                electricalInterfacesCollectionDataGridView.Rows[num].Cells[0]
+                                                                    .Value = ++ultimatenumber;
+                                                            }
+                                                            else
+                                                            {
+                                                                electricalInterfacesCollectionDataGridView.Rows[num].Cells[0]
+                                                                    .Value = 1;
+                                                            }
+
+                                                            electricalInterfacesCollectionDataGridView.Rows[num].Cells[1]
+                                                                    .Value = "(" + counter + ")" +
+                                                                             electricalConnectorType.Name.ToString()
+                                                                             + "{" + "Class:" + "  " +
+                                                                             electricalConnectorType.BaseClass + "}";
+                                                            electricalInterfacesCollectionDataGridView.Rows[num].Cells[4]
+                                                                .Value = true;
+
+
+                                                            /* int rowindex = electricalInterfacesCollectionDataGridView.Rows[num].Cells[1].RowIndex;
+                                                              int columnindex = electricalInterfacesCollectionDataGridView.Rows[num].Cells[1].ColumnIndex;*/
+
+
+
+
+                                                            foreach (var electricalConnectorPins in electricalConnectorType
+                                                                .ExternalInterface)
+                                                            {
+                                                                if (electricalConnectorPins != null)
+                                                                {
+                                                                    searchAMLComponentFile
+                                                                        .CheckForAttributesOfEclectricalConnectorPins(counter,
+                                                                            electricalConnectorPins, electricalConnectorType);
+                                                                }
+                                                            }
+
+
+                                                            treeViewElectricalInterfaces.Nodes.Clear();
+
+                                                            TreeNode parentNode;
+                                                            TreeNode childNodes;
+
+                                                            var AutomationMLDataTables = new AutomationMLDataTables();
+                                                            electricalInterfacesCollectionDataGridView.CurrentRow.Selected =
+                                                                true;
+
+
+                                                            if (electricalInterfacesCollectionDataGridView.Rows[num].Cells[0]
+                                                                .Value != null)
+                                                            {
+                                                                string interfaceSerialNumber =
+                                                                    electricalInterfacesCollectionDataGridView.Rows[num]
+                                                                        .Cells[0].Value.ToString();
+
+
+                                                                if (Convert.ToBoolean(electricalInterfacesCollectionDataGridView
+                                                                    .Rows[num].Cells[4].Value) == true)
+                                                                {
+                                                                    elecInterAttDataGridView.Rows.Clear();
+                                                                    string interfaceClass =
+                                                                        electricalInterfacesCollectionDataGridView.Rows[num]
+                                                                            .Cells[1].Value.ToString();
+                                                                    foreach (var pair in searchAMLComponentFile
+                                                                        .DictionaryofElectricalConnectorType)
+                                                                    {
+                                                                        if (pair.Key.ToString() == interfaceClass)
+                                                                        {
+                                                                            try
+                                                                            {
+                                                                                if (device
+                                                                                    .DictionaryForInterfaceClassesInElectricalInterfaces
+                                                                                    .ContainsKey("(" + interfaceSerialNumber +
+                                                                                        ")" + interfaceClass))
+                                                                                {
+                                                                                    device
+                                                                                        .DictionaryForInterfaceClassesInElectricalInterfaces
+                                                                                        .Remove("(" + interfaceSerialNumber +
+                                                                                            ")" + interfaceClass);
+                                                                                    device
+                                                                                        .DictionaryForInterfaceClassesInElectricalInterfaces
+                                                                                        .Add(
+                                                                                            "(" + interfaceSerialNumber + ")" +
+                                                                                            interfaceClass, pair.Value);
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    device
+                                                                                        .DictionaryForInterfaceClassesInElectricalInterfaces
+                                                                                        .Add(
+                                                                                            "(" + interfaceSerialNumber + ")" +
+                                                                                            interfaceClass, pair.Value);
+                                                                                }
+                                                                            }
+                                                                            catch (Exception)
+                                                                            {
+                                                                                throw;
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                                    parentNode =
+                                                                        treeViewElectricalInterfaces.Nodes.Add(
+                                                                            "(" + interfaceSerialNumber + ")" + interfaceClass,
+                                                                            "(" + interfaceSerialNumber + ")" + interfaceClass,
+                                                                            2);
+
+                                                                    foreach (var pair in searchAMLComponentFile
+                                                                        .DictioanryofElectricalConnectorPinType)
+                                                                    {
+                                                                        if (pair.Key.Contains(interfaceClass))
+                                                                        {
+                                                                            try
+                                                                            {
+                                                                                if (device
+                                                                                    .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
+                                                                                    .ContainsKey("(" + interfaceSerialNumber +
+                                                                                        ")" + pair.Key.ToString()))
+                                                                                {
+                                                                                    device
+                                                                                        .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
+                                                                                        .Remove("(" + interfaceSerialNumber +
+                                                                                            ")" + pair.Key.ToString());
+                                                                                    device
+                                                                                        .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
+                                                                                        .Add(
+                                                                                            "(" + interfaceSerialNumber + ")" +
+                                                                                            pair.Key.ToString(), pair.Value);
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    device
+                                                                                        .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
+                                                                                        .Add(
+                                                                                            "(" + interfaceSerialNumber + ")" +
+                                                                                            pair.Key.ToString(), pair.Value);
+                                                                                }
+                                                                            }
+                                                                            catch (Exception)
+                                                                            {
+
+                                                                                throw;
+                                                                            }
+
+
+                                                                            childNodes = parentNode.Nodes.Add(
+                                                                                pair.Key.Replace(interfaceClass, "").ToString()
+                                                                                , pair.Key.Replace(interfaceClass, "").ToString(),
+                                                                                2);
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+
+                                                    counter++;
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Beim Laden ist ein Fehler aufgetreten." + "\n" + "Bitte überprüfen sie ihre AML Filestruktur" + "\n");
+                                    MessageBox.Show("Beim Laden ist ein Fehler aufgetreten." + "\n" + "Bitte überprüfen sie ihre AML Filestruktur und minimieren sie ihre Odernerstruktur!");
                                 }
 
 
-                                foreach (var internalElements in classType.InternalElement)
-                                {
-                                    if (internalElements.Name != "Interfaces" && internalElements.Name != "ElectricalInterfaces" && internalElements.Name != "DeviceIdentification")
-                                    {
-                                        int num = attachablesInfoDataGridView.Rows.Add();
-                                        attachablesInfoDataGridView.Rows[num].Cells[0].Value = internalElements.Name;
-                                        foreach (var externalInterface in internalElements.ExternalInterface)
-                                        {
-
-                                            foreach (var attribute in externalInterface.Attribute)
-                                            {
-                                                if (attribute.Value.Contains("https://") ||
-                                                    attribute.Value.Contains("http://") ||
-                                                    attribute.Value.Contains("www") || attribute.Value.Contains("WWW"))
-                                                {
-                                                    attachablesInfoDataGridView.Rows[num].Cells[1].Value =
-                                                        attribute.Value;
-                                                    attachablesInfoDataGridView.Rows[num].Cells[2].Value = true;
-                                                }
-
-                                                foreach (FileInfo fileInfo1 in directory.GetFiles())
-                                                {
-                                                    string name = attribute.Value.ToString();
-                                                    if (name.Contains("%20"))
-                                                    {
-                                                        //name.Replace("%20", " ");
-                                                        name = Uri.UnescapeDataString(name);
-                                                    }
-
-                                                    if (name.Contains("%28") || name.Contains("%29"))
-                                                    {
-                                                        name = Uri.UnescapeDataString(name);
-                                                    }
-
-                                                    if (name.Contains(fileInfo1.ToString()))
-                                                    {
-                                                        attachablesInfoDataGridView.Rows[num].Cells[1].Value =
-                                                            fileInfo1.FullName;
-                                                        attachablesInfoDataGridView.Rows[num].Cells[2].Value = true;
-                                                    }
-                                                }
-                                                //attachablesInfoDataGridView.Rows[num].Cells[1].Value = attribute.Value;
-                                            }
-                                        }
-                                    }
-
-
-                                    if (internalElements.Name == "Interfaces" ||
-                                        internalElements.Name == "ElectricalInterfaces")
-                                    {
-                                        int i = 1;
-                                        foreach (var subinternalElements in internalElements.InternalElement)
-                                        {
-                                            foreach (var electricalConnectorType in subinternalElements
-                                                .ExternalInterface)
-                                            {
-
-                                                if (electricalConnectorType != null)
-                                                {
-
-                                                    searchAMLComponentFile.CheckForAttributesOfExternalIterface(i,
-                                                        electricalConnectorType);
-
-                                                    int num = electricalInterfacesCollectionDataGridView.Rows.Add();
-                                                    List<string> listofSerialNumbers = new List<string>();
-                                                    List<int> listofFinalSerialNumber = new List<int>();
-                                                    string number = "";
-                                                    int finalNumber = 0;
-                                                    int ultimatenumber = 0;
-                                                    if (electricalInterfacesCollectionDataGridView.Rows.Count > 2)
-                                                    {
-                                                        foreach (DataGridViewRow row in
-                                                            electricalInterfacesCollectionDataGridView.Rows)
-                                                        {
-                                                            if (row.Cells[0].Value == null)
-                                                            {
-                                                                number = "0";
-                                                                listofSerialNumbers.Add(number);
-                                                            }
-
-                                                            if (row.Cells[0].Value != null)
-                                                            {
-                                                                number = row.Cells[0].Value.ToString();
-                                                                listofSerialNumbers.Add(number);
-                                                            }
-                                                        }
-
-                                                        foreach (string str in listofSerialNumbers)
-                                                        {
-                                                            finalNumber = Convert.ToInt32(str);
-                                                            listofFinalSerialNumber.Add(finalNumber);
-                                                        }
-
-                                                        ultimatenumber = listofFinalSerialNumber.Max();
-                                                        electricalInterfacesCollectionDataGridView.Rows[num].Cells[0]
-                                                            .Value = ++ultimatenumber;
-                                                    }
-                                                    else
-                                                    {
-                                                        electricalInterfacesCollectionDataGridView.Rows[num].Cells[0]
-                                                            .Value = 1;
-                                                    }
-
-                                                    electricalInterfacesCollectionDataGridView.Rows[num].Cells[1]
-                                                            .Value = "(" + i + ")" +
-                                                                     electricalConnectorType.Name.ToString()
-                                                                     + "{" + "Class:" + "  " +
-                                                                     electricalConnectorType.BaseClass + "}";
-                                                    electricalInterfacesCollectionDataGridView.Rows[num].Cells[4]
-                                                        .Value = true;
-
-
-                                                    /* int rowindex = electricalInterfacesCollectionDataGridView.Rows[num].Cells[1].RowIndex;
-                                                      int columnindex = electricalInterfacesCollectionDataGridView.Rows[num].Cells[1].ColumnIndex;*/
-
-
-
-
-                                                    foreach (var electricalConnectorPins in electricalConnectorType
-                                                        .ExternalInterface)
-                                                    {
-                                                        if (electricalConnectorPins != null)
-                                                        {
-                                                            searchAMLComponentFile
-                                                                .CheckForAttributesOfEclectricalConnectorPins(i,
-                                                                    electricalConnectorPins, electricalConnectorType);
-                                                        }
-                                                    }
-
-
-                                                    treeViewElectricalInterfaces.Nodes.Clear();
-
-                                                    TreeNode parentNode;
-                                                    TreeNode childNodes;
-
-                                                    var AutomationMLDataTables = new AutomationMLDataTables();
-                                                    electricalInterfacesCollectionDataGridView.CurrentRow.Selected =
-                                                        true;
-
-
-                                                    if (electricalInterfacesCollectionDataGridView.Rows[num].Cells[0]
-                                                        .Value != null)
-                                                    {
-                                                        string interfaceSerialNumber =
-                                                            electricalInterfacesCollectionDataGridView.Rows[num]
-                                                                .Cells[0].Value.ToString();
-
-
-                                                        if (Convert.ToBoolean(electricalInterfacesCollectionDataGridView
-                                                            .Rows[num].Cells[4].Value) == true)
-                                                        {
-                                                            elecInterAttDataGridView.Rows.Clear();
-                                                            string interfaceClass =
-                                                                electricalInterfacesCollectionDataGridView.Rows[num]
-                                                                    .Cells[1].Value.ToString();
-                                                            foreach (var pair in searchAMLComponentFile
-                                                                .DictionaryofElectricalConnectorType)
-                                                            {
-                                                                if (pair.Key.ToString() == interfaceClass)
-                                                                {
-                                                                    try
-                                                                    {
-                                                                        if (device
-                                                                            .DictionaryForInterfaceClassesInElectricalInterfaces
-                                                                            .ContainsKey("(" + interfaceSerialNumber +
-                                                                                ")" + interfaceClass))
-                                                                        {
-                                                                            device
-                                                                                .DictionaryForInterfaceClassesInElectricalInterfaces
-                                                                                .Remove("(" + interfaceSerialNumber +
-                                                                                    ")" + interfaceClass);
-                                                                            device
-                                                                                .DictionaryForInterfaceClassesInElectricalInterfaces
-                                                                                .Add(
-                                                                                    "(" + interfaceSerialNumber + ")" +
-                                                                                    interfaceClass, pair.Value);
-                                                                        }
-                                                                        else
-                                                                        {
-                                                                            device
-                                                                                .DictionaryForInterfaceClassesInElectricalInterfaces
-                                                                                .Add(
-                                                                                    "(" + interfaceSerialNumber + ")" +
-                                                                                    interfaceClass, pair.Value);
-                                                                        }
-                                                                    }
-                                                                    catch (Exception)
-                                                                    {
-                                                                        throw;
-                                                                    }
-                                                                }
-                                                            }
-
-                                                            parentNode =
-                                                                treeViewElectricalInterfaces.Nodes.Add(
-                                                                    "(" + interfaceSerialNumber + ")" + interfaceClass,
-                                                                    "(" + interfaceSerialNumber + ")" + interfaceClass,
-                                                                    2);
-
-                                                            foreach (var pair in searchAMLComponentFile
-                                                                .DictioanryofElectricalConnectorPinType)
-                                                            {
-                                                                if (pair.Key.Contains(interfaceClass))
-                                                                {
-                                                                    try
-                                                                    {
-                                                                        if (device
-                                                                            .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
-                                                                            .ContainsKey("(" + interfaceSerialNumber +
-                                                                                ")" + pair.Key.ToString()))
-                                                                        {
-                                                                            device
-                                                                                .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
-                                                                                .Remove("(" + interfaceSerialNumber +
-                                                                                    ")" + pair.Key.ToString());
-                                                                            device
-                                                                                .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
-                                                                                .Add(
-                                                                                    "(" + interfaceSerialNumber + ")" +
-                                                                                    pair.Key.ToString(), pair.Value);
-                                                                        }
-                                                                        else
-                                                                        {
-                                                                            device
-                                                                                .DictionaryForExternalInterfacesUnderInterfaceClassInElectricalInterfaces
-                                                                                .Add(
-                                                                                    "(" + interfaceSerialNumber + ")" +
-                                                                                    pair.Key.ToString(), pair.Value);
-                                                                        }
-                                                                    }
-                                                                    catch (Exception)
-                                                                    {
-
-                                                                        throw;
-                                                                    }
-
-
-                                                                    childNodes = parentNode.Nodes.Add(
-                                                                        pair.Key.Replace(interfaceClass, "").ToString()
-                                                                        , pair.Key.Replace(interfaceClass, "").ToString(),
-                                                                        2);
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-
-                                            i++;
-                                        }
-                                    }
-                                }
+                                
                             }
                         }
-
+                        
                         amlx.Dispose();
                         amlx.Close();
                     }
