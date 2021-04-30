@@ -1881,6 +1881,8 @@ namespace Aml.Editor.Plugin
                         // Get the root path -> main .aml file
                         IEnumerable<PackagePart> rootParts = amlx.GetPartsByRelationShipType(AutomationMLContainer.RelationshipType.Root);
 
+
+
                         // We expect the aml to only have one root part
                         if (rootParts.First() != null)
                         {
@@ -1895,19 +1897,19 @@ namespace Aml.Editor.Plugin
 
                         fileNameLabel.Text = fileInfo.Name;
 
-
                         foreach (var classLibType in document.CAEXFile.SystemUnitClassLib)
                         {
                             foreach (var classType in classLibType.SystemUnitClass)
                             {
+                                
                                 if (classType.SupportedRoleClass.Exists)
                                 {
                                     int i = 1;
+
                                     foreach (var SRC in classType.SupportedRoleClass)
                                     {
                                         if (classType.Attribute.Exists)
                                         {
-
                                             foreach (var attribute in classType.Attribute)
                                             {
                                                 searchForComponentNames(attribute);
@@ -1977,14 +1979,8 @@ namespace Aml.Editor.Plugin
                                         }
 
                                         genericInformationDataGridView.Rows[num].Cells[1].Value =
-                                            "(" + i + ")" + SRC.RoleReference.ToString()
-                                            /* + "{" + "Class:" + "  " + electricalConnectorType.BaseClass + "}"*/;
+                                            "(" + i + ")" + SRC.RoleReference.ToString();
                                         genericInformationDataGridView.Rows[num].Cells[4].Value = true;
-
-                                        /*int rowindex = genericInformationDataGridView.Rows[num].Cells[1].RowIndex;
-                                        int columnindex = genericInformationDataGridView.Rows[num].Cells[1].ColumnIndex;
-
-                                        genericInformationDataGridView_CellClick(new object(), new DataGridViewCellEventArgs(columnindex, rowindex));*/
 
                                         genericInformationtreeView.Nodes.Clear();
 
@@ -1995,34 +1991,26 @@ namespace Aml.Editor.Plugin
 
                                         if (genericInformationDataGridView.Rows[num].Cells[0].Value != null)
                                         {
-                                            string SRCSerialNumber = genericInformationDataGridView.Rows[num].Cells[0]
-                                                .Value.ToString();
+                                            string SRCSerialNumber = genericInformationDataGridView.Rows[num].Cells[0].Value.ToString();
 
-                                            if (Convert.ToBoolean(genericInformationDataGridView.Rows[num].Cells[4]
-                                                .Value) == true)
+                                            if (Convert.ToBoolean(genericInformationDataGridView.Rows[num].Cells[4].Value) == true)
                                             {
                                                 genericparametersAttrDataGridView.Rows.Clear();
-                                                string SRCName = genericInformationDataGridView.Rows[num].Cells[1].Value
-                                                    .ToString();
-                                                foreach (var pair in searchAMLComponentFile
-                                                    .DictionaryofRolesforAutomationComponenet)
+                                                string SRCName = genericInformationDataGridView.Rows[num].Cells[1].Value.ToString();
+                                                foreach (var pair in searchAMLComponentFile.DictionaryofRolesforAutomationComponenet)
                                                 {
                                                     if (pair.Key.ToString() == SRCName)
                                                     {
                                                         try
                                                         {
-                                                            if (device.DictionaryForRoleClassofComponent.ContainsKey(
-                                                                "(" + SRCSerialNumber + ")" + SRCName))
+                                                            if (device.DictionaryForRoleClassofComponent.ContainsKey("(" + SRCSerialNumber + ")" + SRCName))
                                                             {
-                                                                device.DictionaryForRoleClassofComponent.Remove(
-                                                                    "(" + SRCSerialNumber + ")" + SRCName);
-                                                                device.DictionaryForRoleClassofComponent.Add(
-                                                                    "(" + SRCSerialNumber + ")" + SRCName, pair.Value);
+                                                                device.DictionaryForRoleClassofComponent.Remove("(" + SRCSerialNumber + ")" + SRCName);
+                                                                device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRCName, pair.Value);
                                                             }
                                                             else
                                                             {
-                                                                device.DictionaryForRoleClassofComponent.Add(
-                                                                    "(" + SRCSerialNumber + ")" + SRCName, pair.Value);
+                                                                device.DictionaryForRoleClassofComponent.Add("(" + SRCSerialNumber + ")" + SRCName, pair.Value);
                                                             }
                                                         }
                                                         catch (Exception)
@@ -2045,6 +2033,158 @@ namespace Aml.Editor.Plugin
                                         i++;
                                     }
                                 }
+                                else if (classType.SupportedRoleClass.Exists == false)
+                                {
+                                    foreach (var classTypeTwo in classType.SystemUnitClass)
+                                    {
+                                        int i = 1;
+
+                                        foreach (var SRC in classTypeTwo.SupportedRoleClass)
+                                        {
+                                            if (classTypeTwo.Attribute.Exists)
+                                            {
+                                                foreach (var attribute in classTypeTwo.Attribute)
+                                                {
+                                                    searchForComponentNames(attribute);
+                                                    if (attribute.Name == "Manufacturer")
+                                                    {
+                                                        if (attribute.Value != null)
+                                                        {
+                                                            vendorNameTextBox.Text = attribute.Value;
+                                                        }
+                                                        else
+                                                        {
+                                                            vendorNameTextBox.Text = "No Vendor Name Set";
+                                                        }
+                                                    }
+
+                                                    if (attribute.Name == "Model")
+                                                    {
+                                                        if (attribute.Value != null)
+                                                        {
+                                                            deviceNameTextBox.Text = attribute.Value;
+                                                        }
+                                                        else
+                                                        {
+                                                            deviceNameTextBox.Text = "No Device Name Set";
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            searchAMLComponentFile.CheckForAttributesOfComponent(i, SRC, classTypeTwo);
+
+                                            int num = genericInformationDataGridView.Rows.Add();
+                                            List<string> listofSerialNumbers = new List<string>();
+                                            List<int> listofFinalSerialNumber = new List<int>();
+                                            string number = "";
+                                            int finalNumber = 0;
+                                            int ultimatenumber = 0;
+                                            if (genericInformationDataGridView.Rows.Count > 2)
+                                            {
+                                                foreach (DataGridViewRow row in genericInformationDataGridView.Rows)
+                                                {
+                                                    if (row.Cells[0].Value == null)
+                                                    {
+                                                        number = "0";
+                                                        listofSerialNumbers.Add(number);
+                                                    }
+
+                                                    if (row.Cells[0].Value != null)
+                                                    {
+                                                        number = row.Cells[0].Value.ToString();
+                                                        listofSerialNumbers.Add(number);
+                                                    }
+                                                }
+
+                                                foreach (string str in listofSerialNumbers)
+                                                {
+                                                    finalNumber = Convert.ToInt32(str);
+                                                    listofFinalSerialNumber.Add(finalNumber);
+                                                }
+
+                                                ultimatenumber = listofFinalSerialNumber.Max();
+                                                genericInformationDataGridView.Rows[num].Cells[0].Value =
+                                                    ++ultimatenumber;
+                                            }
+                                            else
+                                            {
+                                                genericInformationDataGridView.Rows[num].Cells[0].Value = 1;
+                                            }
+
+                                            genericInformationDataGridView.Rows[num].Cells[1].Value =
+                                                "(" + i + ")" + SRC.RoleReference.ToString();
+                                            genericInformationDataGridView.Rows[num].Cells[4].Value = true;
+
+                                            genericInformationtreeView.Nodes.Clear();
+
+                                            TreeNode parentNode;
+
+                                            var AutomationMLDataTables = new AutomationMLDataTables();
+                                            genericInformationDataGridView.CurrentRow.Selected = true;
+
+                                            if (genericInformationDataGridView.Rows[num].Cells[0].Value != null)
+                                            {
+                                                string SRCSerialNumber = genericInformationDataGridView.Rows[num]
+                                                    .Cells[0].Value.ToString();
+
+                                                if (Convert.ToBoolean(genericInformationDataGridView.Rows[num].Cells[4]
+                                                    .Value) == true)
+                                                {
+                                                    genericparametersAttrDataGridView.Rows.Clear();
+                                                    string SRCName = genericInformationDataGridView.Rows[num].Cells[1]
+                                                        .Value.ToString();
+                                                    foreach (var pair in searchAMLComponentFile
+                                                        .DictionaryofRolesforAutomationComponenet)
+                                                    {
+                                                        if (pair.Key.ToString() == SRCName)
+                                                        {
+                                                            try
+                                                            {
+                                                                if (device.DictionaryForRoleClassofComponent
+                                                                    .ContainsKey("(" + SRCSerialNumber + ")" + SRCName))
+                                                                {
+                                                                    device.DictionaryForRoleClassofComponent.Remove(
+                                                                        "(" + SRCSerialNumber + ")" + SRCName);
+                                                                    device.DictionaryForRoleClassofComponent.Add(
+                                                                        "(" + SRCSerialNumber + ")" + SRCName,
+                                                                        pair.Value);
+                                                                }
+                                                                else
+                                                                {
+                                                                    device.DictionaryForRoleClassofComponent.Add(
+                                                                        "(" + SRCSerialNumber + ")" + SRCName,
+                                                                        pair.Value);
+                                                                }
+                                                            }
+                                                            catch (Exception)
+                                                            {
+                                                                throw;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    parentNode = genericInformationtreeView.Nodes.Add(
+                                                        "(" + SRCSerialNumber + ")" + SRCName,
+                                                        "(" + SRCSerialNumber + ")" + SRCName, 2);
+
+                                                    autoloadGenericInformationtreeView(parentNode);
+
+                                                }
+                                            }
+
+                                            vendorNameTextBox_Leave(new object(), new EventArgs());
+                                            deviceNameTextBox_Leave(new object(), new EventArgs());
+
+                                            i++;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Beim Laden ist ein Fehler aufgetreten." + "\n" + "Bitte überprüfen sie ihre AML Filestruktur" + "\n");
+                                }
+
 
                                 foreach (var internalElements in classType.InternalElement)
                                 {
