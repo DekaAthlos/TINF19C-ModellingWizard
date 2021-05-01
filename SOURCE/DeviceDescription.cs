@@ -3069,10 +3069,6 @@ namespace Aml.Editor.Plugin
                                             }
                                         }
                                     }
-                                    else
-                                    {
-                                        MessageBox.Show("An error occurred while open file." + "\n" + "Please check your AML file structure and minimize your folder structure!", "Error opening file", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                                    }
                                 }
                             }
                         }
@@ -3082,7 +3078,7 @@ namespace Aml.Editor.Plugin
                     }
                     catch
                     {
-
+                        MessageBox.Show("An error occurred while open file." + "\n" + "Please check your AML file structure and minimize your folder structure!", "Error opening file", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                     }
                 }
             }
