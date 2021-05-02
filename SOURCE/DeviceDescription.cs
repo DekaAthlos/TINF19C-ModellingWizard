@@ -2042,6 +2042,8 @@ namespace Aml.Editor.Plugin
                         MessageBox.Show("Missing names of attributes or same attribute sequence is repeated in the given file", "Missing Names", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     }
 
+
+
                     //open and load data from file
                     try
                     {
@@ -2065,7 +2067,6 @@ namespace Aml.Editor.Plugin
                         IEnumerable<PackagePart> rootParts = amlx.GetPartsByRelationShipType(AutomationMLContainer.RelationshipType.Root);
 
 
-
                         // We expect the aml to only have one root part
                         if (rootParts.First() != null)
                         {
@@ -2073,7 +2074,6 @@ namespace Aml.Editor.Plugin
 
                             // load the aml file as an CAEX document
                             document = CAEXDocument.LoadFromStream(part.GetStream());
-
                         }
 
                         fileNameLabel.Text = fileInfo.Name;
@@ -3020,8 +3020,9 @@ namespace Aml.Editor.Plugin
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.StackTrace + "\n" + ex.Message + "\n" + ex.Source);
-                        MessageBox.Show("An error occurred while open file." + "\n" + "Please check your AML file structure and minimize your folder structure!", "Error opening file", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        open.Dispose();
+                        newToolStripMenuItem_Click(sender, e);
+                        MessageBox.Show("An error occurred while open file." + "\n" + "The AML file structure is not allowed. Check if there are two different aml files and merge them. Another error could be the structure of your AML file.", "Error opening file", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                     }
                 }
             }
