@@ -11,6 +11,13 @@ using System.Windows.Forms;
 using Aml.Engine.AmlObjects.Extensions;
 
 
+/// <summary>
+/// MOD.002 Controller
+/// This Module is the backend of the GUI. It covers all functions that are not frontend-related and makes sure that all errors occuring are caught by the program.
+/// Every time a user makes a mistake, like triggering an error he gets feedback from this module (like an error message). The Controller is also responsible for opening, saving,
+/// exporting and importing files
+/// </summary>
+
 namespace Aml.Editor.Plugin
 {
     public partial class DeviceDescription : UserControl

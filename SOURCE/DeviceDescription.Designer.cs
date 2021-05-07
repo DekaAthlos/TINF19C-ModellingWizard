@@ -1,4 +1,11 @@
-﻿namespace Aml.Editor.Plugin
+﻿/// <summary>
+/// MOD.001 GUI
+/// This Module is responsible for the look of the GUI. Everything related to the frontend of the plugin can be changed here. For Example the size of elements,
+/// their color, their types...
+/// This can be edited with the WinForm GUI of VisualStudio or in this class. To edit anything of the GUI in this Code double-click line 30 ("Component Designer generated code").
+/// </summary>
+
+namespace Aml.Editor.Plugin
 {
     partial class DeviceDescription
     {
