@@ -1838,7 +1838,7 @@ namespace Aml.Editor.Plugin
 
         private void manualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string search = "https://github.com/DekaAthlos/TINF19C-ModellingWizard/blob/Development/MANUAL/ModellingWizardDocumentation.zip";
+            string search = "https://github.com/DekaAthlos/TINF19C-ModellingWizard/wiki/6.-User-Manual";
             System.Diagnostics.Process.Start(search);
         }
 
