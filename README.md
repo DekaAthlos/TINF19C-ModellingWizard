@@ -29,3 +29,7 @@ The further development of the Modelling Wizard was carried out by the following
   
 Link to the lecture content: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
 
+## About the installation and usage
+
+If you are unsure how to install the AutomationML Editor or the Modelling Wizard plugin, visit our [User Manual](#Installationprocess) in our Wiki!
+
