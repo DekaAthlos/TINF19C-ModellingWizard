@@ -22,7 +22,6 @@ namespace Aml.Editor.Plugin
             
         }
 
-
         public void CheckForAttributesOfExternalIterface(int i, ExternalInterfaceType externalInterface)
         {
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -64,6 +63,7 @@ namespace Aml.Editor.Plugin
 
 
         }
+        
         public void CkeckForNestedAttributesOfExternalIterface(int i, AttributeType attributeType,  ExternalInterfaceType externalInterface)
         {
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -101,8 +101,7 @@ namespace Aml.Editor.Plugin
 
         }
 
-        public void StoreEachAttributeValueInListOfExternalIterface(int i, List<List<ClassOfListsFromReferencefile>> list,
-           AttributeType attributeType, ExternalInterfaceType externalInterface)
+        public void StoreEachAttributeValueInListOfExternalIterface(int i, List<List<ClassOfListsFromReferencefile>> list, AttributeType attributeType, ExternalInterfaceType externalInterface)
         {
             list = new List<List<ClassOfListsFromReferencefile>>();
             List<ClassOfListsFromReferencefile> sublist = new List<ClassOfListsFromReferencefile>();
@@ -146,8 +145,7 @@ namespace Aml.Editor.Plugin
 
         }
 
-        public void StoreEachAttributeValueInListOfExternalIterface(int i, List<List<ClassOfListsFromReferencefile>> list,
-            AttributeType AttributeInAttribute, AttributeType attributeType, ExternalInterfaceType externalInterface)
+        public void StoreEachAttributeValueInListOfExternalIterface(int i, List<List<ClassOfListsFromReferencefile>> list, AttributeType AttributeInAttribute, AttributeType attributeType, ExternalInterfaceType externalInterface)
         {
             list = new List<List<ClassOfListsFromReferencefile>>();
             List<ClassOfListsFromReferencefile> sublist = new List<ClassOfListsFromReferencefile>();
@@ -185,11 +183,6 @@ namespace Aml.Editor.Plugin
             }
 
         }
-
-
-
-
-
 
         public void CheckForAttributesOfEclectricalConnectorPins(int i, ExternalInterfaceType externalInterface, ExternalInterfaceType classType)
         {
@@ -233,8 +226,8 @@ namespace Aml.Editor.Plugin
 
 
         }
-        public void CkeckForNestedAttributesOfElectricalConnectorPins(int i, AttributeType attributeType, ExternalInterfaceType externalInterface, 
-            ExternalInterfaceType classType)
+        
+        public void CkeckForNestedAttributesOfElectricalConnectorPins(int i, AttributeType attributeType, ExternalInterfaceType externalInterface, ExternalInterfaceType classType)
         {
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
             if (attributeType.Attribute.Exists)
@@ -271,8 +264,7 @@ namespace Aml.Editor.Plugin
 
         }
 
-        public void StoreEachAttributeValueInListOfElectricalConnectorPins(int i, List<List<ClassOfListsFromReferencefile>> list,
-           AttributeType attributeType, ExternalInterfaceType externalInterface, ExternalInterfaceType classType)
+        public void StoreEachAttributeValueInListOfElectricalConnectorPins(int i, List<List<ClassOfListsFromReferencefile>> list, AttributeType attributeType, ExternalInterfaceType externalInterface, ExternalInterfaceType classType)
         {
             list = new List<List<ClassOfListsFromReferencefile>>();
             List<ClassOfListsFromReferencefile> sublist = new List<ClassOfListsFromReferencefile>();
@@ -316,8 +308,7 @@ namespace Aml.Editor.Plugin
 
         }
 
-        public void StoreEachAttributeValueInListOfElectricalConnectorPins(int i, List<List<ClassOfListsFromReferencefile>> list,
-            AttributeType AttributeInAttribute, AttributeType attributeType, ExternalInterfaceType externalInterface, ExternalInterfaceType classType)
+        public void StoreEachAttributeValueInListOfElectricalConnectorPins(int i, List<List<ClassOfListsFromReferencefile>> list, AttributeType AttributeInAttribute, AttributeType attributeType, ExternalInterfaceType externalInterface, ExternalInterfaceType classType)
         {
             list = new List<List<ClassOfListsFromReferencefile>>();
             List<ClassOfListsFromReferencefile> sublist = new List<ClassOfListsFromReferencefile>();
@@ -356,13 +347,7 @@ namespace Aml.Editor.Plugin
 
         }
 
-
-
-
-
-
         // read supported role class attributes of System Unit Class i.e. "Component Attributes "
-
         public void CheckForAttributesOfComponent(int i, SupportedRoleClassType supportedRoleClass, SystemUnitFamilyType classType)
         {
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -402,6 +387,7 @@ namespace Aml.Editor.Plugin
 
 
         }
+        
         public void CkeckForNestedAttributesOfComponent(int i, AttributeType attributeType, SupportedRoleClassType supportedRoleClass, SystemUnitFamilyType classType)
         {
             List<List<ClassOfListsFromReferencefile>> attributelist = new List<List<ClassOfListsFromReferencefile>>();
@@ -444,8 +430,7 @@ namespace Aml.Editor.Plugin
 
         }
 
-        public void StoreEachAttributeValueInListOfComponent(int i, List<List<ClassOfListsFromReferencefile>> list,
-           AttributeType attributeType, SupportedRoleClassType supportedRoleClass, SystemUnitFamilyType classType)
+        public void StoreEachAttributeValueInListOfComponent(int i, List<List<ClassOfListsFromReferencefile>> list, AttributeType attributeType, SupportedRoleClassType supportedRoleClass, SystemUnitFamilyType classType)
         {
             list = new List<List<ClassOfListsFromReferencefile>>();
             List<ClassOfListsFromReferencefile> sublist = new List<ClassOfListsFromReferencefile>();
@@ -486,8 +471,7 @@ namespace Aml.Editor.Plugin
 
         }
 
-        public void StoreEachAttributeValueInListOfComponent(int i, List<List<ClassOfListsFromReferencefile>> list,
-            AttributeType AttributeInAttribute, AttributeType attributeType, SupportedRoleClassType supportedRoleClass, SystemUnitFamilyType classType)
+        public void StoreEachAttributeValueInListOfComponent(int i, List<List<ClassOfListsFromReferencefile>> list, AttributeType AttributeInAttribute, AttributeType attributeType, SupportedRoleClassType supportedRoleClass, SystemUnitFamilyType classType)
         {
             list = new List<List<ClassOfListsFromReferencefile>>();
             List<ClassOfListsFromReferencefile> sublist = new List<ClassOfListsFromReferencefile>();

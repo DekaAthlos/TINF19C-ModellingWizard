@@ -54,7 +54,7 @@ namespace Aml.Editor.Plugin
                     int num = DataGridViewName.Rows.Add();
 
 
-                    if (item.Name == "Manufacturer" || item.Name == "Model")
+                    if (item.Name == "Manufacturer" || item.Name == "Model" || item.Name == "ManufacturerURI" || item.Name == "DeviceClass" || item.Name == "ProductCode")
                     {
                         DataGridViewName.Rows[num].Cells[0].Value = item.Name;
                         DataGridViewName.Rows[num].Cells[0].Style.ForeColor = Color.Red;

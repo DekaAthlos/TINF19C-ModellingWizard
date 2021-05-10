@@ -42,7 +42,7 @@ namespace Aml.Editor.Plugin
         /// <returns>the CreateDevice GUI for this session</returns>
        
         /// <summary>
-        /// creáte the new DeviceDescription GUI or return the previously created GUI
+        /// create the new DeviceDescription GUI or return the previously created GUI
         /// </summary>
         public DeviceDescription GetDeviceDescriptionForm()
         {
@@ -52,13 +52,6 @@ namespace Aml.Editor.Plugin
             }
             return deviceDescriptionForm;
         }
-        
-      
-        
-
-
-       
-      
 
         /// <summary>
         /// 
@@ -69,17 +62,7 @@ namespace Aml.Editor.Plugin
         public String CreateDeviceOnClick(MWDevice newDevice, bool isEdit)
         {
             string result = "";
-            // Check if device Name is set
-            if (newDevice.deviceName.Equals(""))
-            {
-                return "Error no device name set!";
-            }
 
-            // Check if vendor name is set
-            if (newDevice.vendorName.Equals(""))
-            {
-                return "Error no vendor name set!";
-            }
             if (newDevice.deviceName != null && newDevice.vendorName != null)
             {
                 // create the device

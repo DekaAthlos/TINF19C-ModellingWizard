@@ -29,6 +29,7 @@ namespace Aml.Editor.Plugin
         {
 
         }
+
         // Method for window size maximum and minimum
         public  void WindowSizeChanger(Panel panelNumber,Button buttonNumber)
         {
@@ -45,6 +46,7 @@ namespace Aml.Editor.Plugin
                 buttonNumber.Image = Resources.icons8_collapse_arrow_24;
             }
         }
+
         public void WindowSizeChanger(Panel panelNumber)
         {
             PanelNumber = panelNumber;
@@ -60,6 +62,7 @@ namespace Aml.Editor.Plugin
                 //Node.Image = Resources.icons8_collapse_arrow_24;
             }
         }
+
         public string OpenFileDialog(TextBox textboxName)
         {
             TextboxName = textboxName;
@@ -74,6 +77,7 @@ namespace Aml.Editor.Plugin
             string nameOfFile = Path.GetFileName(open.FileName);
             return nameOfFile;
         }
+
         public void OpenFileDialog(TextBox textboxName, Button pdfDisplayBtn)
         {
             TextboxName = textboxName;
@@ -92,7 +96,6 @@ namespace Aml.Editor.Plugin
        // method for opening IEC-CDD urls 
        public void ManualOpener(string btnText)
         {
-            
             string mainUrl = "https://cdd.iec.ch/CDD/IEC62683/iec62683.nsf/PropertiesAllVersions/0112-2---62683%23";
             string lastUrl = "?OpenDocument";
             string midUrl = btnText.Substring(15);
@@ -115,6 +118,7 @@ namespace Aml.Editor.Plugin
                 pictureBoxNumber.Image = new Bitmap(open.FileName);
             }
         }
+
         public void OpenFileDialog(TextBox textboxName, PictureBox pictureBoxNumber, Button displayButton)
         {
             TextboxName = textboxName;
@@ -130,6 +134,7 @@ namespace Aml.Editor.Plugin
                 displayButton.Text = Path.GetFileName(open.FileName);
             }
         }
+
         // this method dispaly all hidden buttons with the Refsemantic Id in them.
         public void DispalySemanticBtn(Button refSemanticBtn, DataGridView dataGrids,string word)
         {
@@ -154,10 +159,6 @@ namespace Aml.Editor.Plugin
             {
                 MessageBox.Show(exc.Message);
             }
-
         }
-        //  this method is responsible to load all the datagrid parameters from the user in to the MWDevice class in to respective lists 
-        
     }
-    
 }
