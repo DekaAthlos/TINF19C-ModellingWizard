@@ -31,5 +31,5 @@ Link to the lecture content: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQP
 
 ## About the installation and usage
 
-If you are unsure how to install and use the Modelling Wizard plugin, visit our [User Manual](https://github.com/DekaAthlos/TINF19C-ModellingWizard/wiki/6.-User-Manual) in our Wiki!
+If you are unsure how to install and use the Modelling Wizard plugin, please visit the [User Manual](https://github.com/DekaAthlos/TINF19C-ModellingWizard/wiki/6.-User-Manual) in our Wiki.
 
