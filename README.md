@@ -27,7 +27,7 @@ The further development of the Modelling Wizard was carried out by the following
   * Timo Zaoral		       	(Product Manager)
   * Tobias Roth			(Technical Editor)
   
-Link to the lecture content: https://owncloud.dhbw-stuttgart.de/index.php/s/4tQPRqTQzANssFi
+Link to the lecture content: https://owncloud.dhbw-stuttgart.de/index.php
 
 ## About the installation and usage
 
