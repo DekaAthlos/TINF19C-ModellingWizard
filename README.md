@@ -32,3 +32,4 @@ The further development of the Modelling Wizard was carried out by the following
 
 If you are unsure how to install and use the Modelling Wizard plugin, please visit the [User Manual](https://github.com/DekaAthlos/TINF19C-ModellingWizard/wiki/6.-User-Manual) in our Wiki.
 
+
