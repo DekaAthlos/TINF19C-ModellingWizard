@@ -20,12 +20,12 @@ Main tasks are e.g. improving the GUI and its usability of the creation of Autom
 
 The further development of the Modelling Wizard was carried out by the following students:
 
-  * Stefan-Nemanja Banov	(Projekt Manager) 
-  * Simon Jess	(Software Architect)
-  * Phillip Tran	       	(Head of Development)
-  * Jakob Schmidt	      	(Test Manager)
-  * Timo Zaoral		       	(Product Manager)
-  * Tobias Roth			(Technical Editor)
+  * Stefan-Nemanja Banov	
+  * Simon Jess	
+  * Phillip Tran	       	
+  * Jakob Schmidt	      	
+  * Timo Zaoral		       	
+  * Tobias Roth			
   
 
 ## About the installation and usage
